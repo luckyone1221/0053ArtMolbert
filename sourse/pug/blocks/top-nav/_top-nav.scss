@@ -1,61 +1,169 @@
 .top-nav {
-	position: sticky; 
-	left: 0;
-	// left: 200px;
-	// right: -200px;
-	// margin-right: -200px;
-	top: 0;
-	left: 0;
-	z-index: 800;
-	background-color: #fff;
-	border-bottom: 1px solid #000; 
-	--color-link: 255,
-	0,
-	0;
-	background-color: #{rgba(var(--color-link), .5)};
-	&.fixed { 
-		bottom: auto;
-		margin-top: 0;
-	}
-	.row{
-	 
-	}
+  &__container{
 
-	// 
-	@include media-breakpoint-up(xl) {}
+  }
 
-	@include media-breakpoint-up(lg) {}
+  &__menu-col{
+    //ul
+    .menu{
+      list-style: none;
+      margin: 0;
 
-	@include media-breakpoint-up(md) {}
+      display: flex;
+      align-items: center;
+    }
 
-	@include media-breakpoint-up(sm) {}
+    //li
+    .menu-item{
+      margin-right: rem(31px);
 
-	@include media-breakpoint-up(xs) {}
+      a{
+        display: block;
+        text-decoration: none;
 
-	// 
-	@include media-breakpoint-between(md, xl) {}
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: 0.06em;
+        color: $black;
+      }
+    }
+  }
+  &__logo{
+    width: rem(120);
+    display: block;
 
-	// 
-	@include media-breakpoint-only(xs) {}
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__sub-row{
+    @include roww(rem(20));
+  }
+  //
+  &__dd-link-cont{
 
-	@include media-breakpoint-only(sm) {}
+  }
+  &__dd-link{
+    display: flex;
+    align-items: center;
 
-	@include media-breakpoint-only(md) {}
+    font-size: 16px;
+    line-height: 1;
 
-	@include media-breakpoint-only(lg) {}
+    &:after{
+      content: '';
+      margin-left: 8px;
+      display: inline-block;
 
-	@include media-breakpoint-only(xl) {}
+      width: 8px;
+      height: 8px;
 
-	// 
-	@include media-breakpoint-down(xl) {}
+      background-image: url(../img/svg/sm-chevron-down.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
 
-	@include media-breakpoint-down(lg) {}
+    }
+  }
+  //
+  &__il-row{
+    @include roww(rem(12px));
+  }
+  &__icon-link{
+    width: 32px;
+    height: 32px;
 
-	@include media-breakpoint-down(md) {}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-	@include media-breakpoint-down(sm) {}
+    &:hover{
+      opacity: .8;
+    }
 
-	@include media-breakpoint-down(xs) {}
+    .icon{
+      font-size: 32px;
+    }
+  }
+  &__{}
 }
 
+//
+.mnu-search{
+  position: relative;
 
+  &__btn{
+    @extend .btn;
+    position: absolute;
+    z-index: 2;
+
+    bottom: 0;
+    left: 0;
+    width: rem(32);
+    height: rem(32);
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon{
+      font-size: rem(18);
+    }
+  }
+  &__input{
+    padding: 7px 0 7px 35px;
+  }
+  .label{
+
+  }
+  .l-title{
+    left: 35px;
+  }
+}
+
+.label{
+  position: relative;
+  margin-bottom: rem(24px);
+
+  input.not-empty,
+  input:focus {
+    background-color: $white;
+    //padding-top: rem(27px);
+    //padding-bottom: rem(7px);
+  }
+
+  input.not-empty + span,
+  input:focus + span,
+  textarea.not-empty + span,
+  textarea:focus + span ,
+  select.not-empty + span,
+  select:focus + span {
+    top: rem(0px) !important;
+    font-size: rem(12) !important;
+    color: $black!important;
+    text-shadow: 0 0 .7px rgba($black, .8);
+  }
+}
+
+.l-title {
+  @include mt();
+  position: absolute;
+  pointer-events: none;
+
+  top: calc(100% - 24px);
+  left: calc(#{$input-padding-x});
+  line-height: $input-line-height;
+  color: rgba($black, .4);
+
+  font-size: rem(16);
+}
+
+.form-control{
+  border-left: none!important;
+  border-right: none!important;
+  border-top: $input-border-width solid transparent!important;
+  //box-shadow: none!important;
+}

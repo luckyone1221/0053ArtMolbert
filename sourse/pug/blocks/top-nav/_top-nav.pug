@@ -1,30 +1,56 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js.on
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
-	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
+		+e.container.container
+			.row.align-items-center
+				+e.menu-col.col
+					+mnu()
+				.col-auto
+					+e.logo(href='#')
+						img(loading="lazy" src='img/svg/logo.svg' alt="")
+				.col
+					+e.sub-row.row.justify-content-end.align-items-center
+						.col-auto
+							+inpBlock()
+						.col-auto
+							+e.dd-link-cont
+								+e.dd-link €
+						.col-auto
+							+e.dd-link-cont
+								+e.dd-link EN
+						.col-auto
+							+e.il-row.row
+								.col-auto
+									+e.icon-link
+										+icon('heart')
+								.col-auto
+									+e.icon-link
+										+icon('user')
+								.col-auto
+									+e.icon-link
+										+icon('bag')
+				//-.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
 	// end top-nav
+
+mixin inpBlock()
+	+b.mnu-search
+		+e.btn(type='button')
+			+icon('search')
+		+inp3('Search', 'text')
+		//-+e.INPUT.input(type="text" name='search')
+
+mixin inp3(ph, type, val='', labelClass='custop-ph-label', name="name")
+	.label(class=labelClass)
+		+e.INPUT.input.form-control.has-ph-js(type=type name=name)&attributes(attributes)
+		span.l-title=ph
+		block

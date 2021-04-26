@@ -261,6 +261,9 @@ var JSCCommon = {
 		var now = new Date();
 		var currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
+	},
+	checkEmptyVal: function checkEmptyVal() {
+		this.value !== '' || this.tagName == "SELECT" && this.querySelector('option').value !== null && this.querySelector('option').text || this.type == "date" ? $(this).addClass('not-empty') : $(this).removeClass('not-empty');
 	}
 };
 var $ = jQuery;
@@ -275,7 +278,11 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.animateScroll();
+	JSCCommon.checkEmptyVal();
+	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
+	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
+	$('.has-ph-js.select-custom--js').on('select', JSCCommon.checkEmptyVal); // JSCCommon.CustomInputFile(); 
 
 	var x = window.location.host;
 	var screenName;
@@ -330,7 +337,9 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
-	})); // modal window
+	})); //luckyone Js
+	//end luckyone Js
+	// modal window
 }
 
 ;

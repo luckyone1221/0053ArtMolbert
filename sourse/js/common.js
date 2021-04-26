@@ -252,7 +252,12 @@ const JSCCommon = {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
-	}
+	},
+	checkEmptyVal() {
+		((this.value !== '' || (this.tagName == "SELECT" && (this.querySelector('option').value !== null && this.querySelector('option').text) )) || this.type == "date")
+			? $(this).addClass('not-empty')
+			: $(this).removeClass('not-empty')
+	},
 };
 const $ = jQuery;
 
@@ -265,6 +270,11 @@ function eventHandler() {
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
+	JSCCommon.checkEmptyVal();
+
+	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
+	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
+	$('.has-ph-js.select-custom--js').on('select', JSCCommon.checkEmptyVal);
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -331,6 +341,10 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	//luckyone Js
+
+	//end luckyone Js
+
 	// modal window
 
 };
