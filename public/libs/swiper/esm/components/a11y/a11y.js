@@ -171,7 +171,7 @@ var A11y = {
       swiper.a11y.addElRoleDescription($(swiper.slides), params.itemRoleDescriptionMessage);
     }
 
-    swiper.a11y.addElRole($(swiper.slides), 'group');
+    swiper.a11y.addElRole($(swiper.slides), params.slideRole);
     swiper.slides.each(function (slideEl) {
       var $slideEl = $(slideEl);
       var ariaLabelMessage = params.slideLabelMessage.replace(/\{\{index\}\}/, $slideEl.index() + 1).replace(/\{\{slidesLength\}\}/, swiper.slides.length);
@@ -260,7 +260,8 @@ export default {
       slideLabelMessage: '{{index}} / {{slidesLength}}',
       containerMessage: null,
       containerRoleDescriptionMessage: null,
-      itemRoleDescriptionMessage: null
+      itemRoleDescriptionMessage: null,
+      slideRole: 'group'
     }
   },
   create: function create() {

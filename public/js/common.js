@@ -19,7 +19,8 @@ var JSCCommon = {
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	modalCall: function modalCall() {
-		$(".link-modal-js").fancybox({
+		var link = ".link-modal-js";
+		$(link).fancybox({
 			arrows: false,
 			infobar: false,
 			touch: false,
@@ -50,7 +51,7 @@ var JSCCommon = {
 			$.fancybox.close();
 		});
 		$.fancybox.defaults.backFocus = false;
-		var linkModal = document.querySelectorAll('.link-modal');
+		var linkModal = document.querySelectorAll(link);
 
 		function addData() {
 			linkModal.forEach(function (element) {

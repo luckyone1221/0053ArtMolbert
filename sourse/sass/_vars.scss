@@ -12,19 +12,20 @@ $colors: (
   'black': $body-color,
 ) !default;
 
-$font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 
 $utilities: ("opacity": (
-    property: opacity,
-    // responsive: true,
-    values: (
-      0: 0,
-      // 25: .25,
-      // 50: .5,
-      // 75: .75,
-      // 100: 1,
-    )));
+  property: opacity,
+  // responsive: true,
+  values: (
+    0: 0,
+    // 25: .25,
+    // 50: .5,
+    // 75: .75,
+    // 100: 1,
+  )));
 /// Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -913,7 +914,7 @@ $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.o
 
 // scss-docs-start form-validation-states
 $form-validation-states: ("valid": ("color": $form-feedback-valid-color,
-    "icon": $form-feedback-icon-valid),
+  "icon": $form-feedback-icon-valid),
   "invalid": ("color": $form-feedback-invalid-color,
     "icon": $form-feedback-icon-invalid)) !default;
 // scss-docs-end form-validation-states
