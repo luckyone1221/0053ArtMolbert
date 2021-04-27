@@ -1,0 +1,27 @@
+mixin sPaltes(data)
+	// start sPaltes
+	+b.SECTION.sPaltes.section#sPaltes&attributes(attributes)
+		+b.section-title--line-r.text-end
+			+e.container.container
+				h2
+					span.outlined-txt.ls Искусство
+					br
+					span.outlined-txt на
+					span.molbert artmolbert
+		.container
+			+e.row.row.gy-4
+				+sPaltesItem(1, 'Живопись')
+				+sPaltesItem(2, 'графика')
+				+sPaltesItem(3, 'СКУЛЬПТУРА')
+				+sPaltesItem(4, 'фотография')
+			+e.load-cont
+				+e.load-btn(href="#") больше
+	// end sPaltes
+
+mixin sPaltesItem(imgNum, txt)
+	+e.col.col-sm-6.col-lg-3
+		+e.item(href='#')
+			+e.box
+				img(loading="lazy" src=`img/@2x/plates-${imgNum}.png` alt="")
+			+e.txt-box
+				+e.txt=txt

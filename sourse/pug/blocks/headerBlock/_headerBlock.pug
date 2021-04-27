@@ -2,9 +2,34 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.slider-wrap
+				.swiper-container.headerBlock-slider-js
+					.swiper-wrapper
+						+hBFistSlide()
+						- for (var i = 0; i < 5; i++)
+							+hBFistSlide()
+					+e.arrow-cont
+						+arrow()
+					.swiper-pagination
 	// end headerBlock
+
+mixin hBFistSlide()
+	.swiper-slide
+		+e.slide-content
+			+e.txt-box
+				+e.welcome-txt welcome to
+				+e.name
+					span art
+					br
+					span.molbert MOLBERT
+				+e.btn-cont
+					+e.buy-btn(href='#') КУПИТЬ
+			+e.img-block
+				+e.img--1.d-none.d-sm-block
+					img(loading="lazy" src="img/@2x/hb-slide-1.jpg" alt="")
+				+e.img--2.d-none.d-md-block
+					img(loading="lazy" src="img/@2x/hb-slide-2.jpg" alt="")
+				+e.img--3.d-none.d-sm-block
+					img(loading="lazy" src="img/@2x/hb-slide-3.jpg" alt="")
+				+e.img--4
+					img(loading="lazy" src="img/@2x/hb-slide-4.jpg" alt="")

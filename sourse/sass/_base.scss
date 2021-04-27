@@ -9,7 +9,7 @@
   height: 100%;
   background-position: center 0;
   opacity: 0;
-  // opacity: 0.7;
+  //opacity: 0.7;
 }
 
 body,
@@ -114,6 +114,37 @@ body {
 
 .section-title {
   padding-bottom: var(--sTPB);
+
+  h2{
+    text-transform: uppercase;
+    @include media-breakpoint-down(md){
+      font-size: rem(35);
+    }
+
+    margin-bottom: rem(20);
+  }
+
+  &--line-l{
+    &:after{
+      content: '';
+      display: block;
+      min-width: rem(100px);
+      width: 20%;
+      height: 1px;
+      background: $black;
+    }
+  }
+  &--line-r{
+    &:after{
+      content: '';
+      display: block;
+      min-width: rem(100px);
+      width: 20%;
+      height: 1px;
+      background: $black;
+      margin-left: auto;
+    }
+  }
 }
 
 
@@ -476,5 +507,90 @@ iframe {
 
   &::-webkit-scrollbar-button {
     display: none
+  }
+}
+
+
+//
+
+.btn-default{
+  @extend .btn;
+  @extend .btn-outline-primary;
+
+  min-width: 200px;
+  text-transform: uppercase;
+}
+
+//swiper
+.swiper-prev,
+.swiper-next{
+  width: rem(60);
+  height: rem(60);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon{
+    font-size: 20px;
+  }
+}
+
+.swiper-prev{
+
+}
+.swiper-next{
+
+}
+
+//
+.swiper-pagination{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -5px 0;
+
+  .swiper-pagination-bullet{
+    position: relative;
+    z-index: 1;
+    &:before{
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      //background-color: red;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--aft-bg, #{$gray-410});
+      border-radius: 50%;
+    }
+
+    @include mt();
+    margin: 5px 8px;
+    width: 6px;
+    height: 6px;
+    background-color: transparent!important;
+
+    --aft-bg: #{rgba($gray-410, .8)};
+    &:hover{
+      --aft-bg: #{rgba($gray-410, 1)};
+    }
+
+    &-active{
+      --aft-bg: #{$black}!important;
+    }
+
   }
 }

@@ -1,0 +1,41 @@
+mixin sPrice(data)
+	// start sPrice
+	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
+		+b.section-title--line-r.text-end
+			+e.container.container
+				h2
+					span.choise
+						| Выбор
+						|
+					br
+					span.outlined-txt.ls
+						| ПО
+						|
+					span ЦЕНЕ
+		.container
+			+e.row.row
+				+sPriceItem(1, '', '30 000')
+				+sPriceItem(2, '30 000', '60 000')
+				+sPriceItem(3, '60 000', '120 000')
+				+sPriceItem(4, '120 000', '240 000')
+	// end sPrice
+
+mixin sPriceItem(imgNum, fromVal, toVal)
+	+e.col.col-md-6
+		+e.item
+			+e.inner
+				+e.img
+					img(loading="lazy" src=`img/@2x/sPrice-${imgNum}.jpg` alt="")
+				+e.price-box
+					if fromVal
+						+e.price
+							+e.price-txt от
+							+e.price-val=fromVal
+							+e.price-currency ₽
+					+e.price
+						+e.price-txt до
+						+e.price-val=toVal
+						+e.price-currency ₽
+				+e.btn-box
+					+e.btn(href='#')
+						+icon('arrow-r2')

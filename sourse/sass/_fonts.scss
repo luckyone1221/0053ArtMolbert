@@ -1,10 +1,13 @@
-$default-font: "";
+$default-font: "Proxima Nova";
+$mono: "Inter";
 $addr: '../fonts/';
 $file-format: woff2;
 
 // If font from googlefont, next lines remove
 @include font-face ($default-font, $addr + "ProximaNova-Black/ProximaNova-Black", 900, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "ProximaNova-Extrabld/ProximaNova-Extrabld", 800, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "ProximaNova-Bold/ProximaNova-Bold", 700, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "ProximaNova-Semibold/ProximaNova-Semibold", 600, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "ProximaNova-Regular/ProximaNova-Regular", 400, $file-formats: $file-format);
 
 // font-weight helper:

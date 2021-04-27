@@ -1,0 +1,41 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		+b.section-title--line-l
+			+e.container.container
+				h2
+					span.outlined-txt
+						| О
+						|
+					span НАС
+		.container
+			.row.gy-5
+				+e.left-col.col
+					+e.descr Платформа, реализующая уникальные проекты. Проффесиональный штат сотрудников. Более 1000 мероприятий организовано. К каждому произведению мы выдаем сертификат подлинности.
+					+e.arrow-btn(href='#')
+						+icon('arrow-r')
+					+e.data-box
+						+e.d-row.row
+							+sAboutDataItem('1 000', 'Мероприятий организовано')
+							+sAboutDataItem('10', 'Опыта на рынке искусства')
+								+e.d-sm лет
+							+sAboutDataItem('200', 'От Галереи Эрмитаж')
+								+e.d-sm м
+							+sAboutDataItem('5000', 'Проданных предметов искусства')
+				+e.right-col.col-auto
+					+e.img-block
+						+sAboutImg(1)
+						+sAboutImg(2)
+						+sAboutImg(3)
+	// end sAbout
+
+mixin sAboutImg(imgNum)
+	+e.img
+		img(loading="lazy" src=`img/@2x/about-img-${imgNum}.jpg` alt="")
+
+mixin sAboutDataItem(big, txt)
+	.col-sm-6
+		+e.d-bold
+			+e.d-big=big
+			block
+		+e.d-txt=txt

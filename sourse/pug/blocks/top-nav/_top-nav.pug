@@ -1,43 +1,37 @@
 mixin mob-mnu()
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js.on
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
 			span
 		+e.inner
+			+e.logo
+				img(loading="lazy" src="img/svg/logo.svg" alt="")
 			+mnu()
-			.text-right
+			+inpBlock()
+			+iconLinksRow('d-sm-none')
 
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		+e.container.container
-			.row.align-items-center
-				+e.menu-col.col
+		.container
+			+e.row.row.align-items-center
+				+e.menu-col.col.d-xl-block.d-none
 					+mnu()
 				.col-auto
 					+e.logo(href='#')
 						img(loading="lazy" src='img/svg/logo.svg' alt="")
 				.col
 					+e.sub-row.row.justify-content-end.align-items-center
-						.col-auto
+						.col-auto.d-none.d-md-block.me-xxl-3
 							+inpBlock()
 						.col-auto
 							+e.dd-link-cont
 								+e.dd-link €
 						.col-auto
-							+e.dd-link-cont
+							+e.dd-link-cont.me-xxl-3
 								+e.dd-link EN
-						.col-auto
-							+e.il-row.row
-								.col-auto
-									+e.icon-link
-										+icon('heart')
-								.col-auto
-									+e.icon-link
-										+icon('user')
-								.col-auto
-									+e.icon-link
-										+icon('bag')
-				//-.col-auto.d-lg-none
+						.col-auto.d-none.d-sm-block
+							+iconLinksRow()
+				.col-auto.ms-auto.d-xl-none
 					+b.toggle-menu-mobile--js
 						span
 	// end top-nav
@@ -54,3 +48,15 @@ mixin inp3(ph, type, val='', labelClass='custop-ph-label', name="name")
 		+e.INPUT.input.form-control.has-ph-js(type=type name=name)&attributes(attributes)
 		span.l-title=ph
 		block
+
+mixin iconLinksRow(addClasses)
+	+b.il-row.row(class=addClasses)
+		.col-auto
+			+e.link
+				+icon('heart')
+		.col-auto
+			+e.link
+				+icon('user')
+		.col-auto
+			+e.link
+				+icon('bag')

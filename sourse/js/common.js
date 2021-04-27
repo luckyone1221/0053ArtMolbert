@@ -108,7 +108,7 @@ const JSCCommon = {
 		}, { passive: true });
 
 		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+			if (window.matchMedia("(min-width: 1200px)").matches) this.closeMenu();
 		}, { passive: true });
 	},
 	// /mobileMenu
@@ -279,7 +279,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = document.body.dataset.bg;
+	screenName = '01.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -339,13 +339,30 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
-
 	});
 	//luckyone Js
+	//
+	let headerBlSlider = new Swiper('.headerBlock-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 30,
+
+		navigation: {
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev',
+		},
+		pagination: {
+			//el: $(this).find('.swiper-pagination'),
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
 
 	//end luckyone Js
 
-	// modal window
+	//todo
+	// 1. clean js file
 
 };
 if (document.readyState !== 'loading') {

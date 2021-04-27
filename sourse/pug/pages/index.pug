@@ -3,6 +3,9 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sPaltes/_sPaltes.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrice/_sPrice.pug
 
 block variables
 	- let  mainPage= null 
@@ -16,6 +19,10 @@ block pagecontent
 	+header()
 	+top-nav()
 	+topLine()
+	+headerBlock()
+	+sPaltes()
+	+sAbout()
+	+sPrice()
 	//+soc()
 	//a(href="")
 	////- img(src="img/", alt="")
@@ -53,7 +60,6 @@ block pagecontent
 	//		+e.content content 2
 	//		+e.content content 3
 	//		+e.content content 4
-	+headerBlock()
 	+sForm()
 	+sContact()
 	+footer()

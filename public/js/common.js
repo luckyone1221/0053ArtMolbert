@@ -125,7 +125,7 @@ var JSCCommon = {
 			passive: true
 		});
 		window.addEventListener('resize', function () {
-			if (window.matchMedia("(min-width: 992px)").matches) _this.closeMenu();
+			if (window.matchMedia("(min-width: 1200px)").matches) _this.closeMenu();
 		}, {
 			passive: true
 		});
@@ -286,7 +286,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = document.body.dataset.bg;
+	screenName = '01.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -338,8 +338,25 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); //luckyone Js
-	//end luckyone Js
-	// modal window
+	//
+
+	var headerBlSlider = new Swiper('.headerBlock-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev'
+		},
+		pagination: {
+			//el: $(this).find('.swiper-pagination'),
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //end luckyone Js
+	//todo
+	// 1. clean js file
 }
 
 ;
