@@ -354,6 +354,16 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
+	}); //
+
+	var sNewSlider = new Swiper('.sNew-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: $(this).find('.swiper-next'),
+			prevEl: $(this).find('.swiper-prev')
+		}
 	}); //end luckyone Js
 	//todo
 	// 1. clean js file

@@ -1,0 +1,77 @@
+// start .sPopular
+.sPopular {
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(81px)};
+		--sPB: #{rem(70)};
+		--sTPB: #{rem(88px)};
+	}
+
+	.section-title{
+		&__container{
+			@include media-breakpoint-up(xl){
+				padding-right: rem(60px);
+			}
+		}
+
+		h2{
+			line-height: 1;
+			@include media-breakpoint-up(sm){
+				line-height: 0.85;
+			}
+		}
+	}
+
+	&__row{
+		padding-bottom: rem(50);
+
+		@include roww(rem(30));
+		@include media-breakpoint-up(xxl){
+			@include roww(rem(45));
+			padding: 0 rem(55px) rem(50px);
+		}
+
+	}
+	&__col{
+
+	}
+	&__img-box{
+		width: rem(170);
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__img{
+		@extend .accept-ratio-frame-nh;
+		padding-top: 100%;
+		border-radius: 50%;
+
+		margin-bottom: rem(40);
+	}
+	&__name{
+		font-size: rem(24px);
+		line-height: 1;
+		margin-bottom: rem(2);
+	}
+	&__surname{
+		font-size: rem(24px);
+		line-height: 1;
+		margin-bottom: rem(16);
+	}
+	&__city{
+		line-height: (24/18);
+		color: $gray-810;
+	}
+	//
+	&__btn-cont{}
+	&__btn{
+		@extend .btn-default;
+	}
+	&__{}
+	&__{}
+} // end.sPopular
+
+.col-xl-p5{
+	@include media-breakpoint-up(xl){
+		width: 20%;
+	}
+}

@@ -6,6 +6,10 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sPaltes/_sPaltes.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sPopular/_sPopular.pug
+include ../blocks/sStyle/_sStyle.pug
+include ../blocks/sNew/_sNew.pug
 
 block variables
 	- let  mainPage= null 
@@ -23,6 +27,10 @@ block pagecontent
 	+sPaltes()
 	+sAbout()
 	+sPrice()
+	+sWho()
+	+sPopular()
+	+sStyle()
+	+sNew()
 	//+soc()
 	//a(href="")
 	////- img(src="img/", alt="")

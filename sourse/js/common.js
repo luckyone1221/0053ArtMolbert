@@ -359,6 +359,18 @@ function eventHandler() {
 		},
 	});
 
+	//
+	let sNewSlider = new Swiper('.sNew-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 20,
+
+		navigation: {
+			nextEl: $(this).find('.swiper-next'),
+			prevEl: $(this).find('.swiper-prev'),
+		},
+	});
+
 	//end luckyone Js
 
 	//todo

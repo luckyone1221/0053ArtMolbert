@@ -1,0 +1,29 @@
+mixin sPopular(data)
+	// start sPopular
+	+b.SECTION.sPopular.section#sPopular&attributes(attributes)
+		+b.section-title--line-r.text-end
+			+e.container.container
+				h2
+					span.outlined-txt Популярные
+					br
+					span Aвторы
+		.container
+			+e.row.row.gy-5.justify-content-sm-center
+				+sPopularItem(1)
+				+sPopularItem(2)
+				+sPopularItem(3)
+				+sPopularItem(4)
+				+sPopularItem(5)
+			+e.btn-cont.text-center
+				+e.btn(href='#') больше
+	// end sPopular
+
+mixin sPopularItem(imgNum)
+	+e.col.col-6.col-sm-4.col-xl-p5&attributes(attributes)
+		+e.item.text-center
+			+e.img-box
+				+e.img(href='#')
+					img(loading="lazy" src=`img/@2x/sPopular-${imgNum}.jpg` alt="")
+			+e.name Александр
+			+e.surname Воцмуш
+			+e.city Севастополь, RU

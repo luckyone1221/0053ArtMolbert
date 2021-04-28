@@ -1,0 +1,29 @@
+mixin sStyle(data)
+	// start sStyle
+	+b.SECTION.sStyle.section#sStyle&attributes(attributes)
+		+b.section-title--line-r.text-end
+			+e.container.container
+				h2
+					span.choise
+						| Выбор
+						|
+					br
+					span.outlined-txt.ls
+						| ПО
+						|
+					span Стилям
+		.container
+			+e.row.row
+				+sStyleItem(1,'импрессионизм')
+				+sStyleItem(2,'модерн')
+				+sStyleItem(3,'стрит арт')
+				+sStyleItem(4,'абстракция')
+	// end sStyle
+
+mixin sStyleItem(imgNum, txt)
+	+e.col.col-sm-6
+		+e.item(href='#')
+			+e.img-box
+				+e.img
+					img(loading="lazy" src=`img/@2x/sStyle-${imgNum}.jpg` alt="")
+			+e.txt=txt
