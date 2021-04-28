@@ -21,13 +21,14 @@
 		--sTPB: #{rem(40)};
 	}
 
-	--swiperArrowSize: #{rem(68)};
-	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-	--swiperBorderColorDef: var(--bs-primary);
-	--swiperColorDef: var(--bs-primary);
-	--swiperBgDef: #ffffff;
-
-	--swiperBorderColorDefHover: var(--bs-primary);
-	--swiperColorDefHover: var(--bs-primary);
-	--swiperBgDefHover: #ffffff;
+	--i-cont-padding: #{15px};
+	@include media-breakpoint-up(md){
+		--i-cont-padding: #{rem(80px)};
+	}
+	@include media-breakpoint-up(xl){
+		--i-cont-padding: #{rem(80px)};
+	}
+	@include media-breakpoint-up(xxl){
+		--i-cont-padding: #{rem(160px)};
+	}
 }

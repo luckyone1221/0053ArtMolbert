@@ -636,3 +636,21 @@ iframe {
     object-fit: cover;
   }
 }
+
+//
+.arrow-btn{
+  @extend .btn-default;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon{
+    font-size: rem(18);
+  }
+  min-width: rem(100);
+
+  @include media-breakpoint-up(xl){
+    min-height: rem(60);
+  }
+
+}

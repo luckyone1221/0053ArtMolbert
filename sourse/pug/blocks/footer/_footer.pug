@@ -1,2 +1,59 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer
+    +e.container.container
+      +e.row.row.gy-5
+        +e.col.col-sm-6.col-md-4.col-xl-auto
+          +e.title ПОКУПАТЕЛЯМ
+          +e.links
+            ul
+              li: a(href='#') Как сделать заказ
+              li: a(href='#') Оплата и доставка
+              li: a(href='#') Возврат товара
+              li: a(href='#') Публичная оферта
+              li: a(href='#') Политика конфиденциальности
+        +e.col.col-sm-6.col-md-5.col-xl-auto
+          +e.title КОНТАКТЫ
+          +e.lonely-link--tell(href="tel:+78124380114") +7 (812) 438-01-14
+          +e.lonely-link--mail(href="mailto:info@molbertgallery.ru") info@molbertgallery.ru
+          +e.lonely-link--shedule Пн-Вс  09.00-20.00
+          +e.address
+            | 191186, Россия, г. Санкт-Петербург,
+            br
+            | ул. Большая Конюшенная, 11
+        +e.col.col-sm-6.col-md-3.col-xl-auto
+          +e.title О НАС
+          +e.links
+            ul
+              li: a(href='#') Кто мы
+              li: a(href='#') Реквизиты
+              li: a(href='#') Отзывы
+        +e.col.col-sm-6.col-md-4.col-xl-auto
+          +e.title ПАРТНЕРАМ
+          +e.links
+            ul
+              li: a(href='#') Заявка на сотрудничество
+              li: a(href='#') Услуги
+        +e.col.col-sm-6.col-md-4.col-xl-auto
+          +e.title МЫ В СОЦ.СЕТЯХ
+          +e.soc-row.row.gy-3
+            +fSocItem('inst')
+            +fSocItem('fb')
+            +fSocItem('yt')
+            +fSocItem('gPlus')
+          +e.sub-title Мы приниаем
+          +e.accept-row.row.gy-3
+            +arItem('visa')
+            +arItem('mastercard')
+            +arItem('paypal')
+            +arItem('uni-pay')
+      +e.copy-right © Copyright 2020 artmolbert Limited. All rights reserved.
+
+mixin fSocItem(icName)
+  .col-auto
+    +e.soc-link(href='#')
+      +icon(icName)
+
+mixin arItem(icName)
+  .col-auto
+    +e.accept-link(href='#')
+      +icon(icName)

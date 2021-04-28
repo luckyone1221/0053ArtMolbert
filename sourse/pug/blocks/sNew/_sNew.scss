@@ -1,17 +1,21 @@
 // start .sNew
 .sNew {
 	@include media-breakpoint-up(md){
-		--sPT: #{rem(81px)};
-		--sPB: #{rem(70)};
-		--sTPB: #{rem(88px)};
+		--sPT: #{rem(20px)};
+		--sPB: #{rem(80)};
+		--sTPB: #{rem(35px)};
 	}
 
 	.section-title{
-
+		&__container{
+			@include media-breakpoint-up(xl){
+				padding-left: rem(157px);
+			}
+		}
 		h2{
 			line-height: 1;
 			@include media-breakpoint-up(sm){
-				line-height: 0.9;
+				line-height: 0.85;
 			}
 		}
 
@@ -19,6 +23,10 @@
 			@include media-breakpoint-up(xl){
 				margin-right: rem(193);
 			}
+		}
+
+		.ms{
+			margin-left: rem(44);
 		}
 	}
 
@@ -33,10 +41,23 @@
 		.swiper-container{
 			padding: 20px;
 			margin: -20px;
+
+			@include media-breakpoint-down(xl){
+				overflow: visible!important;
+			}
 		}
-		.swiper-wrapper{}
+		.swiper-wrapper{
+
+		}
 		.swiper-slide{
-			@include media-breakpoint-up(xxl){
+			width: rem(320);
+			@include media-breakpoint-up(md){
+				width: calc((100% / 2) - (20px * 1 / 2));
+			}
+			@include media-breakpoint-up(lg){
+				width: calc((100% / 3) - (20px * 2 / 3));
+			}
+			@include media-breakpoint-up(xl){
 				width: calc((100% / 4) - (20px * 3 / 4));
 			}
 		}
@@ -48,11 +69,16 @@
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		margin-bottom: rem(10);
 
 		.swiper-prev{
-			margin-right: 7px;
+			margin-right: 10px;
 		}
 		.swiper-next{}
+
+		@include media-breakpoint-up(xxl){
+			margin-right: -5px;
+		}
 	}
 	&__box{
 		@include mt();
@@ -71,6 +97,8 @@
 		@include media-breakpoint-up(xxl){
 			padding: rem(43) rem(47) rem(41);
 		}
+
+		margin-bottom: rem(20);
 	}
 	&__like-btn{
 		position: absolute;
@@ -88,14 +116,15 @@
 		top: 12px;
 		left: 12px;
 	}
-	&__txt-col{
+	&__txt-item{
 		font-weight: 800;
 		font-size: rem(14);
 		line-height: 1;
 		color: $orange2;
+		padding: rem(8px);
 	}
 	&__sale{
-		padding: rem(8) rem(10);
+		padding: rem(7) rem(9);
 		border: 2px solid $orange2;
 
 		font-weight: 600;
@@ -118,16 +147,87 @@
 		}
 	}
 	&__txt-cont{
-
+		padding: 0 rem(28px);
 	}
-	&__author{}
-	&__name{}
-	&__size{}
-	&__lower-row{}
-	&__price-col{}
-	&__bag-btn{
-		.icon{
+	&__author{
+		font-size: rem(14px);
+		line-height: 1;
+		color: $gray-810;
+		margin-bottom: rem(10);
+	}
+	&__name{
+		font-weight: 600;
+		//font-size: 18px;
+		line-height: 1;
+		text-transform: capitalize;
+		margin-bottom: rem(10);
+	}
+	&__size{
+		font-size: 14px;
+		line-height: 1;
+		color: $gray-810;
 
+		width: rem(160);
+		max-width: 100%;
+		border-bottom: 1px solid $orange2;
+		padding-bottom: rem(10);
+
+		margin-bottom: 15px;
+	}
+	&__lower-row{
+		@include roww(rem(28));
+	}
+	&__price-col{
+		display: flex;
+		flex-direction: column;
+
+		min-height: 44px;
+	}
+	//
+	&__price-old{
+		font-size: rem(16px);
+		line-height: 1;
+
+		letter-spacing: rem(.5px);
+		text-decoration-line: line-through;
+		//text-transform: uppercase;
+
+		color: $gray-810;
+		.currency{
+			margin-left: 1px;
+			font-size: 0.9em;
+		}
+	}
+	&__price-curr{
+		margin-top: auto;
+
+		font-size: rem(24);
+		line-height: 1;
+		letter-spacing: rem(.5px);
+
+		.currency{
+			margin-left: 1px;
+			font-size: 0.9em;
+		}
+	}
+
+	&__bag-btn{
+		width: rem(30);
+		height: rem(30);
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		//border: 1px solid transparent;
+		border: 1px solid $orange2;
+		&:hover{
+			border: 1px solid $orange2;
+		}
+
+		.icon{
+			font-size: rem(18);
 		}
 	}
 	&__{}

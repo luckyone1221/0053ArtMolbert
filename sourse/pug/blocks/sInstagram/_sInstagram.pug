@@ -1,0 +1,22 @@
+mixin sInstagram(data)
+	// start sInstagram
+	+b.SECTION.sInstagram.section#sInstagram&attributes(attributes)
+		+b.section-title--line-l
+			+e.container.container
+				h2
+					span INSTAGRAM
+		+e.container.container
+			+e.link(href='#') @molbertgallery
+			+e.descr Следите за нашими выставками и новостями.
+			+e.btn(href='#')
+				+icon('arrow-r')
+			+e.row.row
+				-for(var i = 1; i <= 9; i++)
+					+sInstagramItem(i)
+
+	// end sInstagram
+
+mixin sInstagramItem(imgNum)
+	.col-6.col-md-4
+		+e.img(href="#")
+			img(loading="lazy" src=`img/@2x/sInstagram-${imgNum}.jpg` alt="")

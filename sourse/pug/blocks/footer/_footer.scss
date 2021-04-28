@@ -1,43 +1,136 @@
 .footer {
-		
 	margin-top: auto;
+	background-color: $black;
+	color: $white;
 
-// 
-@include media-breakpoint-up(xl) {}
+	padding: rem(50) 0 rem(28);
 
-@include media-breakpoint-up(lg) {}
+	&__container{
 
-@include media-breakpoint-up(md) {}
+	}
+	&__row{
+		@include roww(rem(30px));
 
-@include media-breakpoint-up(sm) {}
+		padding-bottom: rem(80);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(127);
+		}
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(34);
+		}
+	}
+	&__col{
+		@media (min-width: 440px) and (max-width: 576px) {
+			width: 50%;
+		}
+		@include media-breakpoint-up(xl){
+			width: 20%;
+		}
+	}
+	&__title{
+		font-size: 14px;
+		line-height: (20/14);
 
-@include media-breakpoint-up(xs) {}
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(40);
+		}
+	}
+	&__links{
 
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
 
-// 
-@include media-breakpoint-between(md, xl) {}
+			li{
+				margin-bottom: 10px;
+			}
+			a{
+				display: block;
+				font-size: 14px;
+				line-height: (17/14);
+				text-decoration: none;
+				color: $white;
+				&:hover{
+					color: rgba($white, .8);
+				}
+			}
+		}
+	}
+	&__lonely-link{
+		text-decoration: none;
+		display: block;
+		font-size: 14px;
+		line-height: (17/14);
+		color: $white;
+		&:hover{
+			color: rgba($white, .8);
+		}
 
+		&--tell{
+			margin-bottom: 10px;
+		}
+		&--mail{
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		&--shedule{
+			margin-bottom: rem(15);
+		}
+	}
+	&__shedule{
 
-// 
-@include media-breakpoint-only(xs) {}
+	}
+	&__address{
+		font-size: 14px;
+		line-height: 1.95;
+		color: $white;
+	}
+	&__soc-row{
+		@include roww(18px);
+		padding-bottom: rem(26);
+	}
+	&__soc-link{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-@include media-breakpoint-only(sm) {}
+		width: rem(32);
+		height: rem(32);
 
-@include media-breakpoint-only(md) {}
+		.icon{
+			font-size: rem(32);
+			color: $white;
+		}
+	}
+	&__sub-title{
+		font-size: 14px;
+		line-height: (20/14);
+		color: $white;
+		margin-bottom: 3px;
+	}
+	&__accept-row{
+		@include roww(18px);
+	}
+	&__accept-link{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-@include media-breakpoint-only(lg) {}
+		width: rem(40);
+		height: rem(40);
 
-@include media-breakpoint-only(xl) {}
-
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+		.icon{
+			font-size: rem(40);
+			color: $white;
+		}
+	}
+	&__copy-right{
+		font-size: 12px;
+		line-height: (15/12);
+		color: rgba($white, 0.4);
+	}
+	&__{}
+	&__{}
 }

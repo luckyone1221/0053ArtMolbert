@@ -1,0 +1,132 @@
+// start .sPercents
+.sPercents {
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(100px)};
+		--sPB: #{rem(90)};
+	}
+
+	&__container{
+		padding: 0 calc(var(--i-cont-padding, #{100px}) + 0);
+		@include media-breakpoint-up(lg){
+			padding: 0 calc(var(--i-cont-padding, #{100px}) + #{rem(20)});
+		}
+		@include media-breakpoint-up(xl){
+			padding: 0 calc(var(--i-cont-padding, #{100px}) + #{rem(40)});
+		}
+		//
+	}
+	position: relative;
+	z-index: 1;
+	&:before,
+	&:after{
+		@include media-breakpoint-up(xxl){
+			content: '';
+		}
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		width: rem(100px);
+		height: 1px;
+		background-color: $black;
+	}
+	&:before{
+		left: 50px;
+	}
+	&:after{
+		right: 50px;
+	}
+
+	&__row{
+
+	}
+	&__title-col{
+
+	}
+	&__txt-row{
+
+	}
+	&__ten-col{
+		display: flex;
+		align-items: center;
+	}
+	&__ten{
+		font-weight: 900;
+		font-size: rem(72);
+		line-height: 1;
+		text-transform: uppercase;
+		color: $black;
+
+		@include media-breakpoint-up(xxl){
+			padding-left: rem(10);
+		}
+	}
+	&__percents{
+		@include media-breakpoint-up(sm){
+			margin-left: rem(30px);
+		}
+		width: rem(45);
+		height: rem(41);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media-breakpoint-up(xxl){
+			margin-top: 5px;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt-col{
+		font-weight: 800;
+		font-size: rem(24px);
+		line-height: (29/24);
+		letter-spacing: 2.5px;
+
+		@include media-breakpoint-up(xxl){
+			padding-left: rem(48px);
+			//padding-top: 10px;
+			position: relative;
+			top: 10px;
+		}
+	}
+	&__inp-col{
+		@include media-breakpoint-up(lg){
+			padding: 17px rem(45) 0 rem(39);
+		}
+	}
+	&__inp-row{
+		@include roww(0);
+		margin-bottom: rem(15);
+	}
+	.sPercents__input{
+		font-size: 14px;
+		line-height: (16/14);
+		color: rgba(0, 0, 0, 0.4);
+
+		border: 1px solid rgba($black, .3)!important;
+		border-right: none!important;
+		padding: 13px 16px;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		font-weight: 600;
+
+		font-size: 14px;
+		line-height: 1;
+		padding: 14px 16px;
+		min-width: rem(147);
+	}
+	&__inp-descr{
+		font-size: 12px;
+		line-height: (14/14);
+	}
+	&__{}
+	&__{}
+} // end.sPercents

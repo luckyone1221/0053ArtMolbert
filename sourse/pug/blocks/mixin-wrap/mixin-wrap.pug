@@ -10,16 +10,16 @@ include components/img.pug
 include components/btn.pug
 
 
-mixin arrow(className)
-	if className
-		.swiper-prev(class=className)
+mixin arrow(mod, className='')
+	if mod
+		.swiper-prev(class=`${mod}-swiper-prev ${className}`)
 			+icon('chevron-left')
-		.swiper-next(class=className)
+		.swiper-next(class=`${mod}-swiper-next ${className}`)
 			+icon('chevron-right')
 	else
-		.swiper-prev
+		.swiper-prev(class=`${className}`)
 			+icon('chevron-left')
-		.swiper-next
+		.swiper-next(class=`${className}`)
 			+icon('chevron-right')
 //- /arrow for swiper-slider
 

@@ -10,6 +10,10 @@ include ../blocks/sWho/_sWho.pug
 include ../blocks/sPopular/_sPopular.pug
 include ../blocks/sStyle/_sStyle.pug
 include ../blocks/sNew/_sNew.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sInstagram/_sInstagram.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sPercents/_sPercents.pug
 
 block variables
 	- let  mainPage= null 
@@ -31,6 +35,11 @@ block pagecontent
 	+sPopular()
 	+sStyle()
 	+sNew()
+	+sPresents()
+	+sInstagram()
+	+sPercents()
+	+sForm()
+	+footer()
 	//+soc()
 	//a(href="")
 	////- img(src="img/", alt="")
@@ -68,9 +77,6 @@ block pagecontent
 	//		+e.content content 2
 	//		+e.content content 3
 	//		+e.content content 4
-	+sForm()
-	+sContact()
-	+footer()
 
 
 

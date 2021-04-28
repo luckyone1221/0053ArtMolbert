@@ -1,38 +1,40 @@
 mixin sNew(data)
 	// start sNew
 	+b.SECTION.sNew.section#sNew&attributes(attributes)
-		+b.section-title--line-r.text-end
+		+b.section-title--line-l
 			+e.container.container
 				h2
-					span НОВЫЕ
+					span.outlined-txt НОВЫЕ
 					br
-					span.outlined-txt.ms ПОСТУПЛЕНИЯ
+					span.ms ПОСТУПЛЕНИЯ
 		+e.container.container
 			+e.slide-wrap
 				.swiper-container.sNew-slider-js
 					+e.nav
-						+arrow()
+						+arrow('sNew')
 					.swiper-wrapper
-						+sNewSlide({
-							txtItem: 'NEW',
-							sale: false,
-							imgNum: 1,
-						})
-						+sNewSlide({
-							txtItem: false,
-							sale: '-50%',
-							imgNum: 2,
-						})
-						+sNewSlide({
-							txtItem: 'BEST SELLER',
-							sale: false,
-							imgNum: 3,
-						})
-						+sNewSlide({
-							txtItem: 'NEW',
-							sale: false,
-							imgNum: 4,
-						})
+						-for (var i = 1; i < 5; i++)
+							+sNewSlide({
+								txtItem: 'NEW',
+								sale: false,
+								imgNum: 1,
+							})
+							+sNewSlide({
+								txtItem: false,
+								priceOld: true,
+								sale: '-50%',
+								imgNum: 2,
+							})
+							+sNewSlide({
+								txtItem: 'BEST SELLER',
+								sale: false,
+								imgNum: 3,
+							})
+							+sNewSlide({
+								txtItem: 'NEW',
+								sale: false,
+								imgNum: 4,
+							})
 	// end sNew
 
 mixin sNewSlide(data)
@@ -43,7 +45,8 @@ mixin sNewSlide(data)
 					+icon('heart')
 				+e.top-row.row.align-items-center
 					if data.txtItem
-						+e.txt-col.col-auto=data.txtItem
+						.col-auto
+							+e.txt-item=data.txtItem
 					if data.sale
 						.col-auto
 							+e.sale=data.sale
@@ -53,8 +56,15 @@ mixin sNewSlide(data)
 				+e.author Александр Воцмуш
 				+e.name На Финском заливе
 				+e.size 60 x 159 cm
-				+e.lower-row.row.align-items-center
-					+e.price-col.col-auto 140 000 ₽
+				+e.lower-row.row.align-items-end
+					+e.price-col.col-auto
+						if data.priceOld
+							+e.price-old
+								span.price 140 000
+								span.currency ₽
+						+e.price-curr
+							span.price 140 000
+							span.currency ₽
 					.col-auto
 						+e.bag-btn(href="#")
 							+icon('shopping-bag')

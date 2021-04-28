@@ -345,11 +345,10 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 30,
 		navigation: {
-			nextEl: '.swiper-next',
-			prevEl: '.swiper-prev'
+			nextEl: '.headerBlock-swiper-next',
+			prevEl: '.headerBlock-swiper-prev'
 		},
 		pagination: {
-			//el: $(this).find('.swiper-pagination'),
 			el: '.swiper-pagination',
 			type: 'bullets',
 			clickable: true
@@ -361,8 +360,24 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 20,
 		navigation: {
-			nextEl: $(this).find('.swiper-next'),
-			prevEl: $(this).find('.swiper-prev')
+			nextEl: '.sNew-swiper-next',
+			prevEl: '.sNew-swiper-prev'
+		}
+	}); //
+
+	var sPresentsSlider = new Swiper('.sPresents-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sPresents-swiper-next',
+			prevEl: '.sPresents-swiper-prev'
+		},
+		pagination: {
+			//el: $(this).find('.sPresents-pagination'),
+			el: '.sPresents-pagination',
+			type: 'bullets',
+			clickable: true
 		}
 	}); //end luckyone Js
 	//todo

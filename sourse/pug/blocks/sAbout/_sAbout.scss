@@ -43,23 +43,11 @@
 		}
 	}
 	&__arrow-btn{
-		@extend .btn-default;
-
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-
-		.icon{
-			font-size: rem(18);
-		}
-
-		min-width: rem(100);
+		@extend .arrow-btn;
 
 		margin-bottom: rem(72);
-
 		@include media-breakpoint-up(xl){
 			margin-left: calc(var(--padding-left, 100px) - 15px);
-			min-height: rem(60);
 		}
 	}
 	&__data-box{

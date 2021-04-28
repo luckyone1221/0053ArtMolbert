@@ -2,8 +2,32 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
 			.row
+				+e.img-col.col-md-5.col-xl-6.d-none.d-md-block
+					+e.img-cont
+						+e.img
+							img(loading="lazy" src='img/@2x/sForm-img.jpg' alt="")
+					+e.txt
+						| Мы поможем с выбором
+						|
+						br.d-none.d-xl-block
+						| произведения искусства
+						|
+						br.d-none.d-xl-block
+						| для вашего интерьера
+				+e.form-col.col-md-7.col-xl-6
+					+e.form-cont
+						+e.title
+							h2
+								span.outlined-txt есть
+								br
+								span вопросы
+							p
+								| Оставьте заявку, наш искусствовед-дизайнер, свяжеться и проконсультирует Вас.
+						+form-wrap()
+							+inp3('Name', 'text')
+							+inp3('Phone ', 'tell')
+							+inp3('E-mail ', 'email')(value="roman@mail.com")
+							+e.send-btn-cont
+								+e.send-btn(type='submit') отправить
 	// end sForm

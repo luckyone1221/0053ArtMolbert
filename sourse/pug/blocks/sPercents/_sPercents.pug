@@ -1,0 +1,26 @@
+mixin sPercents(data)
+	// start sPercents
+	+b.sPercents.section#sPercents&attributes(attributes)
+		+e.container.container
+			+e.row.row.gy-4
+				+e.title-col.col-lg-auto
+					+e.txt-row.row
+						+e.ten-col.col-auto
+							+e.ten 10
+							+e.percents
+								img(loading="lazy" src="img/svg/percents.svg" alt="")
+						+e.txt-col.col
+							| Получи  на
+							br
+							| свою первую
+							br
+							| покупку
+				+e.inp-col.col-lg
+					+e.inp-row.row.align-items-start
+						.col
+							+e.INPUT.input.form-control(type="text" placeholder='E-mail')
+						.col-auto
+							+e.btn(type="button") подписаться
+					+e.inp-descr Подписавшись Вы соглашаетесь на политику конфиденциальности & использования
+
+	// end sPercents

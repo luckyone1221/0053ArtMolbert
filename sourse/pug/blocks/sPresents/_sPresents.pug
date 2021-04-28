@@ -1,0 +1,45 @@
+mixin sPresents(data)
+	// start sPresents
+	+b.SECTION.sPresents.section#sPresents&attributes(attributes)
+		+b.section-title--line-r.text-end
+			+e.container.container
+				h2
+					span ПОДАРКИ
+		.container
+			+e.row.row
+				+e.slider-col.col-lg
+					+e.slider-wrap
+						//-nav
+						.sPresents-swiper-prev
+							+icon('arrow-l-long')
+						.sPresents-swiper-next
+							+icon('arrow-r-long')
+						//
+						.swiper-container.sPresents-slider-js
+							.swiper-wrapper
+								+sPresentsSlide()
+								+sPresentsSlide()
+								+sPresentsSlide()
+							.swiper-pagination.sPresents-pagination
+				+e.txt-col.col-lg-auto
+					+e.descr Эксклюзивные подарки, от наших авторов можно купить онлайн. Выбирайте в электронном каталоге и заказывайте оригинальные предметы и авторские аксессуары с фрагментами произведений художников.
+					+e.choise-btn(href='#') выбрать подарок
+	// end sPresents
+
+mixin sPresentsSlide()
+	.swiper-slide
+		+e.s-row.row
+			+e.s-txt-col.col-md
+				+e.name(href='#')
+					| книга
+					br
+					| “День рождения
+					br
+					| второго пилота”
+				+e.author Александр Войцеховский
+				+e.price
+					span.price 1500
+					span.currency ₽
+			+e.s-img-col.col-md-auto
+				+e.s-img(href='#')
+					img(loading="lazy" src=`img/@2x/sPresent-img.png` alt="")
