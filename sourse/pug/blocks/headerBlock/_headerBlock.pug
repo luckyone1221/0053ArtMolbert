@@ -6,11 +6,17 @@ mixin headerBlock()
 				.swiper-container.headerBlock-slider-js
 					.swiper-wrapper
 						+hBFistSlide()
-						- for (var i = 0; i < 5; i++)
+						+hBFistSlide2()
+						+hBFistSlide3()
+						+hBFistSlide4()
+						+hBFistSlide5()
+						+hBFistSlide6()
+						//-- for (var i = 0; i < 5; i++)
 							+hBFistSlide()
-					+e.arrow-cont
-						+arrow('headerBlock')
-					.swiper-pagination
+					+e.slider-nav
+						+e.arrow-cont
+							+arrow('headerBlock')
+						.swiper-pagination
 	// end headerBlock
 
 mixin hBFistSlide()
@@ -33,3 +39,63 @@ mixin hBFistSlide()
 					img(loading="lazy" src="img/@2x/hb-slide-3.jpg" alt="")
 				+e.img--4
 					img(loading="lazy" src="img/@2x/hb-slide-4.jpg" alt="")
+
+mixin hBFistSlide2()
+	.swiper-slide
+		+e.slide-content
+			+b.hb-slide-2
+				+e.bg
+					img(loading="lazy" src="img/@2x/header-bl-slide-2.jpg" alt="")
+				+e.title
+					h2
+						span.outlined-txt НАЙДИ
+						span.ms ИСКУССТВО
+						span.outlined-txt которое
+						span.ms ты любишь
+
+mixin hBFistSlide3()
+	.swiper-slide
+		+e.slide-content
+			+b.hb-slide-2
+				+e.bg
+					img(loading="lazy" src="img/@2x/header-bl-slide-3.jpg" alt="")
+				+e.title
+					h2
+						span.outlined-txt ВАШ
+						span.ms ВЫБОР
+						span.outlined-txt СТАЛ
+						span.ms ПРОЩЕ
+
+mixin hBFistSlide4()
+	.swiper-slide
+		+e.slide-content
+			+b.hb-slide-3
+				+e.bg
+					img(loading="lazy" src="img/@2x/header-bl-slide-4.jpg" alt="")
+				+e.content
+					h2 ПОДАРКИ
+					+e.btn-cont
+						+e.btn(href='#') КУПИТЬ
+
+mixin hBFistSlide5()
+	.swiper-slide
+		+e.slide-content
+			+b.hb-slide-5
+				+e.bg
+					img(loading="lazy" src="img/@2x/header-bl-slide-5.jpg" alt="")
+				+e.wrap.text-md-end
+					+e.content
+						h2 ПОДАРКИ
+						+e.btn-cont
+							+e.btn(href='#') КУПИТЬ
+
+mixin hBFistSlide6()
+	.swiper-slide
+		+e.slide-content
+			+b.hb-slide-3
+				+e.bg
+					img(loading="lazy" src="img/@2x/header-bl-slide-6.jpg" alt="")
+				+e.content
+					h2 ПОДАРКИ
+					+e.btn-cont
+						+e.btn(href='#') КУПИТЬ
