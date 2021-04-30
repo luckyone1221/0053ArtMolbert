@@ -6,6 +6,37 @@
 		--sTPB: #{rem(35px)};
 	}
 
+	&.sNew-p-alt{
+		@include media-breakpoint-up(md){
+			--sPT: #{rem(75)};
+			--sPB: #{rem(75)};
+		}
+
+		.sNew__nav{
+			margin-bottom: rem(20);
+		}
+	}
+	&__title-alt{
+		h2{
+			font-weight: 600;
+			font-size: rem(24px);
+			line-height: 1;
+			text-transform: uppercase;
+
+			color: $black;
+			margin-bottom: 0;
+		}
+
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(-30px);
+		}
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(-43px);
+		}
+	}
+
+	//
 	.section-title{
 		&__container{
 			@include media-breakpoint-up(xl){
@@ -116,22 +147,7 @@
 		top: 12px;
 		left: 12px;
 	}
-	&__txt-item{
-		font-weight: 800;
-		font-size: rem(14);
-		line-height: 1;
-		color: $orange2;
-		padding: rem(8px);
-	}
-	&__sale{
-		padding: rem(7) rem(9);
-		border: 2px solid $orange2;
 
-		font-weight: 600;
-		font-size: 12px;
-		line-height: 1;
-		color: $orange2;
-	}
 	&__img{
 		width: 100%;
 		height: rem(288);
@@ -233,3 +249,20 @@
 	&__{}
 	&__{}
 } // end.sNew
+
+.red-txt-box{
+	font-weight: 800;
+	font-size: rem(14);
+	line-height: 1;
+	color: $orange2;
+	padding: rem(8px);
+}
+.sale-box{
+	padding: rem(7) rem(9);
+	border: 2px solid $orange2;
+
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1;
+	color: $orange2;
+}

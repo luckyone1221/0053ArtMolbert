@@ -1,5 +1,13 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -286,7 +294,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '01-2.png';
+	screenName = '02.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -379,7 +387,89 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
-	}); //end luckyone Js
+	}); //prod card
+
+	var prodCardThumb = new Swiper('.sProdCard-thumb-js', {
+		slidesPerView: 'auto',
+		direction: 'vertical',
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.sProdCard-thumb-next-js',
+			prevEl: '.sProdCard-thumb-prev-js'
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6
+		}
+	});
+	var prodCardSlider = new Swiper('.sProdCard-slider-js', {
+		spaceBetween: 30,
+		thumbs: {
+			swiper: prodCardThumb
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		},
+		loop: true
+	}); //select2
+	//console.log($.select2);
+
+	$('.default-select2-js').select2({
+		//minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select2-dd"
+	});
+	$('.default-select2-js').one('select2:open', function (e) {
+		var ph = this.getAttribute('data-search-placeholder') || 'Поиск';
+		$('input.select2-search__field').prop('placeholder', ph);
+	});
+
+	function makeDDGroup() {
+		var _iterator = _createForOfIteratorHelper(arguments),
+				_step;
+
+		try {
+			var _loop = function _loop() {
+				var parentSelect = _step.value;
+				var parent = document.querySelector(parentSelect);
+				if (!parent) return {
+					v: void 0
+				}; // childHeads, kind of funny))
+
+				var ChildHeads = parent.querySelectorAll('.dd-head-js');
+				$(ChildHeads).click(function () {
+					var clickedHead = this;
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+								$(this).toggleClass('active');
+							});
+						} else {
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function () {
+								$(this).removeClass('active');
+							});
+						}
+					});
+				});
+			};
+
+			for (_iterator.s(); !(_step = _iterator.n()).done;) {
+				var _ret = _loop();
+
+				if (_typeof(_ret) === "object") return _ret.v;
+			}
+		} catch (err) {
+			_iterator.e(err);
+		} finally {
+			_iterator.f();
+		}
+	}
+
+	makeDDGroup('.sProdCard-dd-group-js'); //end luckyone Js
 	//todo
 	// 1. clean js file
 }

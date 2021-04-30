@@ -279,7 +279,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '01-2.png';
+	screenName = '02.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -386,6 +386,81 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	//prod card
+	let prodCardThumb = new Swiper('.sProdCard-thumb-js', {
+		slidesPerView: 'auto',
+		direction: 'vertical',
+		spaceBetween: 10,
+
+		navigation: {
+			nextEl: '.sProdCard-thumb-next-js',
+			prevEl: '.sProdCard-thumb-prev-js',
+		},
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
+
+	});
+	let prodCardSlider = new Swiper('.sProdCard-slider-js', {
+		spaceBetween: 30,
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3,
+		},
+		loop: true,
+	});
+
+	//select2
+	//console.log($.select2);
+	$('.default-select2-js').select2({
+		//minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select2-dd",
+	});
+
+	$('.default-select2-js').one('select2:open', function(e) {
+		let ph = this.getAttribute('data-search-placeholder') || 'Поиск';
+		$('input.select2-search__field').prop('placeholder', ph);
+	});
+
+	function makeDDGroup(){
+		for (let parentSelect of arguments){
+			let parent = document.querySelector(parentSelect);
+			if (!parent) return;
+
+			// childHeads, kind of funny))
+			let ChildHeads = parent.querySelectorAll('.dd-head-js');
+
+			$(ChildHeads).click(function (){
+				let clickedHead = this;
+
+				$(ChildHeads).each(function (){
+					if (this === clickedHead){
+						//parent element gain toggle class, style head change via parent
+						$(this.parentElement).toggleClass('active');
+						$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+							$(this).toggleClass('active');
+						});
+					}
+					else{
+						$(this.parentElement).removeClass('active');
+						$(this.parentElement).find('.dd-content-js').slideUp(function (){
+							$(this).removeClass('active');
+						});
+					}
+				});
+
+			});
+		}
+	}
+	makeDDGroup(
+		'.sProdCard-dd-group-js',
+	);
 
 	//end luckyone Js
 

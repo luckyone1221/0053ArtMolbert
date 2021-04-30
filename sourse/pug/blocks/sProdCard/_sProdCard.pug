@@ -1,0 +1,152 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			block
+			+e.main-row.row
+				+e.left-col.col-md-7.col-xxl-6
+					+sProdCardSliders()
+				+e.right-col.col-md-5.col-xxl-6
+					+sProdCardDescrContent()
+				+e.left-col.col-md-7.col-xxl-6
+					+sProdCardDD()
+				+e.right-col.col-md-5.col-xxl-6
+					+sProdCardAnother()
+
+	// end sProdCard
+mixin sProdCardAnother()
+	+e.another-row.row.align-items-center
+		+e.a-txt.col.text-end Другие произведения автора
+		.col-auto
+			+e.a-btn(href='#')
+				+icon('arrow-r')
+	+e.a-baner
+		img(loading="lazy" src="img/@2x/sProdCard-baner.jpg" alt="")
+
+mixin sProdCardDD()
+	+b.sPC-dd.sProdCard-dd-group-js
+		+e.items
+			+sProdCardDDItem('детали')
+			+sProdCardDDItem('СЕРТИФИКАТ ПОДЛИННОСТИ')
+			+sProdCardDDItem('ДОСТАВКА')
+			+sProdCardDDItem('ЗАДАТЬ НАМ ВОПРОС')
+			+sProdCardDDItem('ВОЗВРАТ')
+
+mixin sProdCardDDItem(name, activeClasses='')
+	+e.item(class=activeClasses)
+		+e.head.dd-head-js
+			+e.name=name
+			+e.cross
+		+e.content.dd-content-js(class=activeClasses)
+			if block
+				block
+			else
+				+sProdCardDDItemTable()
+
+mixin sProdCardDDItemTable()
+	+e.table
+		+sProdCardDDItemTR('Ориентация', 'Горизонтальная')
+		+sProdCardDDItemTR('Цвет', 'Белый, Зеленый, Красный')
+		+sProdCardDDItemTR('Год', '2015')
+		+sProdCardDDItemTR('Коллекция', 'Лучшие абстрактные картины, Сюрреализм')
+		+sProdCardDDItemTR('Стиль', 'Абстракционизм')
+		+sProdCardDDItemTR('Темы', 'Абстракция')
+		+sProdCardDDItemTR('Техника', 'Масло, Холст')
+
+mixin sProdCardDDItemTR(name, val)
+	+e.t-row.row
+		+e.name-col.col-sm-auto=name
+		+e.val-col.col-sm=val
+
+mixin socSelect2(selectName, optionsArr=['tg', 'tw', 'fb', 'vk', 'in'], keyClass='default-select2-js')
+	+b.custom-select
+		select(name=selectName class=keyClass data-search-placeholder="Поиск")
+			if block
+				block
+			else
+				option(value='ok' data-icon='ok' selected) ok
+				- for (let item of optionsArr)
+					option(value=item data-icon=item)=item
+
+mixin sProdCardDescrContent()
+	+b.descr-c
+		+e.top-row.row.justify-content-between
+			.col-auto
+				+b.red-txt-box NEW
+			.col-auto
+				+b.sale-box -50%
+		+e.H1.name
+			| КАРТИНА
+			| “Абстракция”
+		+e.author Даша Рыбина
+		+e.code-row.row.align-items-center
+			+e.code-txt.col-auto Код товара
+			+e.code-val.col-auto
+				+e.code 32 55 84 35
+				+e.frame без рамки
+		+e.select
+			+socSelect2('size-select', [''])
+				option(value='150 x 259.8 cm.' selected) 150 x 259.8 cm.
+				option(value="999 x 111 cm.") 999 x 111 cm.
+				option(value="3324 x 3512 cm.") 3324 x 3512 cm.
+		+e.amount-row.row.justify-content-center.align-items-center
+			.col-auto
+				+e.a-btn--min(type="button")
+					+icon('minus')
+			.col-auto
+				+e.INPUT.amount-inp(type="number" value="1")
+			.col-auto
+				+e.a-btn--plus(type="button")
+					+icon('plus')
+		+e.price-bl.text-center
+			+e.price--old
+				span 300 000
+				span.currency ₽
+			+e.price--current
+				span 190 000
+				span.currency ₽
+		+e.buy-btn(href='#') купить
+		+e.like-btn(href='#')
+			+icon('heart')
+			span В избранное
+
+mixin sProdCardSliders()
+	+b.sPCsliders
+		+e.row.row
+			.col-auto
+				+e.thumb-wrap
+					//-prev
+					.swiper-prev.sProdCard-thumb-prev-js
+						+icon('chevron-top')
+					.swiper-container.sProdCard-thumb-js
+						.swiper-wrapper
+							+prodCardThumb(1)
+							+prodCardThumb(2)
+							+prodCardThumb(3)
+							+prodCardThumb(4)
+							+prodCardThumb(5)
+							+prodCardThumb(5)
+					//-next
+					.swiper-next.sProdCard-thumb-next-js
+						+icon('chevron-bottom')
+			+e.slider-col.col
+				+e.slider-wrap
+					.swiper-container.sProdCard-slider-js
+						.swiper-wrapper
+							+prodCardSlide(1)
+							+prodCardSlide(2)
+							+prodCardSlide(3)
+							+prodCardSlide(4)
+							+prodCardSlide(5)
+							+prodCardSlide(5)
+
+mixin prodCardThumb(imgNum)
+	.swiper-slide
+		+e.th-item
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-thumb-${imgNum}.jpg` alt="")
+
+mixin prodCardSlide(imgNum)
+	.swiper-slide
+		+e.slide-img
+			+e.img-inner
+				img.swiper-lazy(src="#" data-src=`img/@2x/prod-cardsl-${imgNum}.png` alt="")

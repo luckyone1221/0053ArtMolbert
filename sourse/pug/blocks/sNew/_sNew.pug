@@ -1,12 +1,15 @@
 mixin sNew(data)
 	// start sNew
-	+b.SECTION.sNew.section#sNew&attributes(attributes)
-		+b.section-title--line-l
-			+e.container.container
-				h2
-					span.outlined-txt НОВЫЕ
-					br
-					span.ms ПОСТУПЛЕНИЯ
+	+b.SECTION.sNew--js.section#sNew&attributes(attributes)
+		if block
+			block
+		else
+			+b.section-title--line-l
+				+e.container.container
+					h2
+						span.outlined-txt НОВЫЕ
+						br
+						span.ms ПОСТУПЛЕНИЯ
 		+e.container.container
 			+e.slide-wrap
 				.swiper-container.sNew-slider-js
@@ -46,10 +49,10 @@ mixin sNewSlide(data)
 				+e.top-row.row.align-items-center
 					if data.txtItem
 						.col-auto
-							+e.txt-item=data.txtItem
+							+b.red-txt-box=data.txtItem
 					if data.sale
 						.col-auto
-							+e.sale=data.sale
+							+b.sale-box=data.sale
 				+e.img
 					img(loading="lazy" src=`img/@2x/sNew-${data.imgNum}.png` alt="")
 			+e.txt-cont

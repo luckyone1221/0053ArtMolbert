@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -708,7 +709,7 @@
 			</section>
 			<!-- end sStyle-->
 			<!-- start sNew-->
-			<section class="sNew section" id="sNew">
+			<section class="sNew sNew--js section" id="sNew">
 				<div class="section-title section-title--line-l">
 					<div class="section-title__container container">
 						<h2><span class="outlined-txt">НОВЫЕ</span><br/><span class="ms">ПОСТУПЛЕНИЯ</span></h2>
@@ -738,7 +739,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -774,7 +775,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__sale">-50%
+													<div class="sale-box">-50%
 													</div>
 												</div>
 											</div>
@@ -812,7 +813,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">BEST SELLER
+													<div class="red-txt-box">BEST SELLER
 													</div>
 												</div>
 											</div>
@@ -848,7 +849,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -884,7 +885,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -920,7 +921,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__sale">-50%
+													<div class="sale-box">-50%
 													</div>
 												</div>
 											</div>
@@ -958,7 +959,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">BEST SELLER
+													<div class="red-txt-box">BEST SELLER
 													</div>
 												</div>
 											</div>
@@ -994,7 +995,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -1030,7 +1031,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -1066,7 +1067,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__sale">-50%
+													<div class="sale-box">-50%
 													</div>
 												</div>
 											</div>
@@ -1104,7 +1105,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">BEST SELLER
+													<div class="red-txt-box">BEST SELLER
 													</div>
 												</div>
 											</div>
@@ -1140,7 +1141,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -1176,7 +1177,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -1212,7 +1213,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__sale">-50%
+													<div class="sale-box">-50%
 													</div>
 												</div>
 											</div>
@@ -1250,7 +1251,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">BEST SELLER
+													<div class="red-txt-box">BEST SELLER
 													</div>
 												</div>
 											</div>
@@ -1286,7 +1287,7 @@
 											</svg></a>
 											<div class="sNew__top-row row align-items-center">
 												<div class="col-auto">
-													<div class="sNew__txt-item">NEW
+													<div class="red-txt-box">NEW
 													</div>
 												</div>
 											</div>
@@ -1673,6 +1674,7 @@
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/libs.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

@@ -1,0 +1,75 @@
+// start .sSafe
+.sSafe {
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(79px)};
+		--sPB: #{rem(150px)};
+	}
+	&__row{
+		margin-left: auto;
+		margin-right: auto;
+
+		@include media-breakpoint-down(lg){
+			@include roww(rem(20));
+		}
+		@include media-breakpoint-up(lg){
+			max-width: rem(914px);
+		}
+	}
+	&__col{
+		@include media-breakpoint-up(lg){
+			min-height: rem(78);
+		}
+		&:nth-child(1){
+			@include media-breakpoint-up(xxl){
+				width: 27.5%;
+			}
+		}
+		&:nth-child(2){
+			@include media-breakpoint-up(lg){
+				border-left: 1px solid $gray-610;
+				border-right: 1px solid $gray-610;
+			}
+
+			@include media-breakpoint-up(xxl){
+				width: 41.5%;
+			}
+		}
+		&:nth-child(3){
+			@include media-breakpoint-up(xxl){
+				width: 30%;
+			}
+		}
+	}
+	&__sub-row{
+		@include roww(rem(16));
+	}
+	&__img{
+		width: rem(40);
+		height: rem(41);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title{
+		font-family: $mono;
+		font-weight: bold;
+		line-height: (21/18);
+		margin-bottom: rem(4);
+	}
+	&__descr{
+		font-size: 14px;
+		line-height: (16/14);
+
+		color: $black;
+	}
+	&__{}
+	&__{}
+} // end.sSafe

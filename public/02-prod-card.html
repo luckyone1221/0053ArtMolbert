@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-xl-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<div class="menu-mobile__logo"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+					</div>
+					<ul class="menu">
+						<li class="menu-item"><a href="#">Искусство</a></li>
+						<li class="menu-item"><a href="#">Авторы</a></li>
+						<li class="menu-item"><a href="#">Коллекции</a></li>
+						<li class="menu-item"><a href="#">Подарки</a></li>
+					</ul>
+					<div class="mnu-search">
+						<button class="mnu-search__btn" type="button">
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
+						</button>
+						<div class="label custop-ph-label"><input class="mnu-search__input form-control has-ph-js" type="text" name="name"/><span class="l-title">Search</span>
+						</div>
+					</div>
+					<div class="il-row row d-sm-none">
+						<div class="col-auto"><a class="il-row__link il-row__link--heart" href="#">
+							<svg class="icon icon-heart ">
+								<use xlink:href="img/svg/sprite.svg#heart"></use>
+							</svg>
+							<svg class="icon icon-heart2 ">
+								<use xlink:href="img/svg/sprite.svg#heart2"></use>
+							</svg></a>
+						</div>
+						<div class="col-auto">
+							<div class="il-row__link-user"><a class="il-row__link il-row__link--user" href="#">
+								<svg class="icon icon-user ">
+									<use xlink:href="img/svg/sprite.svg#user"></use>
+								</svg></a>
+								<div class="lc-dd">
+									<div class="lc-dd__inner">
+										<div class="lc-dd__header"><span>Приветствуем,</span><br/><span>tatiana.nikolaeva</span>
+										</div>
+										<div class="lc-dd__content">
+											<div class="lc-dd__menu">
+												<ul>
+													<li><a href="#">Данные аккаунта</a></li>
+													<li><a href="#">Контактные данные</a></li>
+													<li><a href="#">Мои заказы</a></li>
+													<li><a href="#">Избранное</a></li>
+												</ul>
+											</div><a class="lc-dd__log-out" href="#"><span class="lc-dd__icon"><img loading="lazy" src="img/svg/logout.svg" alt=""/></span><span class="lc-dd__lo-txt">Выйти</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto d-none">
+							<div class="il-row__link-user"><a class="il-row__user-img" href="#"><img loading="lazy" src="img/@2x/soc-img.png" alt=""/></a>
+								<div class="lc-dd">
+									<div class="lc-dd__inner">
+										<div class="lc-dd__header"><span>Приветствуем,</span><br/><span>tatiana.nikolaeva</span>
+										</div>
+										<div class="lc-dd__content">
+											<div class="lc-dd__menu">
+												<ul>
+													<li><a href="#">Данные аккаунта</a></li>
+													<li><a href="#">Контактные данные</a></li>
+													<li><a href="#">Мои заказы</a></li>
+													<li><a href="#">Избранное</a></li>
+												</ul>
+											</div><a class="lc-dd__log-out" href="#"><span class="lc-dd__icon"><img loading="lazy" src="img/svg/logout.svg" alt=""/></span><span class="lc-dd__lo-txt">Выйти</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto"><a class="il-row__link il-row__link--bag" href="#">
+							<svg class="icon icon-bag ">
+								<use xlink:href="img/svg/sprite.svg#bag"></use>
+							</svg></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- start header-->
+			<header class="header" id="header">
+			</header>
+			<!-- end header-->
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
+				<div class="container">
+					<div class="top-nav__row row align-items-center">
+						<div class="top-nav__menu-col col d-xl-block d-none">
+							<ul class="menu">
+								<li class="menu-item"><a href="#">Искусство</a></li>
+								<li class="menu-item"><a href="#">Авторы</a></li>
+								<li class="menu-item"><a href="#">Коллекции</a></li>
+								<li class="menu-item"><a href="#">Подарки</a></li>
+							</ul>
+						</div>
+						<div class="col-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						</div>
+						<div class="col">
+							<div class="top-nav__sub-row row justify-content-end align-items-center">
+								<div class="col-auto d-none d-md-block me-xxl-3">
+									<div class="mnu-search">
+										<button class="mnu-search__btn" type="button">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+										<div class="label custop-ph-label"><input class="mnu-search__input form-control has-ph-js" type="text" name="name"/><span class="l-title">Search</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="top-nav__dd-link-cont">
+										<div class="top-nav__dd-link">€
+										</div>
+										<div class="dd-content">
+											<ul>
+												<li><a href="#">€</a></li>
+												<li><a href="#">₽</a></li>
+												<li><a href="#">$</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="top-nav__dd-link-cont">
+										<div class="top-nav__dd-link">EN
+										</div>
+										<div class="dd-content">
+											<ul>
+												<li><a href="#">RUS</a></li>
+												<li><a href="#">UKR</a></li>
+												<li><a href="#">POL</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto d-none d-sm-block">
+									<div class="il-row row">
+										<div class="col-auto"><a class="il-row__link il-row__link--heart" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg>
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+										</div>
+										<div class="col-auto">
+											<div class="il-row__link-user"><a class="il-row__link il-row__link--user" href="#">
+												<svg class="icon icon-user ">
+													<use xlink:href="img/svg/sprite.svg#user"></use>
+												</svg></a>
+												<div class="lc-dd">
+													<div class="lc-dd__inner">
+														<div class="lc-dd__header"><span>Приветствуем,</span><br/><span>tatiana.nikolaeva</span>
+														</div>
+														<div class="lc-dd__content">
+															<div class="lc-dd__menu">
+																<ul>
+																	<li><a href="#">Данные аккаунта</a></li>
+																	<li><a href="#">Контактные данные</a></li>
+																	<li><a href="#">Мои заказы</a></li>
+																	<li><a href="#">Избранное</a></li>
+																</ul>
+															</div><a class="lc-dd__log-out" href="#"><span class="lc-dd__icon"><img loading="lazy" src="img/svg/logout.svg" alt=""/></span><span class="lc-dd__lo-txt">Выйти</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-auto d-none">
+											<div class="il-row__link-user"><a class="il-row__user-img" href="#"><img loading="lazy" src="img/@2x/soc-img.png" alt=""/></a>
+												<div class="lc-dd">
+													<div class="lc-dd__inner">
+														<div class="lc-dd__header"><span>Приветствуем,</span><br/><span>tatiana.nikolaeva</span>
+														</div>
+														<div class="lc-dd__content">
+															<div class="lc-dd__menu">
+																<ul>
+																	<li><a href="#">Данные аккаунта</a></li>
+																	<li><a href="#">Контактные данные</a></li>
+																	<li><a href="#">Мои заказы</a></li>
+																	<li><a href="#">Избранное</a></li>
+																</ul>
+															</div><a class="lc-dd__log-out" href="#"><span class="lc-dd__icon"><img loading="lazy" src="img/svg/logout.svg" alt=""/></span><span class="lc-dd__lo-txt">Выйти</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-auto"><a class="il-row__link il-row__link--bag" href="#">
+											<svg class="icon icon-bag ">
+												<use xlink:href="img/svg/sprite.svg#bag"></use>
+											</svg></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto ms-auto d-xl-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end top-nav-->
+			<!-- start topLine-->
+			<div class="topLine d-xl-block d-none" id="topLine">
+				<div class="container">
+					<div class="topLine__row row">
+						<div class="topLine__col topLine__col--left col-auto text-end">Скидки на летний сезон:
+						</div>
+						<div class="topLine__col topLine__col--mid col-auto">10% скидка на покупку от 20 000 руб. по коду Summer10
+						</div>
+						<div class="topLine__col topLine__col--right col">5% скидка на покупку от 50 000 руб. по коду Summer15
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end topLine-->
+			<!-- start sProdCard-->
+			<section class="sProdCard section" id="sProdCard">
+				<div class="container">
+					<nav>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+							<li class="breadcrumb-item"><a href="#"><span>Живопись</span></a></li>
+							<li class="breadcrumb-item active"><a href="#"><span>Картина</span></a></li>
+						</ol>
+					</nav>
+					<div class="sProdCard__main-row row">
+						<div class="sProdCard__left-col col-md-7 col-xxl-6">
+							<div class="sPCsliders">
+								<div class="sPCsliders__row row">
+									<div class="col-auto">
+										<div class="sPCsliders__thumb-wrap">
+											<div class="swiper-prev sProdCard-thumb-prev-js">
+												<svg class="icon icon-chevron-top ">
+													<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
+												</svg>
+											</div>
+											<div class="swiper-container sProdCard-thumb-js">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<div class="sPCsliders__th-item"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-thumb-1.jpg" alt=""/>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__th-item"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-thumb-2.jpg" alt=""/>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__th-item"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-thumb-3.jpg" alt=""/>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__th-item"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-thumb-4.jpg" alt=""/>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__th-item"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-thumb-5.jpg" alt=""/>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__th-item"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-thumb-5.jpg" alt=""/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-next sProdCard-thumb-next-js">
+												<svg class="icon icon-chevron-bottom ">
+													<use xlink:href="img/svg/sprite.svg#chevron-bottom"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="sPCsliders__slider-col col">
+										<div class="sPCsliders__slider-wrap">
+											<div class="swiper-container sProdCard-slider-js">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<div class="sPCsliders__slide-img">
+															<div class="sPCsliders__img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-cardsl-1.png" alt=""/>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__slide-img">
+															<div class="sPCsliders__img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-cardsl-2.png" alt=""/>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__slide-img">
+															<div class="sPCsliders__img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-cardsl-3.png" alt=""/>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__slide-img">
+															<div class="sPCsliders__img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-cardsl-4.png" alt=""/>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__slide-img">
+															<div class="sPCsliders__img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-cardsl-5.png" alt=""/>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="sPCsliders__slide-img">
+															<div class="sPCsliders__img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-cardsl-5.png" alt=""/>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sProdCard__right-col col-md-5 col-xxl-6">
+							<div class="descr-c">
+								<div class="descr-c__top-row row justify-content-between">
+									<div class="col-auto">
+										<div class="red-txt-box">NEW
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="sale-box">-50%
+										</div>
+									</div>
+								</div>
+								<h1 class="descr-c__name">
+									КАРТИНА
+									“Абстракция”
+								</h1>
+								<div class="descr-c__author">Даша Рыбина
+								</div>
+								<div class="descr-c__code-row row align-items-center">
+									<div class="descr-c__code-txt col-auto">Код товара
+									</div>
+									<div class="descr-c__code-val col-auto">
+										<div class="descr-c__code">32 55 84 35
+										</div>
+										<div class="descr-c__frame">без рамки
+										</div>
+									</div>
+								</div>
+								<div class="descr-c__select">
+									<div class="custom-select">
+										<select class="default-select2-js" name="size-select" data-search-placeholder="Поиск">
+											<option value="150 x 259.8 cm." selected="selected">150 x 259.8 cm.</option>
+											<option value="999 x 111 cm.">999 x 111 cm.</option>
+											<option value="3324 x 3512 cm.">3324 x 3512 cm.</option>
+										</select>
+									</div>
+								</div>
+								<div class="descr-c__amount-row row justify-content-center align-items-center">
+									<div class="col-auto">
+										<button class="descr-c__a-btn descr-c__a-btn--min" type="button">
+											<svg class="icon icon-minus ">
+												<use xlink:href="img/svg/sprite.svg#minus"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="col-auto"><input class="descr-c__amount-inp" type="number" value="1"/>
+									</div>
+									<div class="col-auto">
+										<button class="descr-c__a-btn descr-c__a-btn--plus" type="button">
+											<svg class="icon icon-plus ">
+												<use xlink:href="img/svg/sprite.svg#plus"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="descr-c__price-bl text-center">
+									<div class="descr-c__price descr-c__price--old"><span>300 000</span><span class="currency">₽</span>
+									</div>
+									<div class="descr-c__price descr-c__price--current"><span>190 000</span><span class="currency">₽</span>
+									</div>
+								</div><a class="descr-c__buy-btn" href="#">купить</a><a class="descr-c__like-btn" href="#">
+								<svg class="icon icon-heart ">
+									<use xlink:href="img/svg/sprite.svg#heart"></use>
+								</svg><span>В избранное</span></a>
+							</div>
+						</div>
+						<div class="sProdCard__left-col col-md-7 col-xxl-6">
+							<div class="sPC-dd sProdCard-dd-group-js">
+								<div class="sPC-dd__items">
+									<div class="sPC-dd__item">
+										<div class="sPC-dd__head dd-head-js">
+											<div class="sPC-dd__name">детали
+											</div>
+											<div class="sPC-dd__cross">
+											</div>
+										</div>
+										<div class="sPC-dd__content dd-content-js">
+											<div class="sPC-dd__table">
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Ориентация
+													</div>
+													<div class="sPC-dd__val-col col-sm">Горизонтальная
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Цвет
+													</div>
+													<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Год
+													</div>
+													<div class="sPC-dd__val-col col-sm">2015
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Коллекция
+													</div>
+													<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Стиль
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракционизм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Темы
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракция
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Техника
+													</div>
+													<div class="sPC-dd__val-col col-sm">Масло, Холст
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sPC-dd__item">
+										<div class="sPC-dd__head dd-head-js">
+											<div class="sPC-dd__name">СЕРТИФИКАТ ПОДЛИННОСТИ
+											</div>
+											<div class="sPC-dd__cross">
+											</div>
+										</div>
+										<div class="sPC-dd__content dd-content-js">
+											<div class="sPC-dd__table">
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Ориентация
+													</div>
+													<div class="sPC-dd__val-col col-sm">Горизонтальная
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Цвет
+													</div>
+													<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Год
+													</div>
+													<div class="sPC-dd__val-col col-sm">2015
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Коллекция
+													</div>
+													<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Стиль
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракционизм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Темы
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракция
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Техника
+													</div>
+													<div class="sPC-dd__val-col col-sm">Масло, Холст
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sPC-dd__item">
+										<div class="sPC-dd__head dd-head-js">
+											<div class="sPC-dd__name">ДОСТАВКА
+											</div>
+											<div class="sPC-dd__cross">
+											</div>
+										</div>
+										<div class="sPC-dd__content dd-content-js">
+											<div class="sPC-dd__table">
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Ориентация
+													</div>
+													<div class="sPC-dd__val-col col-sm">Горизонтальная
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Цвет
+													</div>
+													<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Год
+													</div>
+													<div class="sPC-dd__val-col col-sm">2015
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Коллекция
+													</div>
+													<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Стиль
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракционизм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Темы
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракция
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Техника
+													</div>
+													<div class="sPC-dd__val-col col-sm">Масло, Холст
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sPC-dd__item">
+										<div class="sPC-dd__head dd-head-js">
+											<div class="sPC-dd__name">ЗАДАТЬ НАМ ВОПРОС
+											</div>
+											<div class="sPC-dd__cross">
+											</div>
+										</div>
+										<div class="sPC-dd__content dd-content-js">
+											<div class="sPC-dd__table">
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Ориентация
+													</div>
+													<div class="sPC-dd__val-col col-sm">Горизонтальная
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Цвет
+													</div>
+													<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Год
+													</div>
+													<div class="sPC-dd__val-col col-sm">2015
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Коллекция
+													</div>
+													<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Стиль
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракционизм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Темы
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракция
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Техника
+													</div>
+													<div class="sPC-dd__val-col col-sm">Масло, Холст
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sPC-dd__item">
+										<div class="sPC-dd__head dd-head-js">
+											<div class="sPC-dd__name">ВОЗВРАТ
+											</div>
+											<div class="sPC-dd__cross">
+											</div>
+										</div>
+										<div class="sPC-dd__content dd-content-js">
+											<div class="sPC-dd__table">
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Ориентация
+													</div>
+													<div class="sPC-dd__val-col col-sm">Горизонтальная
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Цвет
+													</div>
+													<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Год
+													</div>
+													<div class="sPC-dd__val-col col-sm">2015
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Коллекция
+													</div>
+													<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Стиль
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракционизм
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Темы
+													</div>
+													<div class="sPC-dd__val-col col-sm">Абстракция
+													</div>
+												</div>
+												<div class="sPC-dd__t-row row">
+													<div class="sPC-dd__name-col col-sm-auto">Техника
+													</div>
+													<div class="sPC-dd__val-col col-sm">Масло, Холст
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sProdCard__right-col col-md-5 col-xxl-6">
+							<div class="sProdCard__another-row row align-items-center">
+								<div class="sProdCard__a-txt col text-end">Другие произведения автора
+								</div>
+								<div class="col-auto"><a class="sProdCard__a-btn" href="#">
+									<svg class="icon icon-arrow-r ">
+										<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="sProdCard__a-baner"><img loading="lazy" src="img/@2x/sProdCard-baner.jpg" alt=""/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sProdCard-->
+			<!-- start sNew-->
+			<section class="sNew sNew--js section sNew-p-alt" id="sNew">
+				<div class="container">
+					<div class="sNew__title-alt">
+						<h2>ПОХОЖИЕ ТОВАРЫ</h2>
+					</div>
+				</div>
+				<div class="sNew__container container">
+					<div class="sNew__slide-wrap">
+						<div class="swiper-container sNew-slider-js">
+							<div class="sNew__nav">
+								<div class="swiper-prev sNew-swiper-prev ">
+									<svg class="icon icon-chevron-left ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-next sNew-swiper-next ">
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sNew-->
+			<!-- start sNew-->
+			<section class="sNew sNew--js section sNew-p-alt" id="sNew">
+				<div class="container">
+					<div class="sNew__title-alt">
+						<h2>Просмотренные ранее</h2>
+					</div>
+				</div>
+				<div class="sNew__container container">
+					<div class="sNew__slide-wrap">
+						<div class="swiper-container sNew-slider-js">
+							<div class="sNew__nav">
+								<div class="swiper-prev sNew-swiper-prev ">
+									<svg class="icon icon-chevron-left ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-next sNew-swiper-next ">
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="sale-box">-50%
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-2.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-old"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">BEST SELLER
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-3.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sNew__item">
+										<div class="sNew__box"><a class="sNew__like-btn" href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a>
+											<div class="sNew__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div>
+											<div class="sNew__img"><img loading="lazy" src="img/@2x/sNew-4.png" alt=""/>
+											</div>
+										</div>
+										<div class="sNew__txt-cont">
+											<div class="sNew__author">Александр Воцмуш
+											</div>
+											<div class="sNew__name">На Финском заливе
+											</div>
+											<div class="sNew__size">60 x 159 cm
+											</div>
+											<div class="sNew__lower-row row align-items-end">
+												<div class="sNew__price-col col-auto">
+													<div class="sNew__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="sNew__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sNew-->
+			<!-- start sSafe-->
+			<div class="sSafe section" id="sSafe">
+				<div class="container">
+					<div class="sSafe__row row gy-4">
+						<div class="sSafe__col col-sm-4">
+							<div class="sSafe__sub-row row gy-2 justify-content-lg-start">
+								<div class="col-auto col-sm-12 col-md-auto">
+									<div class="sSafe__img"><img loading="lazy" src="img/svg/vantage-1.svg" alt=""/>
+									</div>
+								</div>
+								<div class="col col-sm-12 col-md col-lg-auto">
+									<div class="sSafe__title">Безопасно
+									</div>
+									<div class="sSafe__descr">
+										Защищенные
+										<br class="d-none d-sm-block"/>платежи!
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sSafe__col col-sm-4">
+							<div class="sSafe__sub-row row gy-2 justify-content-lg-center">
+								<div class="col-auto col-sm-12 col-md-auto">
+									<div class="sSafe__img"><img loading="lazy" src="img/svg/vantage-2.svg" alt=""/>
+									</div>
+								</div>
+								<div class="col col-sm-12 col-md col-lg-auto">
+									<div class="sSafe__title">Доставка
+									</div>
+									<div class="sSafe__descr">
+										Быстрая доставку
+										<br class="d-none d-sm-block"/>по всему миру!
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sSafe__col col-sm-4">
+							<div class="sSafe__sub-row row gy-2 justify-content-lg-end">
+								<div class="col-auto col-sm-12 col-md-auto">
+									<div class="sSafe__img"><img loading="lazy" src="img/svg/vantage-3.svg" alt=""/>
+									</div>
+								</div>
+								<div class="col col-sm-12 col-md col-lg-auto">
+									<div class="sSafe__title">Возврат
+									</div>
+									<div class="sSafe__descr">
+										Вы можете вернуть
+										<br class="d-none d-sm-block"/>товар в течении 14 дней!
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sSafe-->
+			<footer class="footer">
+				<div class="footer__container container">
+					<div class="footer__row row gy-5">
+						<div class="footer__col col-sm-6 col-md-4 col-xl-auto">
+							<div class="footer__title">ПОКУПАТЕЛЯМ
+							</div>
+							<div class="footer__links">
+								<ul>
+									<li><a href="#">Как сделать заказ</a></li>
+									<li><a href="#">Оплата и доставка</a></li>
+									<li><a href="#">Возврат товара</a></li>
+									<li><a href="#">Публичная оферта</a></li>
+									<li><a href="#">Политика конфиденциальности</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-5 col-xl-auto">
+							<div class="footer__title">КОНТАКТЫ
+							</div><a class="footer__lonely-link footer__lonely-link--tell" href="tel:+78124380114">+7 (812) 438-01-14</a><a class="footer__lonely-link footer__lonely-link--mail" href="mailto:info@molbertgallery.ru">info@molbertgallery.ru</a>
+							<div class="footer__lonely-link footer__lonely-link--shedule">Пн-Вс  09.00-20.00
+							</div>
+							<div class="footer__address">191186, Россия, г. Санкт-Петербург,<br/>ул. Большая Конюшенная, 11
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-3 col-xl-auto">
+							<div class="footer__title">О НАС
+							</div>
+							<div class="footer__links">
+								<ul>
+									<li><a href="#">Кто мы</a></li>
+									<li><a href="#">Реквизиты</a></li>
+									<li><a href="#">Отзывы</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-4 col-xl-auto">
+							<div class="footer__title">ПАРТНЕРАМ
+							</div>
+							<div class="footer__links">
+								<ul>
+									<li><a href="#">Заявка на сотрудничество</a></li>
+									<li><a href="#">Услуги</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-4 col-xl-auto">
+							<div class="footer__title">МЫ В СОЦ.СЕТЯХ
+							</div>
+							<div class="footer__soc-row row gy-3">
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-inst ">
+										<use xlink:href="img/svg/sprite.svg#inst"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-yt ">
+										<use xlink:href="img/svg/sprite.svg#yt"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-gPlus ">
+										<use xlink:href="img/svg/sprite.svg#gPlus"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="footer__sub-title">Мы приниаем
+							</div>
+							<div class="footer__accept-row row gy-3">
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-visa ">
+										<use xlink:href="img/svg/sprite.svg#visa"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-mastercard ">
+										<use xlink:href="img/svg/sprite.svg#mastercard"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-paypal ">
+										<use xlink:href="img/svg/sprite.svg#paypal"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-uni-pay ">
+										<use xlink:href="img/svg/sprite.svg#uni-pay"></use>
+									</svg></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__copy-right">© Copyright 2020 artmolbert Limited. All rights reserved.
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta at blanditiis error quis incidunt ratione. Expedita ullam repellendus possimus eos ex quidem quisquam quam voluptatum ipsa doloremque molestias accusamus rem deserunt tenetur incidunt exercitationem laboriosam consequuntur, repudiandae dolore odit earum voluptatibus autem amet! Eligendi omnis necessitatibus at accusamus excepturi, debitis magnam alias. Dolore voluptatum hic assumenda quo non facilis sed sint fugit ex quam. Natus eligendi sequi repellat earum doloremque vero consequatur repudiandae ipsam libero odit alias quia expedita magni fugit perspiciatis aperiam maxime illo, voluptatem omnis tenetur suscipit molestias beatae distinctio totam? Excepturi quaerat dolorum natus reprehenderit voluptas officiis totam recusandae harum autem ipsum laboriosam dolorem, tempore, maxime nam dignissimos aperiam cupiditate accusantium deleniti. Iusto harum facere blanditiis minima dolor assumenda error nisi soluta perferendis animi? Distinctio maxime, perspiciatis neque dignissimos reprehenderit obcaecati quo provident, dolores labore laborum adipisci at veniam reiciendis aliquam nemo minus cumque sequi quasi architecto aliquid magnam tempore expedita? Repellendus veniam est dicta nihil, aspernatur molestiae ducimus quibusdam voluptatibus saepe. Repudiandae itaque rem animi voluptas voluptate? Expedita numquam architecto totam quo quod quibusdam ut, rem earum, similique dolorum excepturi nobis quis, tempore et exercitationem repellendus! Ipsa, consequuntur praesentium quaerat excepturi voluptas, delectus maiores necessitatibus explicabo consequatur neque optio doloremque temporibus similique doloribus pariatur velit aliquam magni cum! Repellat mollitia quam saepe porro, culpa unde! Molestias laboriosam vitae nihil facere corporis cupiditate eos ea saepe dolorem, eaque laudantium quam distinctio, fugit placeat maxime enim dicta rem eligendi accusamus, eum id. Incidunt, illum quaerat ab modi iste quasi non laboriosam unde, atque fugit delectus cumque eligendi sapiente dolore autem omnis alias, adipisci dicta illo corrupti optio? Esse error numquam fugit itaque ipsam fugiat nostrum repudiandae recusandae, nobis repellat aperiam officiis labore possimus neque velit, a obcaecati illum quasi suscipit veritatis! Ea earum obcaecati impedit possimus adipisci vitae animi commodi consequatur omnis amet? Quod sed doloremque id nesciunt iure recusandae iste voluptatibus unde eligendi porro nulla architecto voluptates quasi temporibus, fugit asperiores quis! Facere non, illo quisquam cumque voluptate earum voluptatem corporis eum cum commodi omnis autem sequi nisi sit iure aperiam iusto dolor harum? Ex eligendi vero reiciendis culpa ipsa suscipit debitis, quam earum maxime. Nemo officia quasi consequuntur velit rem culpa ipsa quas earum excepturi amet fuga eum consequatur, repellendus commodi facere maxime. Magni voluptas consequatur facere dolores ut culpa, expedita fugit? Quae placeat asperiores est, fuga eligendi eius similique necessitatibus explicabo? Eveniet corporis tempora reiciendis, dolore ipsam quos aut ea alias amet nihil? Excepturi maiores mollitia inventore voluptate est ullam reprehenderit itaque iure quasi non molestias, vel veniam alias! Obcaecati laudantium ex incidunt autem ipsam a suscipit, in dolorem error deserunt minima laborum nulla facere officia sunt. Aliquid repellat rem sunt reprehenderit. Fugit perferendis officiis labore nesciunt pariatur optio minima aperiam et similique maxime odio laudantium eligendi deleniti culpa exercitationem impedit, fugiat magni vero temporibus eos obcaecati esse possimus asperiores dolores! Quod iure eius minus adipisci? Architecto sapiente corrupti error! Magni ea tempore laboriosam minus totam facilis iure voluptates nostrum officiis dignissimos nihil necessitatibus quam in, commodi molestiae expedita facere asperiores ad! Corporis delectus magnam, vel aspernatur rem laboriosam autem soluta aliquam iure impedit? Deserunt ad nam excepturi, quibusdam qui nisi necessitatibus, voluptatibus deleniti quo cumque ipsam cum repudiandae impedit in a laborum dignissimos ratione labore vitae officia quaerat magnam. Saepe ullam omnis harum reprehenderit beatae pariatur est? Animi dolores necessitatibus corrupti velit architecto obcaecati doloremque vero sapiente quaerat praesentium? Veniam illum iusto ea sunt deserunt, omnis consequatur est adipisci aliquid magnam quibusdam animi debitis magni excepturi accusamus vel facilis ipsa blanditiis expedita cumque fugiat! Aspernatur voluptatum quos corrupti blanditiis? Sapiente pariatur sunt culpa nesciunt consequatur eaque veritatis laborum possimus, saepe at nam amet exercitationem assumenda temporibus illo aliquid asperiores quae impedit beatae voluptatem? Vitae, totam quos odio nobis perferendis unde! Voluptates voluptatum, sint iure aliquid quis quod voluptatem saepe et similique, repellendus dolorum. Sed vel illo quisquam cum aut, ullam impedit quaerat a odit alias fugit repudiandae. Consequuntur voluptas explicabo eligendi, beatae esse nihil laborum illo rerum ab dolorum nemo iste est doloremque magnam. Repellendus in voluptates cumque ullam, cum odio quam deserunt optio doloremque modi nobis itaque cupiditate ea, neque exercitationem laborum, obcaecati mollitia earum debitis accusamus nisi dolorem autem libero dicta! Atque ad doloribus distinctio cumque nobis labore placeat? Necessitatibus, accusamus deleniti numquam asperiores distinctio tempora consectetur minus veritatis cum repellat architecto voluptatibus minima omnis aliquam fugit maiores eos veniam consequatur, rerum ex illo facere? Suscipit distinctio qui quae asperiores voluptates nobis unde, nisi soluta natus aspernatur tempore libero, nam iure? Modi, explicabo iusto tenetur placeat praesentium, sunt voluptatum soluta reiciendis quam atque hic dolorum in, esse consequuntur voluptate animi doloremque saepe expedita voluptates? Consectetur sint assumenda quaerat deleniti. Exercitationem, quas beatae. Ut ipsam eum nisi fugiat numquam saepe tempore dolorem necessitatibus consequatur, voluptatem eligendi magni laborum nostrum sed accusamus ducimus laudantium minus animi. Totam expedita vero voluptas libero ipsa! Facilis ullam vel libero aliquam sit itaque quasi delectus a rerum laborum, possimus, eos inventore nulla, excepturi exercitationem aliquid unde porro. Odio nulla labore repellat exercitationem cupiditate voluptates, obcaecati asperiores eligendi delectus commodi deserunt provident sit nam praesentium culpa cum amet explicabo, nisi dolores? Recusandae provident veritatis porro corporis voluptatem assumenda necessitatibus at. Sint quam in facere nihil hic cupiditate porro sapiente nisi, et ratione placeat commodi unde excepturi error repellat earum perspiciatis quisquam amet tempora. Expedita, ipsum? Molestias mollitia voluptatum sapiente inventore, perspiciatis ab laudantium, voluptatibus amet aliquid laborum autem? Adipisci aliquid voluptatum numquam quas quia ullam error sed illo, sit minima, consectetur temporibus unde? Rerum minima necessitatibus est expedita assumenda nesciunt, modi ea fugiat consectetur ad corporis velit ducimus quia aut cumque iusto voluptatibus et perferendis ipsum! Excepturi perferendis veritatis cumque quo, quod facere facilis impedit magnam numquam repellat ad tempora! Pariatur distinctio laborum, quaerat dolorem nostrum totam animi. Ipsa distinctio consectetur explicabo culpa, esse reprehenderit eveniet obcaecati, repudiandae dolorum vero expedita modi exercitationem iure aut provident sit cum adipisci consequatur id delectus voluptatum fuga ducimus natus. Cum, aperiam impedit error illo hic similique quo iure omnis ullam sapiente modi.</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__polite">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/libs.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

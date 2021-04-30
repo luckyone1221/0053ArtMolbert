@@ -1,0 +1,32 @@
+mixin sSafe(data)
+	// start sSafe
+	+b.sSafe.section#sSafe&attributes(attributes)
+		.container
+			+e.row.row.gy-4
+				+sSafeItem(1,'Безопасно', 'justify-content-lg-start')
+					| Защищенные
+					|
+					br.d-none.d-sm-block
+					| платежи!
+				+sSafeItem(2,'Доставка', 'justify-content-lg-center')
+					| Быстрая доставку
+					|
+					br.d-none.d-sm-block
+					| по всему миру!
+				+sSafeItem(3,'Возврат', 'justify-content-lg-end')
+					| Вы можете вернуть
+					|
+					br.d-none.d-sm-block
+					| товар в течении 14 дней!
+	// end sSafe
+
+mixin sSafeItem(imgNum, title, rowClasses)
+	+e.col.col-sm-4
+		+e.sub-row.row.gy-2(class=rowClasses)
+			.col-auto.col-sm-12.col-md-auto
+				+e.img
+					img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
+			.col.col-sm-12.col-md.col-lg-auto
+				+e.title=title
+				+e.descr
+					block

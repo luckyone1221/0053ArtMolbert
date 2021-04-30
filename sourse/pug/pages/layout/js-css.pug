@@ -1,12 +1,12 @@
 mixin allcss()
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	link(rel="stylesheet", href="libs/select2/css/select2.min.css")
 	link(href="libs/@fancyapps/fancybox/jquery.fancybox.min.css", rel="stylesheet")
 	link(href="css/main.min.css", rel="stylesheet")
 
 mixin allcjs()
 	//- script(src="js/libs.js")
-
 	//- script(src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js")
 
 	// modal libs
@@ -19,6 +19,7 @@ mixin allcjs()
 
 	script(src="libs/inputmask/inputmask.min.js")
 	script(src="js/libs.js")
+	script(src="libs/select2/js/select2.full.min.js")
 	script(src="js/common.js")
 	//- cut text libs
 	//- script(src="libs/jquery.morelines.min.js")
