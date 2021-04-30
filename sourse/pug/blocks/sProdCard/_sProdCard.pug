@@ -83,7 +83,8 @@ mixin sProdCardDescrContent()
 			+e.code-txt.col-auto Код товара
 			+e.code-val.col-auto
 				+e.code 32 55 84 35
-				+e.frame без рамки
+				+e.frame.text-primary.d-none без рамки
+				+e.frame--link(href='#') Таблица размеров
 		+e.select
 			+socSelect2('size-select', [''])
 				option(value='150 x 259.8 cm.' selected) 150 x 259.8 cm.

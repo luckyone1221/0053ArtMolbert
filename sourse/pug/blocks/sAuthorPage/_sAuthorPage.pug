@@ -1,0 +1,72 @@
+mixin sAuthorPage(data)
+	// start sAuthorPage
+	+b.SECTION.sAuthorPage.section#sAuthorPage&attributes(attributes)
+		.container
+			block
+			+e.row.row
+				+e.left-col.col-md-7.col-xxl-6
+					+AuthotPortrait()
+				+e.right-col.col-md-5.col-xxl-6
+					+authotorAchievements()
+	// end sAuthorPage
+
+mixin AuthotPortrait()
+	+e.portrait-cont
+		+e.portrait
+			+e.img-cont
+				+e.img-stab
+					img(loading="lazy" src='img/@2x/user-stab.png' alt="")
+				+e.img
+					img(loading="lazy" src="img/@2x/author-img.jpg" alt="")
+
+mixin authotorAchievements()
+	+e.achievements
+		+e.name
+			h1
+				span Александр
+				span Воцмуш
+		+e.country-bl
+			+icon('location')
+			+e.c-name Россия
+		+e.a-items.a-items-js
+			+e.visible
+				+AchievementItem()
+					span
+						| Cеребрянная медаль на
+						|
+					strong SHENZHEN INTERNATIONAL WATERCOLOUR BIENNIAL
+				+AchievementItem()
+					span
+						| Проект
+						|
+					strong  «Перекресток столетий»
+				+AchievementItem()
+					span
+						| Грамота
+						|
+					strong «Фестиваль галерей»
+				+AchievementItem()
+					span
+						| Выставка в Лос Анджелесе в галерее
+						|
+					strong Nucleus
+			+e.hidden.a-hidden-items-js
+				+AchievementItem()
+				+AchievementItem()
+				+AchievementItem()
+			+e.show-more.a-show-more-js
+				span.show Смотреть все
+				span.hide Скрыть
+
+mixin AchievementItem()
+	+e.a-item
+		+e.a-icon
+			img(loading="lazy" src='img/svg/nomination-icon.svg' alt="")
+		+e.a-txt
+			if block
+				block
+			else
+				span
+					| Проект
+					|
+				strong  «lalalalal»

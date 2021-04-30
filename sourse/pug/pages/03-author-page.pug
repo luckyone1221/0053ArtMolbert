@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sPaltes/_sPaltes.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sPopular/_sPopular.pug
+include ../blocks/sStyle/_sStyle.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sInstagram/_sInstagram.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sPercents/_sPercents.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sAuthorPage/_sAuthorPage.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+	+top-nav(true)
+	+topLine()
+	+sAuthorPage()
+		+breadcrumb('Главная', 'Автор', 'Художники', 'Александр Воцмуш')
+	+sNew()(class="sNew-p-alt")
+		.container
+			+e.title-alt
+				h2 ПОХОЖИЕ ТОВАРЫ
+	//+sNew()(class="sNew-p-alt")
+	//	.container
+	//		+e.title-alt
+	//			h2 Просмотренные ранее
+	+sSafe()
+	+footer()

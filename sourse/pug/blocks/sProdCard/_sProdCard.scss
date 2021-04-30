@@ -366,6 +366,9 @@
 	&__code-val{
 		display: flex;
 		align-items: center;
+		@include media-breakpoint-up(xxl){
+			padding-left: 0;
+		}
 	}
 	&__code{
 		display: inline-flex;
@@ -385,9 +388,19 @@
 		}
 	}
 	&__frame{
+		@include mt();
+		display: block;
+		text-decoration: none;
+
 		font-size: 14px;
 		line-height: (17/14);
 		color: $black;
+		&--link{
+			&:hover{
+				color: $orange2;
+				text-shadow: 0 0 .7px rgba($orange2, 1);
+			}
+		}
 	}
 	&__select{
 		padding-bottom: rem(22);

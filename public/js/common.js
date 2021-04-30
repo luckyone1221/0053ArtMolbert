@@ -282,15 +282,15 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
+	JSCCommon.mobileMenu(); //JSCCommon.inputMask();
+
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.checkEmptyVal();
 	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
 	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
-	$('.has-ph-js.select-custom--js').on('select', JSCCommon.checkEmptyVal); // JSCCommon.CustomInputFile(); 
+	$('.has-ph-js.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal); // JSCCommon.CustomInputFile(); 
 
 	var x = window.location.host;
 	var screenName;
@@ -469,7 +469,17 @@ function eventHandler() {
 		}
 	}
 
-	makeDDGroup('.sProdCard-dd-group-js'); //end luckyone Js
+	makeDDGroup('.sProdCard-dd-group-js');
+	$('.a-show-more-js').click(function () {
+		var grandParent = this.closest('.a-items-js');
+		if (!grandParent) return;
+		var hiddenItemsCont = grandParent.querySelector('.a-hidden-items-js');
+		if (!hiddenItemsCont) return;
+		$(this).toggleClass('active');
+		$(hiddenItemsCont).slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //end luckyone Js
 	//todo
 	// 1. clean js file
 }

@@ -266,7 +266,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
+	//JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
@@ -274,7 +274,7 @@ function eventHandler() {
 
 	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
 	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
-	$('.has-ph-js.select-custom--js').on('select', JSCCommon.checkEmptyVal);
+	$('.has-ph-js.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal);
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -461,6 +461,18 @@ function eventHandler() {
 	makeDDGroup(
 		'.sProdCard-dd-group-js',
 	);
+	$('.a-show-more-js').click(function (){
+		let grandParent = this.closest('.a-items-js');
+		if (!grandParent) return
+		let hiddenItemsCont = grandParent.querySelector('.a-hidden-items-js');
+		if (!hiddenItemsCont) return
+
+		$(this).toggleClass('active');
+		$(hiddenItemsCont).slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	})
+
 
 	//end luckyone Js
 

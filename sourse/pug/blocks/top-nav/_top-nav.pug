@@ -9,7 +9,7 @@ mixin mob-mnu()
 			+inpBlock()
 			+iconLinksRow('d-sm-none')
 
-mixin top-nav() 
+mixin top-nav(showActive)
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
@@ -32,7 +32,10 @@ mixin top-nav()
 								+e.dd-link EN
 								+ddContent(['RUS', 'UKR', 'POL'])
 						.col-auto.d-none.d-sm-block
-							+iconLinksRow()
+							if showActive
+								+iconLinksRow2()
+							else
+								+iconLinksRow()
 				.col-auto.ms-auto.d-xl-none
 					+b.toggle-menu-mobile--js
 						span
@@ -46,10 +49,10 @@ mixin ddContent(linksArr=['1', '2'])
 
 mixin inpBlock()
 	+b.mnu-search
-		+e.btn(type='button')
+		//-+e.btn(type='button')
 			+icon('search')
-		+inp3('Search', 'text')
-		//-+e.INPUT.input(type="text" name='search')
+		//-+inp3('Search', 'text')
+		+e.INPUT.input.form-control(type='text' placeholder='Search')&attributes(attributes)
 
 mixin inp3(ph, type, val='', labelClass='custop-ph-label', name="name")
 	.label(class=labelClass)
@@ -61,14 +64,13 @@ mixin iconLinksRow(addClasses)
 	+b.il-row.row(class=addClasses)
 		.col-auto
 			+e.link--heart(href='#')
-				+icon('heart')
 				+icon('heart2')
 		.col-auto
 			+e.link-user
 				+e.link--user(href='#')
 					+icon('user')
 				+lcDD()
-		.col-auto.d-none
+		//-.col-auto.d-none
 			+e.link-user
 				+e.user-img(href='#')
 					img(loading="lazy" src='img/@2x/soc-img.png' alt="")
@@ -77,6 +79,25 @@ mixin iconLinksRow(addClasses)
 			+e.link--bag(href='#')
 				+icon('bag')
 
+
+mixin iconLinksRow2(addClasses)
+	+b.il-row.row(class=addClasses)
+		.col-auto
+			+e.link--heart.active(href='#')
+				+icon('heart2')
+		//-.col-auto.d-none
+			+e.link-user
+				+e.link--user(href='#')
+					+icon('user')
+				+lcDD()
+		.col-auto
+			+e.link-user
+				+e.user-img(href='#')
+					img(loading="lazy" src='img/@2x/soc-img.png' alt="")
+				+lcDD()
+		.col-auto
+			+e.link--bag(href='#')
+				+icon('bag')
 mixin lcDD()
 	+b.lc-dd
 		+e.inner
