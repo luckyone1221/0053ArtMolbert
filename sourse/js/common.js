@@ -462,9 +462,13 @@ function eventHandler() {
 		});
 	})
 	makeDDGroup([
-		'.sProdCard-dd-group-js'
+		'.sProdCard-dd-group-js',
+		'.sProdCard-dd-group-js',
+		'.sProdCard-dd-group-js',
+		'.sProdCard-dd-group-js',
 	]);
-	//
+
+	//add to .f-hide-btn-js
 	$('.f-hide-btn-js').click(function (){
 		let ddContent = this.closest('.free-dd-content-js');
 		let parent = ddContent.parentElement;
@@ -474,6 +478,75 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		})
 	})
+
+	// rangle sliders
+	function currencyFormat(num) {
+		return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+	}
+	$(".range-wrap").each(function () {
+		let _this = $(this);
+		var $range= _this.find(".slider-js");
+		var $inputFrom = _this.find(".input_from");
+		var $inputTo = _this.find(".input_to");
+		var instance, from, to,
+			min = $range.data('min'),
+			max = $range.data('max');
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: false,
+			hide_from_to: true,
+			//here
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+
+			$inputFrom.prop("value", currencyFormat(from));
+			$inputTo.prop("value", currencyFormat(to));
+			// InputFormat();
+		}
+
+		$inputFrom.on("change input ", function () {
+			var val = +($(this).prop("value").replace(/\s/g, ''));
+			// validate
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", currencyFormat(val));
+			console.log(val)
+		});
+
+		$inputTo.on("change input ", function () {
+			var val = +($(this).prop("value").replace(/\s/g, ''));
+
+			// validate
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
+
+			instance.update({
+				to: val
+			});
+			$(this).prop("value", currencyFormat(val));
+		});
+
+	});
 
 	//
 	$('.a-show-more-js').click(function (){

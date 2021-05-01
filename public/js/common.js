@@ -117,7 +117,7 @@ var JSCCommon = {
 		}
 	},
 	mobileMenu: function mobileMenu() {
-		var _this = this;
+		var _this2 = this;
 
 		if (!this.menuMobileLink) return;
 		this.toggleMenu();
@@ -126,12 +126,12 @@ var JSCCommon = {
 
 			var link = event.target.closest(".navMenu__link"); // (1)
 
-			if (!container || link) _this.closeMenu();
+			if (!container || link) _this2.closeMenu();
 		}, {
 			passive: true
 		});
 		window.addEventListener('resize', function () {
-			if (window.matchMedia("(min-width: 1200px)").matches) _this.closeMenu();
+			if (window.matchMedia("(min-width: 1200px)").matches) _this2.closeMenu();
 		}, {
 			passive: true
 		});
@@ -468,7 +468,7 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
-	makeDDGroup(['.sProdCard-dd-group-js']); //
+	makeDDGroup(['.sProdCard-dd-group-js', '.sProdCard-dd-group-js', '.sProdCard-dd-group-js', '.sProdCard-dd-group-js']); //add to .f-hide-btn-js
 
 	$('.f-hide-btn-js').click(function () {
 		var ddContent = this.closest('.free-dd-content-js');
@@ -476,6 +476,76 @@ function eventHandler() {
 		$(parent).toggleClass('active');
 		$(ddContent).slideToggle(function () {
 			$(this).toggleClass('active');
+		});
+	}); // rangle sliders
+
+	function currencyFormat(num) {
+		return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+	}
+
+	$(".range-wrap").each(function () {
+		var _this = $(this);
+
+		var $range = _this.find(".slider-js");
+
+		var $inputFrom = _this.find(".input_from");
+
+		var $inputTo = _this.find(".input_to");
+
+		var instance,
+				from,
+				to,
+				min = $range.data('min'),
+				max = $range.data('max');
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: false,
+			hide_from_to: true,
+			//here
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+			$inputFrom.prop("value", currencyFormat(from));
+			$inputTo.prop("value", currencyFormat(to)); // InputFormat();
+		}
+
+		$inputFrom.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", currencyFormat(val));
+			console.log(val);
+		});
+		$inputTo.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
+
+			instance.update({
+				to: val
+			});
+			$(this).prop("value", currencyFormat(val));
 		});
 	}); //
 
