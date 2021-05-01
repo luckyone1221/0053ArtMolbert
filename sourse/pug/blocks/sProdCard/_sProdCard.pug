@@ -60,7 +60,7 @@ mixin sProdCardDDItemTR(name, val)
 
 mixin socSelect2(selectName, optionsArr=['tg', 'tw', 'fb', 'vk', 'in'], keyClass='default-select2-js')
 	+b.custom-select
-		select(name=selectName class=keyClass data-search-placeholder="Поиск")
+		select(name=selectName class=keyClass data-search-placeholder="Поиск")&attributes(attributes)
 			if block
 				block
 			else

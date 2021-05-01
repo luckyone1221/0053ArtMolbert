@@ -94,7 +94,7 @@
 		}
 	}
 	&__item{
-
+		position: relative;
 	}
 	&__nav{
 		display: flex;
@@ -141,6 +141,7 @@
 		.icon{
 			font-size: 32px;
 		}
+		@extend .like-btn-icon-css;
 	}
 	&__top-row{
 		position: absolute;
@@ -172,6 +173,8 @@
 		margin-bottom: rem(10);
 	}
 	&__name{
+		display: block;
+		text-decoration: none;
 		font-weight: 600;
 		//font-size: 18px;
 		line-height: 1;
@@ -236,8 +239,8 @@
 		align-items: center;
 		justify-content: center;
 
-		//border: 1px solid transparent;
-		border: 1px solid $orange2;
+		border: 1px solid transparent;
+		//border: 1px solid $orange2;
 		&:hover{
 			border: 1px solid $orange2;
 		}
@@ -246,7 +249,47 @@
 			font-size: rem(18);
 		}
 	}
-	&__{}
+
+
+	//
+	&.sAuthorWorks{
+		@include media-breakpoint-up(xxl){
+			--sPT: #{rem(77)};
+			--sPB: #{rem(100)};
+		}
+	}
+	&__author-row{
+		padding-bottom: rem(49px);
+	}
+	&__a-select{
+		width: rem(315);
+	}
+	&__items-row{
+		@include roww(rem(30));
+		--bs-gutter-y: #{rem(30)};
+		padding-bottom: 20px;
+		@include media-breakpoint-up(xl){
+			@include roww(20px);
+			--bs-gutter-y: 20px;
+			padding-bottom: 20px;
+		}
+
+		&--hidden{
+			display: none!important;
+			&.active{
+				display: flex!important;
+			}
+		}
+	}
+	.a-show-more-js{
+		padding-top: rem(37);
+		justify-content: flex-start;
+	}
+	&__a-col{
+		@media (min-width: 440px) and (max-width: 576px) {
+			width: 50%;
+		}
+	}
 	&__{}
 } // end.sNew
 

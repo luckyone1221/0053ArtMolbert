@@ -1,0 +1,66 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			block
+			+e.top-row.row.align-items-center.gy-3
+				.col
+					+b.section-title.pb-0
+						h1 искусство
+				.col-auto
+					+e.select
+						+socSelect2('sort-select', [''], 'select2-no-search-js')(data-placeholder="Сортировать")
+							option(value="" label="" selected)
+							option(value='Все новые') Все новые
+							option(value="По популярности") По популярности
+							option(value="По скидке") По скидке
+							option(value="От самой низкой цены") От самой низкой цены
+							option(value="От самой высокой цены") От самой высокой цены
+			+e.filter-col.col-xl-3
+				+e.f-items
+					+filterItem('Фильтры', 'active')
+						//-+customChBRow('живопись')(checked)
+						+e.plates-row.row.pb-3
+							+plateRowItem('Живопись')
+							+plateRowItem('Арт Деко')
+							+plateRowItem('Экспрессионизм')
+							+plateRowItem('Красный')
+						+e.discard-btn(href='#') Сбросить все
+					+filterItem('Категории')
+					+filterItem('темы')
+					+filterItem('стиль')
+					+filterItem('техника')
+					+filterItem('цена')
+					+filterItem('ориентация')
+					+filterItem('размер')
+					+filterItem('цвет')
+			+e.items-col
+	// end sCatalog
+
+mixin filterItem(title, activeClass)
+	+e.filter-item(class=activeClass)
+		+e.head.free-dd-head-js=title
+		+e.content.free-dd-content-js(class=activeClass)
+			+e.content-inner
+				if block
+					block
+				else
+					+customChBRow('something')(checked)
+			+e.hide-btn.f-hide-btn-js Скрыть
+
+mixin plateRowItem(txt)
+	.col-auto
+		+e.plate(href='#')=txt
+
+mixin customChBRow(txtVal)
+	+e.chb-row.row.flex-nowrap
+		.col
+			+customChB(txtVal)&attributes(attributes)
+		.col-auto
+			+e.chb-txt 50
+
+mixin customChB(txt='txt')
+	+b.LABEL.custom-chb
+		input(type="checkbox" class='invisible' name='')&attributes(attributes)
+		.square
+		.cc-txt=txt

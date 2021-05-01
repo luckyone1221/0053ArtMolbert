@@ -209,7 +209,7 @@
 		font-size: 14px!important;
 	}
 	.select2-selection__arrow{
-		height: rem(50)!important;
+		height: rem(48)!important;
 		width: rem(52)!important;
 		*{
 			display: none!important;
@@ -225,8 +225,7 @@
 	}
 
 	//opened
-	.select2.select2-container.select2-container--default.select2-container--open,
-	.select2-container--focus{
+	.select2.select2-container.select2-container--default.select2-container--open{
 		border: 1px solid $black!important;
 		border-bottom: 1px solid $black!important;
 		position: relative;

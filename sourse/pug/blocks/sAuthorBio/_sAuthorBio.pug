@@ -1,0 +1,45 @@
+mixin sAuthorBio(data)
+	// start sAuthorBio
+	+b.SECTION.sAuthorBio.section#sAuthorBio&attributes(attributes)
+		.container
+			+e.row.row
+				//-
+				+e.left-col.col-lg-6
+					+b.section-title
+						h2.outlined-txt Биография
+					+exponationLink('d-lg-none')
+				//-
+				+e.right-col.col-lg-6.d-none.d-lg-block
+					+exponationLink('d-none d-lg-block')
+				//-
+				+e.left-col.col-lg-6
+					+e.txt-box--1
+						| Родился в 1967 году в Омске. С 1971 года живет
+						|
+						br.d-none.d-xxl-block
+						| в Севастополе, куда Александр, с родителями переехал в детстве. Успешно закончил Крымское художественное училище. Затем учился во ВГИКе по курсу «Анимация». Сейчас Воцмуш занимается мультипликацией и режиссурой, пишет стихи, прозу, песни, сценарии.
+						|
+						br.d-none.d-xxl-block
+						| Эти таланты он относит к хобби.
+						|
+						br.d-none.d-xxl-block
+						| Oтдавая профессиональноепредпочтениеКартина Александра Воцмуша «Девочки рисуют» приняла участие в акварельной биеннале в городе Питтсбург, США в октябре 2016 года.  В это же время состоялась персональная выставка в Лос Анджелесе в галерее Nucleus. В организации выставки приняла участие галерея «Мольберт.»  Работы художника находятся в музейных и частных коллекциях в разных странах мира.
+				//-
+				+e.right-col.col-lg-6.a-items-js
+					+e.txt-box--2
+						| Картина Александра Воцмуша «Девочки рисуют» приняла участие в акварельной биеннале в городе Питтсбург, США в октябре 2016 года.  В это же время состоялась персональная выставка в Лос Анджелесе в галерее Nucleus. В организации выставки приняла участие галерея «Мольберт.»  Работы художника находятся в музейных и частных коллекциях в разных странах мира...
+					+e.hidden.a-hidden-items-js
+						+e.picture
+							img(loading="lazy" src="img/@2x/author-pic.jpg" alt="")
+					.show-more-link.a-show-more-js
+						span.show Читать все
+						span.hide Скрыть
+	// end sAuthorBio
+
+mixin exponationLink(addClasses='')
+	+b.exp-link(class=addClasses)
+		+e.row.row.align-items-center
+			+e.txt-col.col.col-lg-auto Выставки
+			.col-auto.col-lg
+				+e.btn(href='#')
+					+icon('arrow-r')

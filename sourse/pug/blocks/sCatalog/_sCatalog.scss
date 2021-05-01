@@ -1,0 +1,205 @@
+// start .sCatalog
+.sCatalog {
+	--sPT: #{rem(25px)};
+	--sPB: #{rem(70px)};
+
+	.section-title{
+
+	}
+	&__top-row{
+		padding-bottom: rem(70);
+	}
+	.section-title{
+		h1{
+			text-transform: uppercase;
+			font-size: rem(64px);
+			line-height: 1;
+			margin-bottom: 0;
+		}
+
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: 1;
+			display: block;
+			width: 100vw;
+			height: 1px;
+			background: $black;
+			right: calc(100% - 200px);
+			bottom: -20px;
+		}
+	}
+	&__select{
+		width: rem(318);
+	}
+
+	//
+	&__filter-item{
+		--f-head-aft-rot: 0deg;
+		&.active{
+			--f-head-aft-rot: 180deg;
+		}
+
+		margin-bottom: rem(37);
+	}
+	&__head{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		padding: rem(13) 0;
+		border-bottom: 1px solid $gray-610;
+
+		font-weight: 600;
+		font-size: rem(24px);
+		line-height: 1;
+
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: $black;
+
+		&:after{
+			@include mt();
+			transform: rotateX(var(--f-head-aft-rot, 0));
+			content: '';
+			flex-shrink: 0;
+			margin-left: rem(20);
+			width: rem(18);
+			height: rem(18);
+
+			background-image: url(../img/svg/chevron-bold-bot.svg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	&__content{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	//
+	&__content-inner{
+		padding: rem(30) 0;
+	}
+	&__plates-row{
+		--bs-gutter-y: #{rem(10)};
+		@include roww(rem(10));
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-y: #{rem(20)};
+			@include roww(rem(18));
+		}
+	}
+	&__plate{
+		@extend .btn;
+		@extend .btn-light;
+
+		display: inline-flex;
+		align-items: center;
+		padding: rem(10);
+
+		font-size: rem(14);
+		line-height: 1;
+		color: $gray-810;
+
+
+		&:after{
+			content: '';
+			flex-shrink: 0;
+			display: inline-block;
+			margin-left: rem(10);
+			width: rem(18);
+			height: rem(18);
+
+			background-image: url(../img/svg/close-cross.svg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	&__discard-btn{
+		font-weight: 600;
+		line-height: 1;
+		margin-bottom: rem(10);
+		text-decoration: none;
+	}
+	&__hide-btn{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		font-weight: 600;
+		line-height: 1;
+
+		&:after{
+			content: '';
+			flex-shrink: 0;
+			width: rem(18);
+			height: rem(18);
+			margin-left: rem(14);
+			transform: rotateX(180deg);
+
+			background-image: url(../img/svg/chevron-bold-bot.svg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sCatalog
+
+.custom-chb{
+	display: flex!important;
+	align-items: center;
+	cursor: pointer;
+
+	--cc-txt-c: #{$gray-810};
+	&:hover{
+		--cc-txt-c: #{$orange2};
+	}
+	input:checked + .square{
+		&:after{
+			opacity: 1;
+		}
+	}
+	.square{
+		@include mt();
+		width: rem(18);
+		height: rem(18);
+		flex-shrink: 0;
+		margin-right: rem(18);
+		border: 1px solid var(--cc-txt-c, #{$gray-810});
+
+		position: relative;
+		&:after{
+			@include mt();
+			opacity: 0;
+			content: '';
+			width: rem(12);
+			height: rem(12);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+
+			background-image: url(../img/svg/checkmark.svg);
+			background-repeat: no-repeat;
+			background-size: rem(12) rem(12);
+			background-position: center;
+		}
+		//checkmark
+	}
+
+	.cc-txt{
+		@include mt();
+		font-weight: 600;
+		line-height: 1;
+		text-transform: capitalize;
+		color: var(--cc-txt-c, #{$gray-810});
+	}
+}

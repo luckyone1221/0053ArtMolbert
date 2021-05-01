@@ -317,13 +317,7 @@
         }
       }
 
-      color: transparent!important;
-      stroke: $black;
-      stroke-width: 2px;
-      &.active{
-        color: $orange2!important;
-        stroke: transparent;
-      }
+      @extend .like-btn-icon-css;
     }
     //bag
     &--bag{

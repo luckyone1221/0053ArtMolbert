@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -282,19 +280,18 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu(); //JSCCommon.inputMask();
-
+	JSCCommon.mobileMenu();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.checkEmptyVal();
 	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
 	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
-	$('.has-ph-js.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal); // JSCCommon.CustomInputFile(); 
+	$('.has-ph-js.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal); // JSCCommon.CustomInputFile();
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '02.png';
+	screenName = '04.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -333,10 +330,7 @@ function eventHandler() {
 	}), _defineProperty(_defaultSl, "pagination", {
 		el: ' .swiper-pagination',
 		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
-
+		clickable: true
 	}), _defaultSl);
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
@@ -414,53 +408,52 @@ function eventHandler() {
 		},
 		loop: true
 	}); //select2
-	//console.log($.select2);
 
 	$('.default-select2-js').select2({
-		//minimumResultsForSearch: Infinity,
 		dropdownCssClass: "default-select2-dd"
 	});
 	$('.default-select2-js').one('select2:open', function (e) {
 		var ph = this.getAttribute('data-search-placeholder') || 'Поиск';
 		$('input.select2-search__field').prop('placeholder', ph);
-	});
+	}); //
 
-	function makeDDGroup() {
-		var _iterator = _createForOfIteratorHelper(arguments),
+	$('.select2-no-search-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select2-dd"
+	}); //
+
+	function makeDDGroup(ArrSelectors) {
+		var _iterator = _createForOfIteratorHelper(ArrSelectors),
 				_step;
 
 		try {
-			var _loop = function _loop() {
+			for (_iterator.s(); !(_step = _iterator.n()).done;) {
 				var parentSelect = _step.value;
 				var parent = document.querySelector(parentSelect);
-				if (!parent) return {
-					v: void 0
-				}; // childHeads, kind of funny))
 
-				var ChildHeads = parent.querySelectorAll('.dd-head-js');
-				$(ChildHeads).click(function () {
-					var clickedHead = this;
-					$(ChildHeads).each(function () {
-						if (this === clickedHead) {
-							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-								$(this).toggleClass('active');
+				if (parent) {
+					(function () {
+						// childHeads, kind of funny))
+						var ChildHeads = parent.querySelectorAll('.dd-head-js');
+						$(ChildHeads).click(function () {
+							var clickedHead = this;
+							$(ChildHeads).each(function () {
+								if (this === clickedHead) {
+									//parent element gain toggle class, style head change via parent
+									$(this.parentElement).toggleClass('active');
+									$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+										$(this).toggleClass('active');
+									});
+								} else {
+									$(this.parentElement).removeClass('active');
+									$(this.parentElement).find('.dd-content-js').slideUp(function () {
+										$(this).removeClass('active');
+									});
+								}
 							});
-						} else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
-					});
-				});
-			};
-
-			for (_iterator.s(); !(_step = _iterator.n()).done;) {
-				var _ret = _loop();
-
-				if (_typeof(_ret) === "object") return _ret.v;
+						});
+					})();
+				}
 			}
 		} catch (err) {
 			_iterator.e(err);
@@ -469,7 +462,23 @@ function eventHandler() {
 		}
 	}
 
-	makeDDGroup('.sProdCard-dd-group-js');
+	$('.free-dd-head-js').click(function () {
+		$(this.parentElement).toggleClass('active');
+		$(this.parentElement).find('.free-dd-content-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	makeDDGroup(['.sProdCard-dd-group-js']); //
+
+	$('.f-hide-btn-js').click(function () {
+		var ddContent = this.closest('.free-dd-content-js');
+		var parent = ddContent.parentElement;
+		$(parent).toggleClass('active');
+		$(ddContent).slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //
+
 	$('.a-show-more-js').click(function () {
 		var grandParent = this.closest('.a-items-js');
 		if (!grandParent) return;
@@ -490,10 +499,4 @@ if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
-} // window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+}

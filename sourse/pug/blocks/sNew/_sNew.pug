@@ -17,57 +17,131 @@ mixin sNew(data)
 						+arrow('sNew')
 					.swiper-wrapper
 						-for (var i = 1; i < 5; i++)
-							+sNewSlide({
-								txtItem: 'NEW',
-								sale: false,
-								imgNum: 1,
-							})
-							+sNewSlide({
-								txtItem: false,
-								priceOld: true,
-								sale: '-50%',
-								imgNum: 2,
-							})
-							+sNewSlide({
-								txtItem: 'BEST SELLER',
-								sale: false,
-								imgNum: 3,
-							})
-							+sNewSlide({
-								txtItem: 'NEW',
-								sale: false,
-								imgNum: 4,
-							})
+							.swiper-slide
+								+sNewSlide({
+									txtItem: 'NEW',
+									sale: false,
+									imgNum: 1,
+								})
+							.swiper-slide
+								+sNewSlide({
+									txtItem: false,
+									priceOld: true,
+									sale: '-50%',
+									imgNum: 2,
+								})
+							.swiper-slide
+								+sNewSlide({
+									txtItem: 'BEST SELLER',
+									sale: false,
+									imgNum: 3,
+								})
+							.swiper-slide
+								+sNewSlide({
+									txtItem: 'NEW',
+									sale: false,
+									imgNum: 4,
+								})
 	// end sNew
 
 mixin sNewSlide(data)
-	.swiper-slide
-		+e.item
-			+e.box
-				+e.like-btn(href="#")
-					+icon('heart')
-				+e.top-row.row.align-items-center
-					if data.txtItem
-						.col-auto
-							+b.red-txt-box=data.txtItem
-					if data.sale
-						.col-auto
-							+b.sale-box=data.sale
-				+e.img
-					img(loading="lazy" src=`img/@2x/sNew-${data.imgNum}.png` alt="")
-			+e.txt-cont
-				+e.author Александр Воцмуш
-				+e.name На Финском заливе
-				+e.size 60 x 159 cm
-				+e.lower-row.row.align-items-end
-					+e.price-col.col-auto
-						if data.priceOld
-							+e.price-old
-								span.price 140 000
-								span.currency ₽
-						+e.price-curr
+	+e.item
+		+e.box
+			+e.like-btn(href="#")
+				+icon('heart2')
+			+e.top-row.row.align-items-center
+				if data.txtItem
+					.col-auto
+						+b.red-txt-box=data.txtItem
+				if data.sale
+					.col-auto
+						+b.sale-box=data.sale
+			+e.img(href="#")
+				img(loading="lazy" src=`img/@2x/sNew-${data.imgNum}.png` alt="")
+		+e.txt-cont
+			+e.author Александр Воцмуш
+			+e.name(href="#") На Финском заливе
+			+e.size 60 x 159 cm
+			+e.lower-row.row.align-items-end
+				+e.price-col.col-auto
+					if data.priceOld
+						+e.price-old
 							span.price 140 000
 							span.currency ₽
-					.col-auto
-						+e.bag-btn(href="#")
-							+icon('shopping-bag')
+					+e.price-curr
+						span.price 140 000
+						span.currency ₽
+				.col-auto
+					+e.bag-btn(href="#")
+						+icon('shopping-bag')
+
+mixin sAuthorWorks(data)
+	+b.SECTION.sNew--js.section#sNew&attributes(attributes)
+		+e.container.container.a-items-js
+			//-
+			+e.author-row.row.align-items-center.gy-3
+				.col
+					+e.title-alt
+						h2 работы автора
+				.col-auto
+					+e.a-select
+						+socSelect2('sort-select', [''])
+							option(value='По популярности' selected) По популярности
+							option(value="По цене") По цене
+							option(value="По lalala") По lalala
+			+e.items-row.row
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: 'NEW',
+						sale: false,
+						imgNum: 1,
+					})
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: false,
+						priceOld: true,
+						sale: '-50%',
+						imgNum: 2,
+					})
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: 'BEST SELLER',
+						sale: false,
+						imgNum: 3,
+					})
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: 'NEW',
+						sale: false,
+						imgNum: 4,
+					})
+			//-
+			+e.items-row--hidden.row.a-hidden-items-js
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: 'NEW',
+						sale: false,
+						imgNum: 1,
+					})
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: false,
+						priceOld: true,
+						sale: '-50%',
+						imgNum: 2,
+					})
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: 'BEST SELLER',
+						sale: false,
+						imgNum: 3,
+					})
+				+e.a-col.col-sm-6.col-lg-4.col-xl-3
+					+sNewSlide({
+						txtItem: 'NEW',
+						sale: false,
+						imgNum: 4,
+					})
+			.show-more-link.a-show-more-js
+				span.show Загрузить больше
+				span.hide Скрыть

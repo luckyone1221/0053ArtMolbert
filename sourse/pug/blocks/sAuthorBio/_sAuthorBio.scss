@@ -1,0 +1,114 @@
+// start .sAuthorBio
+.sAuthorBio {
+	--sPT: #{rem(31)};
+	--sPB: #{rem(70px)};
+	--sTPB: #{rem(50)};
+
+	&__row{
+
+	}
+	&__left-col{
+		@include media-breakpoint-up(xxl){
+			padding-right: 54px;
+		}
+
+		//its down lg
+		.exp-link{
+			@include media-breakpoint-down(lg){
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	&__right-col{
+		@include media-breakpoint-up(xxl){
+			padding-left: 49px;
+		}
+
+		//its up lg
+		.exp-link{
+			@include media-breakpoint-up(xl){
+				margin-top: 17px;
+			}
+		}
+	}
+	.section-title{
+
+		h2{
+			margin-bottom: 0;
+			padding-bottom: rem(15);
+			position: relative;
+
+			@include media-breakpoint-up(xl){
+				padding-left: rem(44);
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				z-index: 1;
+				display: block;
+				width: 100vw;
+				height: 1px;
+				background: $black;
+				right: calc(100% - 200px);
+				bottom: 0;
+			}
+		}
+	}
+	&__txt-box{
+		line-height: 1.45;
+		@include media-breakpoint-up(lg){
+			max-width: rem(430px);
+		}
+
+		&--1{
+			margin-left: auto;
+		}
+		&--2{
+
+		}
+	}
+	&__hidden{
+		display: none;
+		&.active{
+			display: block;
+		}
+
+		padding-top: rem(30);
+		@include media-breakpoint-up(xxl){
+			padding-top: rem(100px);
+		}
+	}
+	.show-more-link{
+		justify-content: flex-start;
+
+		margin-top: rem(25px);
+		//&.active{
+		//	margin-top: rem(30px);
+		//}
+	}
+	&__picture{
+		@extend .accept-ratio-frame;
+		padding-top: (405/620) * 100%;
+
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sAuthorBio
+
+.exp-link{
+	&__row{
+		@include roww(rem(40));
+	}
+	&__txt-col{
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: 1;
+		color: $black;
+	}
+	&__btn{
+		@extend .arrow-btn;
+	}
+	&__{}
+	&__{}
+}

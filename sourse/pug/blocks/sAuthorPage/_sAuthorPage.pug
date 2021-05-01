@@ -3,7 +3,7 @@ mixin sAuthorPage(data)
 	+b.SECTION.sAuthorPage.section#sAuthorPage&attributes(attributes)
 		.container
 			block
-			+e.row.row
+			+e.row.row.gy-5
 				+e.left-col.col-md-7.col-xxl-6
 					+AuthotPortrait()
 				+e.right-col.col-md-5.col-xxl-6
@@ -54,7 +54,7 @@ mixin authotorAchievements()
 				+AchievementItem()
 				+AchievementItem()
 				+AchievementItem()
-			+e.show-more.a-show-more-js
+			.show-more-link.a-show-more-js
 				span.show Смотреть все
 				span.hide Скрыть
 

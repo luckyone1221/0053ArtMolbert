@@ -266,7 +266,6 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
-	//JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
@@ -276,10 +275,10 @@ function eventHandler() {
 	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
 	$('.has-ph-js.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal);
 
-	// JSCCommon.CustomInputFile(); 
+	// JSCCommon.CustomInputFile();
 	var x = window.location.host;
 	let screenName;
-	screenName = '02.png';
+	screenName = '04.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -299,7 +298,6 @@ function eventHandler() {
 
 	window.addEventListener('scroll', () => {
 		setFixedNav();
-
 	}, { passive: true })
 	window.addEventListener('resize', () => {
 		whenResize();
@@ -324,9 +322,6 @@ function eventHandler() {
 			el: ' .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
 		},
 	}
 
@@ -417,50 +412,70 @@ function eventHandler() {
 	});
 
 	//select2
-	//console.log($.select2);
 	$('.default-select2-js').select2({
-		//minimumResultsForSearch: Infinity,
 		dropdownCssClass: "default-select2-dd",
 	});
-
 	$('.default-select2-js').one('select2:open', function(e) {
 		let ph = this.getAttribute('data-search-placeholder') || 'Поиск';
 		$('input.select2-search__field').prop('placeholder', ph);
 	});
+	//
+	$('.select2-no-search-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select2-dd",
+	});
 
-	function makeDDGroup(){
-		for (let parentSelect of arguments){
+	//
+	function makeDDGroup(ArrSelectors){
+		for (let parentSelect of ArrSelectors){
 			let parent = document.querySelector(parentSelect);
-			if (!parent) return;
+			if (parent){
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js');
+				$(ChildHeads).click(function (){
+					let clickedHead = this;
 
-			// childHeads, kind of funny))
-			let ChildHeads = parent.querySelectorAll('.dd-head-js');
+					$(ChildHeads).each(function (){
+						if (this === clickedHead){
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+								$(this).toggleClass('active');
+							});
+						}
+						else{
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function (){
+								$(this).removeClass('active');
+							});
+						}
+					});
 
-			$(ChildHeads).click(function (){
-				let clickedHead = this;
-
-				$(ChildHeads).each(function (){
-					if (this === clickedHead){
-						//parent element gain toggle class, style head change via parent
-						$(this.parentElement).toggleClass('active');
-						$(this.parentElement).find('.dd-content-js').slideToggle(function (){
-							$(this).toggleClass('active');
-						});
-					}
-					else{
-						$(this.parentElement).removeClass('active');
-						$(this.parentElement).find('.dd-content-js').slideUp(function (){
-							$(this).removeClass('active');
-						});
-					}
 				});
-
-			});
+			}
 		}
 	}
-	makeDDGroup(
-		'.sProdCard-dd-group-js',
-	);
+	$('.free-dd-head-js').click(function (){
+		$(this.parentElement).toggleClass('active');
+		$(this.parentElement).find('.free-dd-content-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	})
+	makeDDGroup([
+		'.sProdCard-dd-group-js'
+	]);
+	//
+	$('.f-hide-btn-js').click(function (){
+		let ddContent = this.closest('.free-dd-content-js');
+		let parent = ddContent.parentElement;
+
+		$(parent).toggleClass('active');
+		$(ddContent).slideToggle(function (){
+			$(this).toggleClass('active');
+		})
+	})
+
+	//
 	$('.a-show-more-js').click(function (){
 		let grandParent = this.closest('.a-items-js');
 		if (!grandParent) return
@@ -473,7 +488,6 @@ function eventHandler() {
 		});
 	})
 
-
 	//end luckyone Js
 
 	//todo
@@ -485,11 +499,3 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
