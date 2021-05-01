@@ -2,21 +2,7 @@ mixin sColections(data)
 	// start sColections
 	+b.SECTION.sColections.section#sColections&attributes(attributes)
 		.container
-			block
-			+e.top-row.row.align-items-center.gy-3
-				.col
-					+b.section-title.pb-0
-						h1 КОЛЛЕКЦИИ
-				.col-auto
-					+e.select
-						+socSelect2('sort-select', [''], 'select2-no-search-js')(data-placeholder="Выбрать коллекцию")
-							option(value="" label="" selected)
-							option(value='Все новые') Искусство и мода
-							option(value="По популярности") По популярности
-							option(value="По скидке") По скидке
-							option(value="От самой низкой цены") От самой низкой цены
-							option(value="От самой высокой цены") От самой высокой цены
-		+e.items
+			+e.items
 	// end sColections
 
 mixin sColectionItem()
