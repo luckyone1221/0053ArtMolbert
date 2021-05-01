@@ -93,9 +93,69 @@
 			}
 		}
 	}
-	&__item{
-		position: relative;
+
+	//
+	&.sAuthorWorks{
+		@include media-breakpoint-up(xxl){
+			--sPT: #{rem(77)};
+			--sPB: #{rem(100)};
+		}
 	}
+	&__author-row{
+		padding-bottom: rem(49px);
+	}
+	&__a-select{
+		width: rem(315);
+	}
+	&__items-row{
+		@include roww(rem(30));
+		--bs-gutter-y: #{rem(30)};
+		padding-bottom: 20px;
+		@include media-breakpoint-up(xl){
+			@include roww(20px);
+			--bs-gutter-y: 20px;
+			padding-bottom: 20px;
+		}
+
+		&--hidden{
+			display: none!important;
+			&.active{
+				display: flex!important;
+			}
+		}
+	}
+	.a-show-more-js{
+		padding-top: rem(37);
+		justify-content: flex-start;
+	}
+	&__a-col{
+		@media (min-width: 440px) and (max-width: 576px) {
+			width: 50%;
+		}
+	}
+	&__{}
+} // end.sNew
+
+.red-txt-box{
+	font-weight: 800;
+	font-size: rem(14);
+	line-height: 1;
+	color: $orange2;
+	padding: rem(8px);
+}
+.sale-box{
+	padding: rem(7) rem(9);
+	border: 2px solid $orange2;
+
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1;
+	color: $orange2;
+}
+
+//
+.prod-item{
+	position: relative;
 	&__nav{
 		display: flex;
 		justify-content: flex-end;
@@ -148,7 +208,6 @@
 		top: 12px;
 		left: 12px;
 	}
-
 	&__img{
 		width: 100%;
 		height: rem(288);
@@ -229,7 +288,6 @@
 			font-size: 0.9em;
 		}
 	}
-
 	&__bag-btn{
 		width: rem(30);
 		height: rem(30);
@@ -249,63 +307,4 @@
 			font-size: rem(18);
 		}
 	}
-
-
-	//
-	&.sAuthorWorks{
-		@include media-breakpoint-up(xxl){
-			--sPT: #{rem(77)};
-			--sPB: #{rem(100)};
-		}
-	}
-	&__author-row{
-		padding-bottom: rem(49px);
-	}
-	&__a-select{
-		width: rem(315);
-	}
-	&__items-row{
-		@include roww(rem(30));
-		--bs-gutter-y: #{rem(30)};
-		padding-bottom: 20px;
-		@include media-breakpoint-up(xl){
-			@include roww(20px);
-			--bs-gutter-y: 20px;
-			padding-bottom: 20px;
-		}
-
-		&--hidden{
-			display: none!important;
-			&.active{
-				display: flex!important;
-			}
-		}
-	}
-	.a-show-more-js{
-		padding-top: rem(37);
-		justify-content: flex-start;
-	}
-	&__a-col{
-		@media (min-width: 440px) and (max-width: 576px) {
-			width: 50%;
-		}
-	}
-	&__{}
-} // end.sNew
-
-.red-txt-box{
-	font-weight: 800;
-	font-size: rem(14);
-	line-height: 1;
-	color: $orange2;
-	padding: rem(8px);
-}
-.sale-box{
-	padding: rem(7) rem(9);
-	border: 2px solid $orange2;
-
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 1;
-	color: $orange2;
 }

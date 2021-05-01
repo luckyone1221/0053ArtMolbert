@@ -16,26 +16,89 @@ mixin sCatalog(data)
 							option(value="По скидке") По скидке
 							option(value="От самой низкой цены") От самой низкой цены
 							option(value="От самой высокой цены") От самой высокой цены
-			+e.filter-col.col-xl-3
-				+e.f-items
-					+filterItem('Фильтры', 'active')
-						//-+customChBRow('живопись')(checked)
-						+e.plates-row.row.pb-3
-							+plateRowItem('Живопись')
-							+plateRowItem('Арт Деко')
-							+plateRowItem('Экспрессионизм')
-							+plateRowItem('Красный')
-						+e.discard-btn(href='#') Сбросить все
-					+filterItem('Категории')
-					+filterItem('темы')
-					+filterItem('стиль')
-					+filterItem('техника')
-					+filterItem('цена')
-					+filterItem('ориентация')
-					+filterItem('размер')
-					+filterItem('цвет')
-			+e.items-col
+			+e.content-row.row
+				+e.filter-col.col-md-4.col-lg-3
+					+e.f-items
+						+filterItem('Фильтры', 'active')
+							+e.plates-row.row.pb-3
+								+plateRowItem('Живопись')
+								+plateRowItem('Арт Деко')
+								+plateRowItem('Экспрессионизм')
+								+plateRowItem('Красный')
+							+e.discard-btn(href='#') Сбросить все
+						+filterItem('Категории')
+							+cbGroup([
+								'живопись',
+								'графика',
+								'принты',
+								'скульптура',
+								'диджитал арт',
+								'фотография',
+								'Тиражная графика',
+							])
+						+filterItem('темы')
+							+cbGroup([
+								'Абстракция',
+								'Авангардизм',
+								'Архитектура',
+								'Города',
+								'Деревенский мотив',
+								'Экспрессионизм',
+								'',
+							])
+						+filterItem('стиль')
+							+cbGroup([
+								'Абстракционизм',
+								'Арт Деко',
+								'Бюст',
+								'Иллюстрация',
+								'Импрессионизм',
+								'Объект',
+							])
+						+filterItem('техника')
+						+filterItem('цена', 'active')
+							+e.range-wrap
+								+range('80', '320000')
+							+e.ok-btn(type='button') ok
+						+filterItem('ориентация')
+						+filterItem('размер')
+						+filterItem('цвет', 'active')
+							+e.chb-group-alt
+								+customChB2('Мультицвет', 'color: #6f42c1; background-image: url(img/@2x/multicolor.png)')
+								+customChB2('Красный', 'color: #FF0000;')
+								+customChB2('Белый', 'color:#000000;')
+								+customChB2('Желтый', 'color: #FFD101;')
+								+customChB2('Зеленый', 'color:#00A64F;')
+								+customChB2('Синий', 'color:#0062C1;')
+				+e.items-col.col-md-8.col-lg-9
+					+e.items-row.row
+						-for(var i = 0; i < 4; i++)
+							+e.item-col.col-sm-6.col-lg-4
+								+sNewSlide({
+									txtItem: 'NEW',
+									sale: false,
+									imgNum: 1,
+								})
+							+e.item-col.col-sm-6.col-lg-4
+								+sNewSlide({
+									txtItem: 'NEW',
+									sale: false,
+									imgNum: 1,
+								})
+							+e.item-col.col-sm-6.col-lg-4
+								+sNewSlide({
+									txtItem: 'NEW',
+									sale: false,
+									imgNum: 1,
+								})
+					+pugin()
+
 	// end sCatalog
+
+mixin cbGroup(Arr)
+	+e.chb-group
+		-for (let item of Arr)
+			+customChBRow(item)
 
 mixin filterItem(title, activeClass)
 	+e.filter-item(class=activeClass)
@@ -52,10 +115,13 @@ mixin plateRowItem(txt)
 	.col-auto
 		+e.plate(href='#')=txt
 
-mixin customChBRow(txtVal)
-	+e.chb-row.row.flex-nowrap
+mixin customChBRow(txtVal, sqStyle)
+	+e.chb-row.row.flex-nowrap.align-items-center
 		.col
-			+customChB(txtVal)&attributes(attributes)
+			if !sqStyle
+				+customChB(txtVal)&attributes(attributes)
+			else
+				+customChB2(txtVal, sqStyle)&attributes(attributes)
 		.col-auto
 			+e.chb-txt 50
 
@@ -63,4 +129,10 @@ mixin customChB(txt='txt')
 	+b.LABEL.custom-chb
 		input(type="checkbox" class='invisible' name='')&attributes(attributes)
 		.square
+		.cc-txt=txt
+
+mixin customChB2(txt='txt', sqStyle='')
+	+b.LABEL.custom-chb--color
+		input(type="checkbox" class='invisible' name='')&attributes(attributes)
+		.square(style=`${sqStyle}`)
 		.cc-txt=txt

@@ -9,6 +9,8 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<!--range slider-->
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -205,215 +207,881 @@
 							</div>
 						</div>
 					</div>
-					<div class="sCatalog__filter-col col-xl-3">
-						<div class="sCatalog__f-items">
-							<div class="sCatalog__filter-item active">
-								<div class="sCatalog__head free-dd-head-js">Фильтры
-								</div>
-								<div class="sCatalog__content free-dd-content-js active">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__plates-row row pb-3">
-											<div class="col-auto"><a class="sCatalog__plate" href="#">Живопись</a>
-											</div>
-											<div class="col-auto"><a class="sCatalog__plate" href="#">Арт Деко</a>
-											</div>
-											<div class="col-auto"><a class="sCatalog__plate" href="#">Экспрессионизм</a>
-											</div>
-											<div class="col-auto"><a class="sCatalog__plate" href="#">Красный</a>
-											</div>
-										</div><a class="sCatalog__discard-btn" href="#">Сбросить все</a>
+					<div class="sCatalog__content-row row">
+						<div class="sCatalog__filter-col col-md-4 col-lg-3">
+							<div class="sCatalog__f-items">
+								<div class="sCatalog__filter-item active">
+									<div class="sCatalog__head free-dd-head-js">Фильтры
 									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+									<div class="sCatalog__content free-dd-content-js active">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__plates-row row pb-3">
+												<div class="col-auto"><a class="sCatalog__plate" href="#">Живопись</a>
+												</div>
+												<div class="col-auto"><a class="sCatalog__plate" href="#">Арт Деко</a>
+												</div>
+												<div class="col-auto"><a class="sCatalog__plate" href="#">Экспрессионизм</a>
+												</div>
+												<div class="col-auto"><a class="sCatalog__plate" href="#">Красный</a>
+												</div>
+											</div><a class="sCatalog__discard-btn" href="#">Сбросить все</a>
+										</div>
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">Категории
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
-												</label>
-											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
+								<div class="sCatalog__filter-item">
+									<div class="sCatalog__head free-dd-head-js">Категории
+									</div>
+									<div class="sCatalog__content free-dd-content-js">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__chb-group">
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">живопись</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">графика</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">принты</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">скульптура</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">диджитал арт</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">фотография</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Тиражная графика</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">темы
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
-												</label>
-											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
+								<div class="sCatalog__filter-item">
+									<div class="sCatalog__head free-dd-head-js">темы
+									</div>
+									<div class="sCatalog__content free-dd-content-js">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__chb-group">
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Абстракция</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Авангардизм</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Архитектура</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Города</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Деревенский мотив</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Экспрессионизм</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt"></div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">стиль
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
-												</label>
-											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
+								<div class="sCatalog__filter-item">
+									<div class="sCatalog__head free-dd-head-js">стиль
+									</div>
+									<div class="sCatalog__content free-dd-content-js">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__chb-group">
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Абстракционизм</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Арт Деко</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Бюст</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Иллюстрация</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Импрессионизм</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
+												</div>
+												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+													<div class="col">
+														<label class="custom-chb">
+															<input class="invisible" type="checkbox" name=""/>
+															<div class="square"></div>
+															<div class="cc-txt">Объект</div>
+														</label>
+													</div>
+													<div class="col-auto">
+														<div class="sCatalog__chb-txt">50
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">техника
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
-												</label>
-											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
+								<div class="sCatalog__filter-item">
+									<div class="sCatalog__head free-dd-head-js">техника
+									</div>
+									<div class="sCatalog__content free-dd-content-js">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+												<div class="col">
+													<label class="custom-chb">
+														<input class="invisible" type="checkbox" name="" checked="checked"/>
+														<div class="square"></div>
+														<div class="cc-txt">something</div>
+													</label>
+												</div>
+												<div class="col-auto">
+													<div class="sCatalog__chb-txt">50
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">цена
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
-												</label>
+								<div class="sCatalog__filter-item active">
+									<div class="sCatalog__head free-dd-head-js">цена
+									</div>
+									<div class="sCatalog__content free-dd-content-js active">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__range-wrap">
+												<div class="range-wrap price_slider_amount">
+													<div class="range-wrap__row row">
+														<div class="range-wrap__col col-6">
+															<div class="form-group" data-unit="₽"><input class="input_from form-control" type="text"/>
+															</div>
+														</div>
+														<div class="range-wrap__col col-6">
+															<div class="form-group" data-unit="₽"><input class="input_to form-control" type="text"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" type="text" data-min="80" data-max="320000"/>
+												</div>
 											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
+											<button class="sCatalog__ok-btn" type="button">ok
+											</button>
+										</div>
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__filter-item">
+									<div class="sCatalog__head free-dd-head-js">ориентация
+									</div>
+									<div class="sCatalog__content free-dd-content-js">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+												<div class="col">
+													<label class="custom-chb">
+														<input class="invisible" type="checkbox" name="" checked="checked"/>
+														<div class="square"></div>
+														<div class="cc-txt">something</div>
+													</label>
+												</div>
+												<div class="col-auto">
+													<div class="sCatalog__chb-txt">50
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">ориентация
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
-												</label>
-											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
+								<div class="sCatalog__filter-item">
+									<div class="sCatalog__head free-dd-head-js">размер
+									</div>
+									<div class="sCatalog__content free-dd-content-js">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__chb-row row flex-nowrap align-items-center">
+												<div class="col">
+													<label class="custom-chb">
+														<input class="invisible" type="checkbox" name="" checked="checked"/>
+														<div class="square"></div>
+														<div class="cc-txt">something</div>
+													</label>
+												</div>
+												<div class="col-auto">
+													<div class="sCatalog__chb-txt">50
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-									</div>
-								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">размер
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
-												</label>
-											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
-												</div>
-											</div>
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
 										</div>
 									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+								</div>
+								<div class="sCatalog__filter-item active">
+									<div class="sCatalog__head free-dd-head-js">цвет
 									</div>
-								</div>
-							</div>
-							<div class="sCatalog__filter-item">
-								<div class="sCatalog__head free-dd-head-js">цвет
-								</div>
-								<div class="sCatalog__content free-dd-content-js">
-									<div class="sCatalog__content-inner">
-										<div class="sCatalog__chb-row row flex-nowrap">
-											<div class="col">
-												<label class="custom-chb">
-													<input class="invisible" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="cc-txt">something</div>
+									<div class="sCatalog__content free-dd-content-js active">
+										<div class="sCatalog__content-inner">
+											<div class="sCatalog__chb-group-alt">
+												<label class="custom-chb custom-chb--color">
+													<input class="invisible" type="checkbox" name=""/>
+													<div class="square" style="color: #6f42c1; background-image: url(img/@2x/multicolor.png)"></div>
+													<div class="cc-txt">Мультицвет</div>
+												</label>
+												<label class="custom-chb custom-chb--color">
+													<input class="invisible" type="checkbox" name=""/>
+													<div class="square" style="color: #FF0000;"></div>
+													<div class="cc-txt">Красный</div>
+												</label>
+												<label class="custom-chb custom-chb--color">
+													<input class="invisible" type="checkbox" name=""/>
+													<div class="square" style="color:#000000;"></div>
+													<div class="cc-txt">Белый</div>
+												</label>
+												<label class="custom-chb custom-chb--color">
+													<input class="invisible" type="checkbox" name=""/>
+													<div class="square" style="color: #FFD101;"></div>
+													<div class="cc-txt">Желтый</div>
+												</label>
+												<label class="custom-chb custom-chb--color">
+													<input class="invisible" type="checkbox" name=""/>
+													<div class="square" style="color:#00A64F;"></div>
+													<div class="cc-txt">Зеленый</div>
+												</label>
+												<label class="custom-chb custom-chb--color">
+													<input class="invisible" type="checkbox" name=""/>
+													<div class="square" style="color:#0062C1;"></div>
+													<div class="cc-txt">Синий</div>
 												</label>
 											</div>
-											<div class="col-auto">
-												<div class="sCatalog__chb-txt">50
-												</div>
-											</div>
 										</div>
-									</div>
-									<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="sCatalog__items-col">
+						<div class="sCatalog__items-col col-md-8 col-lg-9">
+							<div class="sCatalog__items-row row">
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sCatalog__item-col col-sm-6 col-lg-4">
+									<div class="prod-item">
+										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+											<div class="prod-item__top-row row align-items-center">
+												<div class="col-auto">
+													<div class="red-txt-box">NEW
+													</div>
+												</div>
+											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+										</div>
+										<div class="prod-item__txt-cont">
+											<div class="prod-item__author">Александр Воцмуш
+											</div><a class="prod-item__name" href="#">На Финском заливе</a>
+											<div class="prod-item__size">60 x 159 cm
+											</div>
+											<div class="prod-item__lower-row row align-items-end">
+												<div class="prod-item__price-col col-auto">
+													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+													</div>
+												</div>
+												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
+													<svg class="icon icon-shopping-bag ">
+														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pagination-wrapper">
+								<ul>
+											<li><span class="prev page-numbers"><img src="img/svg/prev.svg" alt=""/></span>
+											</li>
+											<li><span class="prev page-numbers"><img src="img/svg/prev-start.svg" alt=""/></span>
+											</li>
+											<li><a class="page-numbers" href="#">1</a>
+											</li>
+											<li><span class="page-numbers">...</span>
+											</li>
+											<li><a class="page-numbers" href="#">6</a>
+											</li>
+											<li><span class="page-numbers current"> 7</span>
+											</li>
+											<li><a class="page-numbers" href="#">8</a>
+											</li>
+											<li><span class="page-numbers">...</span>
+											</li>
+											<li><a class="page-numbers" href="#">56</a>
+											</li>
+									<!-- - for (var x = 1; x < 5; x++)-->
+									<!-- 	+li(x)-->
+											<li><a class="next page-numbers" href="#"><img src="img/svg/next.svg" alt=""/></a>
+											</li>
+											<li><a class="next page-numbers" href="#"><img src="img/svg/next-end.svg" alt=""/></a>
+											</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -567,6 +1235,7 @@
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/libs.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
