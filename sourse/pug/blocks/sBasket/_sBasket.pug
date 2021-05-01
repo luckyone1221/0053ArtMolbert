@@ -1,0 +1,28 @@
+mixin basketblock()
+	+b.basketBlock
+		+e.TABLE.table
+			thead 
+				tr 
+					th Товар
+					th Размер
+					th Количество
+					th Цена за 1 штуку
+			tbody 
+				mixin tr(i,t,size)
+					tr
+						td 
+							.row 
+								.col-auto
+									+e.img-wrap 
+										+pic(``)
+								.col
+						td 
+						td 
+						td 
+
+mixin sBasket(data)
+	// start sBasket
+	+b.sBasket.section#sBasket&attributes(attributes)
+		.container
+			
+	// end sBasket
