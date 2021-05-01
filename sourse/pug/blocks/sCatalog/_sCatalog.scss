@@ -12,7 +12,8 @@
 	.section-title{
 		h1{
 			text-transform: uppercase;
-			font-size: rem(64px);
+			// font-size: rem(64px);
+			@include rfs(64px);
 			line-height: 1;
 			margin-bottom: 0;
 		}

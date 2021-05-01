@@ -786,3 +786,26 @@ iframe {
     }
   }
 }
+
+.page-head{
+
+  h1{
+    text-transform: uppercase;
+    // font-size: rem(64px);
+    @include rfs(64px);
+    line-height: 1;
+    margin-bottom: 0;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 100vw;
+      height: 1px;
+      background: $black;
+      right: calc(100% - #{em(80)});
+      bottom: -20px;
+    }
+  }
+
+}

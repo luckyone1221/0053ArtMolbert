@@ -156,15 +156,8 @@ var A11y = {
 
     var $wrapperEl = swiper.$wrapperEl;
     var wrapperId = $wrapperEl.attr('id') || "swiper-wrapper-" + swiper.a11y.getRandomNumber(16);
-    var live;
+    var live = swiper.params.autoplay && swiper.params.autoplay.enabled ? 'off' : 'polite';
     swiper.a11y.addElId($wrapperEl, wrapperId);
-
-    if (swiper.params.autoplay && swiper.params.autoplay.enabled) {
-      live = 'off';
-    } else {
-      live = 'polite';
-    }
-
     swiper.a11y.addElLive($wrapperEl, live); // Slide
 
     if (params.itemRoleDescriptionMessage) {
