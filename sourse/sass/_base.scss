@@ -886,7 +886,7 @@ iframe {
 .title-md{
   @extend .h5;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   margin-bottom: rem(20);
   text-transform: uppercase;
   position: relative;
@@ -1042,5 +1042,33 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     
+  }
+}
+
+.aside-nav{
+  max-width: rem(300);
+  li{
+    list-style: none;
+  }
+  a{
+    display: flex;
+    // max-width: rem(300);
+    font-weight: 600;
+    align-items: center;
+    text-decoration: none !important; 
+    padding: rem(9) rem(20);
+    &:hover,
+    &.active{
+      background: #F4F5EF;
+    }
+    .icon{
+      font-size: rem(32);
+      margin-right: rem(20);
+      &-heart2{
+        fill: transparent;
+        stroke: currentColor;
+        stroke-width: 2px;
+      }
+    }
   }
 }
