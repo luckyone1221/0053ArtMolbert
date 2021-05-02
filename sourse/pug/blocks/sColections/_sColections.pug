@@ -1,0 +1,23 @@
+mixin sColections(data)
+	// start sColections
+	+b.SECTION.sColections.section#sColections&attributes(attributes)
+		.container
+			+e.items
+	// end sColections
+
+mixin sColectionItem()
+	+e.item
+		+e.i-row.row
+			+e.big-col.col-md
+			+e.small-col.col-md-auto
+				+sNewSlide({
+					txtItem: 'NEW',
+					sale: false,
+					imgNum: 1,
+				})
+			+e.small-col.col-md-auto
+				+sNewSlide({
+					txtItem: 'NEW',
+					sale: false,
+					imgNum: 1,
+				})

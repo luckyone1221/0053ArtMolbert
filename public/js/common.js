@@ -561,6 +561,7 @@ function eventHandler() {
 	}); //end luckyone Js
 	//todo
 	// 1. clean js file
+	// 2. remake page with h1(02-04)
 }
 
 ;

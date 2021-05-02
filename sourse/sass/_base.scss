@@ -708,26 +708,111 @@ iframe {
     stroke: transparent;
   }
 }
+//
+.pagination-wrapper{
+  ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    li{
+      &:last-child{
+        .page-numbers{
+          margin-right: 0;
+        }
+      }
+
+      span{
+        pointer-events: none!important;
+      }
+      //
+      .page-numbers{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        width: rem(30);
+        height: rem(30);
+        margin-right: rem(4);
+        @include media-breakpoint-up(sm){
+          width: rem(40);
+          height: rem(40);
+          margin-right: rem(10);
+        }
+
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1;
+
+        border: 1px solid transparent;
+        &.current{
+          border: 1px solid $black;
+        }
+
+        &:hover{
+          border: 1px solid rgba($black, .6);
+        }
+      }
+
+      .prev,
+      .next{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: rem(30);
+        height: rem(30);
+        margin-right: rem(6);
+        @include media-breakpoint-up(sm){
+          width: rem(60);
+          height: rem(60);
+          margin-right: rem(20);
+        }
+
+        img{
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .prev{}
+      .next{}
+
+    }
+  }
+}
 
 .page-head{
+  padding-top: rem(30);
 
   h1{
-			text-transform: uppercase;
-			// font-size: rem(64px); 
-    @include rfs(64px);
-			line-height: 1;
-			margin-bottom: 0;
-      position: relative;
-      &:after{
+    text-transform: uppercase;
+    // font-size: rem(64px);
+    // @include rfs(64px);
+    line-height: 1;
+    margin-bottom: 0;
+    position: relative;
+    &:after{
+      @include media-breakpoint-up(lg){
         content: '';
-        position: absolute;
-        z-index: 1; 
-        width: 100vw;
-        height: 1px;
-        background: $black;
-        right: calc(100% - #{em(80)});
-        bottom: -20px;
       }
-		}
+      position: absolute;
+      z-index: 1;
+      width: 100vw;
+      height: 1px;
+      background: $black;
+      right: calc(100% - #{em(80)});
+      bottom: -20px;
+    }
+  }
+
+  &__select{
+    width: rem(318);
+  }
 
 }
