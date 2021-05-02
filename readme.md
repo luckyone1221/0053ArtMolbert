@@ -13,4 +13,5 @@
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/11-rews.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/12-сooperation.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/thanks.html>
-1. <https://luckyone1221.github.io/0053ArtMolbert/public/14-cabinet.html>
+<!-- 1. <https://luckyone1221.github.io/0053ArtMolbert/public/14-cabinet.html> -->
+1. <https://luckyone1221.github.io/0053ArtMolbert/public/15-shipping.html>
