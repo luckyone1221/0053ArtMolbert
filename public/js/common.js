@@ -313,16 +313,18 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
-	}); //
-
-	var sNewSlider = new Swiper('.sNew-slider-js', {
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 20,
-		navigation: {
-			nextEl: '.sNew-swiper-next',
-			prevEl: '.sNew-swiper-prev'
-		}
+	});
+	var slideSection = document.querySelectorAll(".sNew--js");
+	slideSection.forEach(function (e) {
+		var sNewSlider = new Swiper(e.querySelector('.sNew-slider-js'), {
+			slidesPerView: 'auto',
+			watchOverflow: true,
+			spaceBetween: 20,
+			navigation: {
+				nextEl: e.querySelector('.sNew-swiper-next'),
+				prevEl: e.querySelector('.sNew-swiper-prev')
+			}
+		});
 	}); //
 
 	var sPresentsSlider = new Swiper('.sPresents-slider-js', {

@@ -2,20 +2,6 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
-			block
-			+e.top-row.row.align-items-center.gy-3
-				.col
-					+b.section-title.pb-0
-						h1 искусство
-				.col-auto
-					+e.select
-						+socSelect2('sort-select', [''], 'select2-no-search-js')(data-placeholder="Сортировать")
-							option(value="" label="" selected)
-							option(value='Все новые') Все новые
-							option(value="По популярности") По популярности
-							option(value="По скидке") По скидке
-							option(value="От самой низкой цены") От самой низкой цены
-							option(value="От самой высокой цены") От самой высокой цены
 			+e.content-row.row
 				+e.filter-col.col-md-4.col-lg-3
 					+e.f-items
@@ -95,6 +81,53 @@ mixin sCatalog(data)
 
 	// end sCatalog
 
+
+mixin sCatalog5(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+				mixin line(i,t)
+					+e.catalog-line 
+						+e.items-row.row 
+							.col-lg-6.col-12
+								+b.collection-banner.bg-wrap
+									+pic(`collection-${i}.jpg`,'bg').picture-bg
+									+e.caption
+										+e.title!= t
+										+e.btn(href="#")
+											+icon("arrow-r")
+							.col-lg-6.col-12
+								.row
+									+e.item-col.col-sm-6
+										+sNewSlide({
+											txtItem: 'NEW',
+											sale: false,
+											imgNum: 2,
+										})
+									+e.item-col.col-sm-6
+										+sNewSlide({
+											txtItem: 'NEW',
+											sale: false,
+											imgNum: 2,
+										})
+				+line(`1`,`искусство  и&nbsp;мода `)
+				+line(`2`,`кулинарное искусство `)
+				+line(`3`,`горы`)
+				+line(`4`,`лучшие абстарктные картины `)
+				+line(`5`,`времена года`)
+				+line(`6`,`городские мотивы`)
+				+line(`7`,`Космос`)
+				+line(`8`,`Любовь`)
+				+line(`9`,`кошки и собаки`)
+				+line(`10`,`в саду`)
+				+line(`11`,`бытовые сцены`)
+				+line(`12`,`Для коллег `)
+				+line(`13`,`для него`)
+				+line(`14`,`Для нее `)
+
+	// end sCatalog
+
+
 mixin cbGroup(Arr)
 	+e.chb-group
 		-for (let item of Arr)
@@ -127,12 +160,16 @@ mixin customChBRow(txtVal, sqStyle)
 
 mixin customChB(txt='txt')
 	+b.LABEL.custom-chb
-		input(type="checkbox" class='invisible' name='')&attributes(attributes)
+		input(class='invisible' name='' type="checkbox")
 		.square
 		.cc-txt=txt
 
 mixin customChB2(txt='txt', sqStyle='')
 	+b.LABEL.custom-chb--color
-		input(type="checkbox" class='invisible' name='')&attributes(attributes)
+		input(class='invisible' name='' type="checkbox")
 		.square(style=`${sqStyle}`)
 		.cc-txt=txt
+
+
+
+

@@ -24,13 +24,27 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'title'
+	- let  title= 'ИСКУССТВО'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 	+top-nav(true)
 	+topLine()
+	+b.page-head
+		.container
+			+breadcrumb('Главная', 'Каталог', title)
+			.row.align-items-center
+				.col
+					h1= title
+				.col-md-auto
+					+e.select
+						+socSelect2('sort-select', [''], 'select2-no-search-js')(data-placeholder="Сортировать")
+							option(value="" label="" selected)
+							option(value='Все новые') Все новые
+							option(value="По популярности") По популярности
+							option(value="По скидке") По скидке
+							option(value="От самой низкой цены") От самой низкой цены
+							option(value="От самой высокой цены") От самой высокой цены
 	+sCatalog()
-		+breadcrumb('Главная', 'Автор', 'Художники', 'Александр Воцмуш')
 	+footer()
