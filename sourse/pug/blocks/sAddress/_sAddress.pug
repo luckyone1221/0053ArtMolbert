@@ -1,0 +1,43 @@
+mixin sAddress(data)
+	// start sAddress
+	+b.SECTION.sAddress.section#sAddress&attributes(attributes)
+		.container
+			+b.section-title
+				h2 
+					span.outlined-txt.d-block Международные
+					| проекты
+			.col-lg-6 
+				p.fw-600 Арт-галерея &laquo;Мольберт&raquo; активно сотрудничает с&nbsp;зарубежными художниками и&nbsp;галереями. На&nbsp;счету деятельности галереи более 35&nbsp;международных проектов. Одним из&nbsp;направлений деятельности галереи является развитие культурных связей между странами через организацию художественных выставо
+			+e.map-wrap 
+				img.res-i(src="img/svg/map.svg", alt="")
+				ul 
+					mixin li(t)
+						li
+							span( data-bs-toggle="popover"  data-bs-content=" ")= t
+								.d-none
+									+b.popover-content
+										.a-items-js 
+											.h5= t 
+											p Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.
+											.a-hidden-items-js
+												p Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.
+											.text-body.a-show-more-js.toggle-text Читать все
+
+
+					+li(' США')
+					+li('  Бельгия')
+					+li('  Франция')
+					+li('  Испания')
+					+li('  Швеция')
+					+li('  Дания')
+					+li('  Германия')
+					+li('  Чехия')
+					+li('  Румыния')
+					+li('  Италия')
+					+li('  Израиль')
+					+li('  Иран')
+					+li('  Индия')
+					+li('  Китай')
+					+li('  Южная Корея')
+					+li('  Япония')
+	// end sAddress

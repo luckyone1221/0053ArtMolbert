@@ -1,0 +1,44 @@
+// start .sProjects
+.sProjects {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+	counter-reset: num;
+	ul{
+		@extend .row;
+	}
+	li {
+		@extend .col-lg-6;
+		list-style: none;
+		position: relative; 
+		display: flex;
+		// @include media-breakpoint-up(lg) {}
+		// margin-bottom: rem(87);
+		margin-bottom: var(--bs-gutter-x);
+
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			@include rfs(144px);
+			font-weight: 900;
+			margin-right: rem(15);
+			line-height: 1;
+			text-align: right;
+			width: em(11);
+			flex: 0 0 auto;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.row{
+
+			--bs-gutter-x: 90px;
+		}
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProjects

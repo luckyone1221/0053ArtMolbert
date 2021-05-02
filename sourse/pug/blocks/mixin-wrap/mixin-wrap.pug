@@ -22,6 +22,12 @@ mixin arrow(mod, className='')
 		.swiper-next(class=`${className}`)
 			+icon('chevron-right')
 //- /arrow for swiper-slider
+mixin arrowl(mod, className='')  
+	.swiper-prev(class=`${className}`)
+		+icon('arrow-l-long')
+	.swiper-next(class=`${className}`)
+		+icon('arrow-r-long')
+//- /arrow for swiper-slider
 
 mixin range(c1, c2, Symb=false, fromTxt='От', toTxt='До', title='Расстояние от МКАД :')
 	+b.range-wrap.price_slider_amount&attributes(attributes)

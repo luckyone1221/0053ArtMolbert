@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sPaltes/_sPaltes.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sPopular/_sPopular.pug
+include ../blocks/sStyle/_sStyle.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sInstagram/_sInstagram.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sPercents/_sPercents.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sAuthorPage/_sAuthorPage.pug
+include ../blocks/sAuthorBio/_sAuthorBio.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sAddress/_sAddress.pug
+include ../blocks/sMap/_sMap.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sShow/_sShow.pug
+include ../blocks/sCooperation/_sCooperation.pug
+include ../blocks/sEvents/_sEvents.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'КТО МЫ  '
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+	+top-nav(true)
+	+topLine()
+	+b.page-head 
+		.container
+			+breadcrumb('Главная', title)
+			.row 
+				.col
+					h1= title
+				.col-auto
+	+sContent()
+	+sAddress
+	+sProjects
+	+sShow
+	+sCooperation
+	+sEvents
+	+sMap
+	+footer()

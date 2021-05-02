@@ -1,0 +1,51 @@
+// start .sEvents
+.sEvents {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+		&__line{
+			border-top: 1px solid;
+			&:last-child{
+				border-bottom: 1px solid;
+
+			}
+			padding-top: rem(30);
+			padding-bottom: rem(30);
+		}
+		&__col{
+			max-width: rem(500);
+		}
+
+		.h5{
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			margin-bottom: 0;
+			color: #000000;
+
+		}
+		ul{
+			margin-bottom: 0;
+		}
+		li{
+			margin-bottom: rem(20);
+		&::marker{
+			color: $orange2;
+			font-size: rem(20);
+		}
+		}
+		&__caption{
+			padding-left: rem(50);
+			border-left: 1px solid #000;
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sEvents

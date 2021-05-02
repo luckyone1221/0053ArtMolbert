@@ -15,11 +15,21 @@ mixin basketblock()
 								.col-auto
 									+e.img-wrap 
 										+pic(`basket-${i}.jpg`,'',0)
-								.col
+								+e.col.col
 									+e.title(href="#")= t
-									+e.text Сергей Усик
-									+e.code Код товара 
+									+e.text.small Сергей Усик
+									+e.code.small Код товара
 										span 32 55 84 35
+									.d-md-none
+										+e.code.small Кол-во
+											span 1
+										+e.code.small Размер
+											span 60 x 159 cm
+							.row.d-sm-none.pt-4
+								.col.small Цена за 1 штуку
+
+								.col-auto
+									+e.price--current 140 000 ₽
 						td 
 							if size 
 								+e.size= size
@@ -27,10 +37,10 @@ mixin basketblock()
 							+b.add-block
 								+e.btn
 								input(type="text" value="1")
-								+e.btn--plus
+								+e.btn--add
 						td 
 							+e.price--old 140 000 ₽
-							+e.price 140 000 ₽
+							+e.price--current 140 000 ₽
 							+e.delete 
 								+icon('close')
 				+tr('1',`12 линия Васильевского  Острова`,`60 x 159 cm`)
@@ -43,4 +53,16 @@ mixin sBasket(data)
 	+b.sBasket.section#sBasket&attributes(attributes)
 		.container
 			+basketblock()
+			+b.basket-total
+				+e.body
+					+e.title ваш заказ
+					+e.line 
+						+e.line-title Итого к оплате
+						+e.line-result 140 000 ₽
+					+e.line 
+						+e.line-title Всего
+						+e.line-result 420 000 ₽
+				+e.btns
+					+e.btn.btn-default(href="#") вернуться к покупкам
+					+e.btn.btn.btn-primary(href="#") Подтвердить заказ
 	// end sBasket

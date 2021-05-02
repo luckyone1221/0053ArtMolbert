@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>КТО МЫ  </title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<!--range slider-->
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-xl-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<div class="menu-mobile__logo"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+					</div>
+					<ul class="menu">
+						<li class="menu-item"><a href="#">Искусство</a></li>
+						<li class="menu-item"><a href="#">Авторы</a></li>
+						<li class="menu-item"><a href="#">Коллекции</a></li>
+						<li class="menu-item"><a href="#">Подарки</a></li>
+					</ul>
+					<div class="mnu-search"><input class="mnu-search__input form-control" type="text" placeholder="Search"/>
+					</div>
+					<div class="il-row row d-sm-none">
+						<div class="col-auto"><a class="il-row__link il-row__link--heart" href="#">
+							<svg class="icon icon-heart2 ">
+								<use xlink:href="img/svg/sprite.svg#heart2"></use>
+							</svg></a>
+						</div>
+						<div class="col-auto">
+							<div class="il-row__link-user"><a class="il-row__link il-row__link--user" href="#">
+								<svg class="icon icon-user ">
+									<use xlink:href="img/svg/sprite.svg#user"></use>
+								</svg></a>
+								<div class="lc-dd">
+									<div class="lc-dd__inner">
+										<div class="lc-dd__header"><span>Приветствуем,</span><br/><span>tatiana.nikolaeva</span>
+										</div>
+										<div class="lc-dd__content">
+											<div class="lc-dd__menu">
+												<ul>
+													<li><a href="#">Данные аккаунта</a></li>
+													<li><a href="#">Контактные данные</a></li>
+													<li><a href="#">Мои заказы</a></li>
+													<li><a href="#">Избранное</a></li>
+												</ul>
+											</div><a class="lc-dd__log-out" href="#"><span class="lc-dd__icon"><img loading="lazy" src="img/svg/logout.svg" alt=""/></span><span class="lc-dd__lo-txt">Выйти</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto"><a class="il-row__link il-row__link--bag" href="#">
+							<svg class="icon icon-bag ">
+								<use xlink:href="img/svg/sprite.svg#bag"></use>
+							</svg></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- start header-->
+			<header class="header" id="header">
+			</header>
+			<!-- end header-->
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
+				<div class="container">
+					<div class="top-nav__row row align-items-center">
+						<div class="top-nav__menu-col col d-xl-block d-none">
+							<ul class="menu">
+								<li class="menu-item"><a href="#">Искусство</a></li>
+								<li class="menu-item"><a href="#">Авторы</a></li>
+								<li class="menu-item"><a href="#">Коллекции</a></li>
+								<li class="menu-item"><a href="#">Подарки</a></li>
+							</ul>
+						</div>
+						<div class="col-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						</div>
+						<div class="col">
+							<div class="top-nav__sub-row row justify-content-end align-items-center">
+								<div class="col-auto d-none d-md-block me-xxl-3">
+									<div class="mnu-search"><input class="mnu-search__input form-control" type="text" placeholder="Search"/>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="top-nav__dd-link-cont">
+										<div class="top-nav__dd-link">€
+										</div>
+										<div class="dd-content">
+											<ul>
+												<li><a href="#">€</a></li>
+												<li><a href="#">₽</a></li>
+												<li><a href="#">$</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="top-nav__dd-link-cont">
+										<div class="top-nav__dd-link">EN
+										</div>
+										<div class="dd-content">
+											<ul>
+												<li><a href="#">RUS</a></li>
+												<li><a href="#">UKR</a></li>
+												<li><a href="#">POL</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto d-none d-sm-block">
+									<div class="il-row row">
+										<div class="col-auto"><a class="il-row__link il-row__link--heart active" href="#">
+											<svg class="icon icon-heart2 ">
+												<use xlink:href="img/svg/sprite.svg#heart2"></use>
+											</svg></a>
+										</div>
+										<div class="col-auto">
+											<div class="il-row__link-user"><a class="il-row__user-img" href="#"><img loading="lazy" src="img/@2x/soc-img.png" alt=""/></a>
+												<div class="lc-dd">
+													<div class="lc-dd__inner">
+														<div class="lc-dd__header"><span>Приветствуем,</span><br/><span>tatiana.nikolaeva</span>
+														</div>
+														<div class="lc-dd__content">
+															<div class="lc-dd__menu">
+																<ul>
+																	<li><a href="#">Данные аккаунта</a></li>
+																	<li><a href="#">Контактные данные</a></li>
+																	<li><a href="#">Мои заказы</a></li>
+																	<li><a href="#">Избранное</a></li>
+																</ul>
+															</div><a class="lc-dd__log-out" href="#"><span class="lc-dd__icon"><img loading="lazy" src="img/svg/logout.svg" alt=""/></span><span class="lc-dd__lo-txt">Выйти</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-auto"><a class="il-row__link il-row__link--bag" href="#">
+											<svg class="icon icon-bag ">
+												<use xlink:href="img/svg/sprite.svg#bag"></use>
+											</svg></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto ms-auto d-xl-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end top-nav-->
+			<!-- start topLine-->
+			<div class="topLine d-xl-block d-none" id="topLine">
+				<div class="container">
+					<div class="topLine__row row">
+						<div class="topLine__col topLine__col--left col-auto text-end">Скидки на летний сезон:
+						</div>
+						<div class="topLine__col topLine__col--mid col-auto">10% скидка на покупку от 20 000 руб. по коду Summer10
+						</div>
+						<div class="topLine__col topLine__col--right col">5% скидка на покупку от 50 000 руб. по коду Summer15
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end topLine-->
+			<div class="page-head"> 
+				<div class="container">
+					<nav>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+							<li class="breadcrumb-item active"><a href="#"><span>КТО МЫ  </span></a></li>
+						</ol>
+					</nav>
+					<div class="row"> 
+						<div class="col">
+							<h1>КТО МЫ  </h1>
+						</div>
+						<div class="col-auto"></div>
+					</div>
+				</div>
+			</div>
+			<!-- start sContent-->
+			<section class="sContent section" id="sContent">
+				<div class="container">
+					<div class="sContent__head">
+						<div class="h1 outlined-txt ttu col-xl-8 mb-5">Галерея Molbert –  это арт галерея, широко популяризирующая современное искусство </div>
+						<div class="sContent__center-block"> 
+							<p>Галерея Molbert&nbsp;&mdash; это он-лайн арт платформа, объединяющая как художников в&nbsp;мировом масштабе и&nbsp;их&nbsp;коллекционеров, так и&nbsp;всех любителей искусства.  Галерея Molbert представляет только оригинальные произведения искусства и&nbsp;всегда привлекает новую аудиторию, и&nbsp;ее&nbsp;интерес к&nbsp;культурным событиям.</p>
+							<p>Галерея Molbert представляет только оригинальные произведения искусства и&nbsp;всегда привлекает новую аудиторию, и&nbsp;ее&nbsp;интерес к&nbsp;культурным событиям.Продавать искусство в&nbsp;галерее Мольберт&nbsp;&mdash; это уникальная возможность представить свои работы всему миру и&nbsp;найти нового зрителя и&nbsp;коллекционера твоего искусства.</p>
+							<p>Покупать работы в&nbsp;галерее Мольберт&nbsp;&mdash; это в&nbsp;первую очередь доверие к&nbsp;галерее с&nbsp;10&nbsp;летним опытом работы в&nbsp;арт- индустрии, а&nbsp;также это удобный поиск найти&nbsp;то, что нравится&nbsp;и, главное, это лучшая инвестиция в&nbsp;себя, а&nbsp;то&nbsp;есть в&nbsp;потребности твоих собственных желаний.</p>
+						</div>
+					</div>
+					<div class="sContent__address-block">
+						<div class="row">
+							<div class="col-lg-6 order-lg-last">
+								<div class="sContent__img-wrap"> 
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/addr-1.webp"/><img src="img/@2x/addr-1.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/addr-2.webp"/><img src="img/@2x/addr-2.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/addr-3.webp"/><img src="img/@2x/addr-3.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+								</div>
+							</div>
+							<div class="col">
+								<p class="fw-600">Галерея находится в&nbsp;центре Петербурга, между Русским музеем и&nbsp;Эрмитажем, во&nbsp;Дворах Капеллы. Старинный дом конца XIX&nbsp;века, в&nbsp;котором разместилась галерея, ранее входил в&nbsp;единый комплекс построек Капеллы, созданных архитектором Леонтием Бенуа.  В&nbsp;этом доме жили и&nbsp;преподавали такие выдающиеся личности русской культуры как: Н.А. Римский-Корсаков, М.Ф. Гейслер, В.В. Чаплин, Б.Ф. Гуслистый.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sContent-->
+			<!-- start sAddress-->
+			<section class="sAddress section" id="sAddress">
+				<div class="container">
+					<div class="section-title">
+						<h2> <span class="outlined-txt d-block">Международные</span>проекты</h2>
+					</div>
+					<div class="col-lg-6"> 
+						<p class="fw-600">Арт-галерея &laquo;Мольберт&raquo; активно сотрудничает с&nbsp;зарубежными художниками и&nbsp;галереями. На&nbsp;счету деятельности галереи более 35&nbsp;международных проектов. Одним из&nbsp;направлений деятельности галереи является развитие культурных связей между странами через организацию художественных выставо</p>
+					</div>
+					<div class="sAddress__map-wrap"> <img class="res-i" src="img/svg/map.svg" alt=""/>
+						<ul> 
+								<li><span data-bs-toggle="popover" data-bs-content=" "> США
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5"> США</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Бельгия
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Бельгия</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Франция
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Франция</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Испания
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Испания</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Швеция
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Швеция</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Дания
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Дания</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Германия
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Германия</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Чехия
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Чехия</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Румыния
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Румыния</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Италия
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Италия</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Израиль
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Израиль</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Иран
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Иран</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Индия
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Индия</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Китай
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Китай</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Южная Корея
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Южная Корея</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+								<li><span data-bs-toggle="popover" data-bs-content=" ">  Япония
+										<div class="d-none">
+											<div class="popover-content">
+												<div class="a-items-js"> 
+													<div class="h5">  Япония</div>
+													<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													<div class="a-hidden-items-js">
+														<p>Вручение награды Гран-при Каннского кинофестиваля Les off de Cannes художнику Алексею Чиркову за портрет в технике живописной мозаики «Сhevalier de la palme d’or», 2012г. Мероприятие организовано совместно с французской Ассоциацией поддержки искусств Stella Art International при участии в культурной программе Каннского кинофестиваля.</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div></span></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- end sAddress-->
+			<!-- start sProjects-->
+			<section class="sProjects section" id="sProjects">
+				<div class="container">
+					<div class="section-title">
+						<h2> <span class="outlined-txt">Исторически </span>значимые проекты</h2>
+					</div>
+					<ul>
+								<li>
+									<div class="a-items-js"> 
+										<p>Сочные, яркие, свои! Олимпиада в Сочи глазами русских художников, 2014г, передвижная выставка.Художники галереи Мольберт посетили Олимпиаду и создали произведения на основе собственных, живых впечатлений от одного из самых значимых событий в России</p>
+										<div class="a-hidden-items-js">
+											<p>Сочные, яркие, свои! Олимпиада в Сочи глазами русских художников, 2014г, передвижная выставка.Художники галереи Мольберт посетили Олимпиаду и создали произведения на основе собственных, живых впечатлений от одного из самых значимых событий в России</p>
+										</div>
+										<div class="text-body a-show-more-js toggle-text">Читать все</div>
+									</div>
+								</li>
+								<li>
+									<div class="a-items-js"> 
+										<p>Конкурс молодых художников «400 лет Дому Романовых» Конкурс проводился в Санкт-Петербурге с 20 марта по 11 июля 2013 года галереей «Мольберт» под покровительством Ее Императорского Высочества Великой Княгини...</p>
+										<div class="a-hidden-items-js">
+											<p>Конкурс молодых художников «400 лет Дому Романовых» Конкурс проводился в Санкт-Петербурге с 20 марта по 11 июля 2013 года галереей «Мольберт» под покровительством Ее Императорского Высочества Великой Княгини...</p>
+										</div>
+										<div class="text-body a-show-more-js toggle-text">Читать все</div>
+									</div>
+								</li>
+								<li>
+									<div class="a-items-js"> 
+										<p>Выставка молодых петербургских художников, посвященная 70-летию снятия блокады Ленинграда, 27 января 2014 года.Великая Отечественная война оставила след в сердцах многих поколений ленинградцев. 27 января в честь Дня снятия блокады Ленинграда в </p>
+										<div class="a-hidden-items-js">
+											<p>Выставка молодых петербургских художников, посвященная 70-летию снятия блокады Ленинграда, 27 января 2014 года.Великая Отечественная война оставила след в сердцах многих поколений ленинградцев. 27 января в честь Дня снятия блокады Ленинграда в </p>
+										</div>
+										<div class="text-body a-show-more-js toggle-text">Читать все</div>
+									</div>
+								</li>
+								<li>
+									<div class="a-items-js"> 
+										<p>Бородино. Взгляд сквозь столетия, сентябрь 2012 год Выставка «Бородино. Взгляд сквозь столетия», посвященная 200-летнему юбилею Отечественной войны 1812 года, была представлена в зале галереи «Мольберт».</p>
+										<div class="a-hidden-items-js">
+											<p>Бородино. Взгляд сквозь столетия, сентябрь 2012 год Выставка «Бородино. Взгляд сквозь столетия», посвященная 200-летнему юбилею Отечественной войны 1812 года, была представлена в зале галереи «Мольберт».</p>
+										</div>
+										<div class="text-body a-show-more-js toggle-text">Читать все</div>
+									</div>
+								</li>
+					</ul>
+				</div>
+			</section>
+			<!-- end sProjects-->
+			<!-- start sShow-->
+			<section class="sShow section" id="sShow">
+				<div class="container">
+					<div class="section-title">
+						<h2><span class="outlined-txt">Выставки</span></h2>
+					</div>
+				</div>
+				<div class="sShow__slider-wrap">
+					<div class="sShow__slider sShow__slider--js">
+						<div class="swiper-wrapper">
+							<div class="sShow__slide swiper-slide"> 
+								<div class="container">
+									<div class="sShow__item">
+										<div class="row">
+											<div class="sShow__col col-lg-auto"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/gal.webp"/><img class="object-fit-js" src="img/@2x/gal.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+											</div>
+											<div class="col">
+												<div class="a-items-js"> 
+													<div class="sShow__title">русский музей
+													</div>
+													<p>Императорские сады России. Михайловский сад. презентация проекта «400 лет Дома Романовых» (более подробная информация о проекте размещена на предыдущей странице)</p>
+													<p>Императорские сады России. Михайловский сад. В рамках VII Международного Фестиваля «Императорские сады» в конкурсной программе представлена инсталляция галереи «Мольберт» – «Алиса  в Стране Чудес» и «Алиса в Зазеркалье». Инсталляция сделана по эскизам московского современного художника Юрия Ващенко к произведениям Льюиса Кэролла.</p>
+													<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+													<div class="a-hidden-items-js">
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sShow__slide swiper-slide"> 
+								<div class="container">
+									<div class="sShow__item">
+										<div class="row">
+											<div class="sShow__col col-lg-auto"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/gal.webp"/><img class="object-fit-js" src="img/@2x/gal.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+											</div>
+											<div class="col">
+												<div class="a-items-js"> 
+													<div class="sShow__title">русский музей
+													</div>
+													<p>Императорские сады России. Михайловский сад. презентация проекта «400 лет Дома Романовых» (более подробная информация о проекте размещена на предыдущей странице)</p>
+													<p>Императорские сады России. Михайловский сад. В рамках VII Международного Фестиваля «Императорские сады» в конкурсной программе представлена инсталляция галереи «Мольберт» – «Алиса  в Стране Чудес» и «Алиса в Зазеркалье». Инсталляция сделана по эскизам московского современного художника Юрия Ващенко к произведениям Льюиса Кэролла.</p>
+													<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+													<div class="a-hidden-items-js">
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sShow__slide swiper-slide"> 
+								<div class="container">
+									<div class="sShow__item">
+										<div class="row">
+											<div class="sShow__col col-lg-auto"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/gal.webp"/><img class="object-fit-js" src="img/@2x/gal.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+											</div>
+											<div class="col">
+												<div class="a-items-js"> 
+													<div class="sShow__title">русский музей
+													</div>
+													<p>Императорские сады России. Михайловский сад. презентация проекта «400 лет Дома Романовых» (более подробная информация о проекте размещена на предыдущей странице)</p>
+													<p>Императорские сады России. Михайловский сад. В рамках VII Международного Фестиваля «Императорские сады» в конкурсной программе представлена инсталляция галереи «Мольберт» – «Алиса  в Стране Чудес» и «Алиса в Зазеркалье». Инсталляция сделана по эскизам московского современного художника Юрия Ващенко к произведениям Льюиса Кэролла.</p>
+													<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+													<div class="a-hidden-items-js">
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+														<p>Императорские сады России. Михайловский сад. 10 Фестиваль АВАНГАРДЕНС...</p>
+													</div>
+													<div class="text-body a-show-more-js toggle-text">Читать все</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-prev">
+						<svg class="icon icon-arrow-l-long ">
+							<use xlink:href="img/svg/sprite.svg#arrow-l-long"></use>
+						</svg>
+					</div>
+					<div class="swiper-next">
+						<svg class="icon icon-arrow-r-long ">
+							<use xlink:href="img/svg/sprite.svg#arrow-r-long"></use>
+						</svg>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			<!-- end sShow-->
+			<!-- start sCooperation-->
+			<section class="sCooperation section" id="sCooperation">
+				<div class="container">
+					<div class="section-title">
+						<h2> <span class="outline-txt d-block">сотрудничетсво</span>с издательствами</h2>
+					</div>
+					<div class="col-lg-6"> 
+						<p class="fw-600">Еще одним из направлений деятельности галереи является сотрудничество  с лучшими русскими издательствами и презентации книг с иллюстрациями современных художников – продвижение и поддержка культуры книги.</p>
+					</div>
+					<div class="sPC-dd sProdCard-dd-group-js">
+						<div class="sPC-dd__item">
+							<div class="sPC-dd__head dd-head-js">
+								<div class="sPC-dd__name">издательство “Вита нова”
+								</div>
+								<div class="sPC-dd__cross">
+								</div>
+							</div>
+							<div class="sPC-dd__content dd-content-js">
+								<div class="sPC-dd__table">
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Ориентация
+										</div>
+										<div class="sPC-dd__val-col col-sm">Горизонтальная
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Цвет
+										</div>
+										<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Год
+										</div>
+										<div class="sPC-dd__val-col col-sm">2015
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Коллекция
+										</div>
+										<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Стиль
+										</div>
+										<div class="sPC-dd__val-col col-sm">Абстракционизм
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Темы
+										</div>
+										<div class="sPC-dd__val-col col-sm">Абстракция
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Техника
+										</div>
+										<div class="sPC-dd__val-col col-sm">Масло, Холст
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sPC-dd__item">
+							<div class="sPC-dd__head dd-head-js">
+								<div class="sPC-dd__name">издательство детской литературы “поляндрия”
+								</div>
+								<div class="sPC-dd__cross">
+								</div>
+							</div>
+							<div class="sPC-dd__content dd-content-js">
+								<div class="sPC-dd__table">
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Ориентация
+										</div>
+										<div class="sPC-dd__val-col col-sm">Горизонтальная
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Цвет
+										</div>
+										<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Год
+										</div>
+										<div class="sPC-dd__val-col col-sm">2015
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Коллекция
+										</div>
+										<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Стиль
+										</div>
+										<div class="sPC-dd__val-col col-sm">Абстракционизм
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Темы
+										</div>
+										<div class="sPC-dd__val-col col-sm">Абстракция
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Техника
+										</div>
+										<div class="sPC-dd__val-col col-sm">Масло, Холст
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sPC-dd__item">
+							<div class="sPC-dd__head dd-head-js">
+								<div class="sPC-dd__name">издательство “планета музыки”
+								</div>
+								<div class="sPC-dd__cross">
+								</div>
+							</div>
+							<div class="sPC-dd__content dd-content-js">
+								<div class="sPC-dd__table">
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Ориентация
+										</div>
+										<div class="sPC-dd__val-col col-sm">Горизонтальная
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Цвет
+										</div>
+										<div class="sPC-dd__val-col col-sm">Белый, Зеленый, Красный
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Год
+										</div>
+										<div class="sPC-dd__val-col col-sm">2015
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Коллекция
+										</div>
+										<div class="sPC-dd__val-col col-sm">Лучшие абстрактные картины, Сюрреализм
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Стиль
+										</div>
+										<div class="sPC-dd__val-col col-sm">Абстракционизм
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Темы
+										</div>
+										<div class="sPC-dd__val-col col-sm">Абстракция
+										</div>
+									</div>
+									<div class="sPC-dd__t-row row">
+										<div class="sPC-dd__name-col col-sm-auto">Техника
+										</div>
+										<div class="sPC-dd__val-col col-sm">Масло, Холст
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCooperation-->
+			<!-- start sEvents-->
+			<section class="sEvents section" id="sEvents">
+				<div class="container">
+					<div class="section-title">
+						<h2><span class="outline-txt d-block">другие значимые</span>мероприятия,<span class="outline-txt d-block">проведенные</span>галереей:</h2>
+					</div>
+						<div class="sEvents__line">
+							<div class="row">
+								<div class="sEvents__col col-lg-auto">
+									<div class="h5">Организация  выставок Русских  художников-эмигрантов,  ныне живущих во Франции.</div>
+								</div>
+								<div class="col"> 
+									<div class="sEvents__caption">
+										<div class="col">
+											<ul> 
+												<li>Анатолия Путилина, известного Ленинградского художника-нонконформиста.</li>
+												<li>Потомственного русского дворянина Валентина Афанасьева, участника нашумевших  выставок андеграунда 70-х годах в Ленинграде.</li>
+												<li>Братьев Андрея и Владимира Гофманов, известных французских скульпторов.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sEvents__line">
+							<div class="row">
+								<div class="sEvents__col col-lg-auto">
+									<div class="h5">Благотворительный проект  «Улыбки Петербургских Звёзд»</div>
+								</div>
+								<div class="col"> 
+									<div class="sEvents__caption">
+										<p>Помощь детской Областной клинической больнице: собраны денежные средства на приобретение специального холодильного оборудования для хранения лекарств. Мы привлекли элиту петербургского бизнеса, известных петербуржцев из мира театра, кино и музыки, договорились с фотографом Васюковой Маргаритой  и изготовили уникальные портреты этих звёзд. Совместный проект со стоматологической клиникой «Аура».</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="sEvents__line">
+						<div class="h5">Памятная выставка Игоря Кравцова </div>
+					</div>
+					<div class="sEvents__line">
+						<div class="h5">Участие в архитектурной неделе Design Week</div>
+					</div>
+					<div class="sEvents__line">
+						<div class="h5">Выставки, посвященные Всемирному Дню Театра</div>
+					</div>
+					<div class="sEvents__line">
+						<div class="h5">Персональные выставки русской художницы Гели Писаревой, чьи работы находятся  в&nbsp;постоянной коллекции Русского Музея</div>
+					</div>
+						<div class="sEvents__line">
+							<div class="row">
+								<div class="sEvents__col col-lg-auto">
+									<div class="h5">Выставки под кураторством</div>
+									<p class="fw-600">известного петербургского искусствоведа, заведующего Отделом новейших течений Государственного Русского музея, заслуженного деятеля искусств Российской Федерации, члена Санкт-Петербургского отделения АИС – Александра Боровского, 2014г:</p>
+								</div>
+								<div class="col"> 
+									<div class="sEvents__caption">
+										<ul> 
+											<li>Выставка петербургских художников Игоря и Елены Кулик «PULP FICTION»</li>
+											<li>Групповая выставка известных петербургских художников-абстракционистов</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sEvents__line">
+							<div class="row">
+								<div class="sEvents__col col-lg-auto">
+									<p class="fw-600">5-9 июня 2014 года генеральный директор галереи – Елена Мочалина посетила ВСЕРОССИЙСКИЙ КОНГРЕСС профессиональных работников и лидеров некоммерческих организаций в сфере культуры, организованный Институтом «Справедливый Мир» и Российским Творческим Союзом работников культуры. Место проведения мероприятий: Москва, Государственная Дума ФС РФ; Симферополь «Киноконцертный комплекс «Юбилейный»; Алушта Golden Resolt; Севастополь «Культурно-информационный центр».</p>
+								</div>
+								<div class="col"> 
+									<div class="sEvents__caption">
+										<p>В результате посещения мероприятий Всероссийского Конгресса галерея «Мольберт» получила приглашение вступить в Российский творческий Союз работников культуры.  И в 2014 году вступила в РТСРК на секцию галеристов и коллекционеров. Впоследствии галерея стала принимать более активное участие в некоммерческих проектах и фестивалях в сфере культуры, значимых для нашего города и России, с целью закрепления имиджа галереи и оказания помощи в продвижении российских художников.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sEvents__line">
+							<div class="row">
+								<div class="sEvents__col col-lg-auto">
+									<div class="h5">Студенты международных  и отечественных вузов  регулярно проходят практику в  галерее «Мольберт»:</div>
+								</div>
+								<div class="col"> 
+									<div class="sEvents__caption">
+										<ul> 
+											<li>Кристина Милкова,- Берлинская академия искусств (Akademie der Künste in Berlin) Прохождение практики и анонс выставки Георга Гросса</li>
+											<li>Студенты из Института им. Репина</li>
+											<li>Студенты из Академии Штиглица</li>
+											<li>Eszter Veres, студентка из Будапешта, Институт дизайна</li>
+											<li>Серкова Надежда-студентка СПБ филиала Финансового Университета при Правительстве РФ</li>
+											<li>Прохождение преддипломной практики студента 4 курса очного отделения Камракова Игоря Андреевича, обучающегося на факультете «Мировой культуры». «Музейное дело и охрана памятников»</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</section>
+			<!-- end sEvents-->
+			<!-- start sMap-->
+			<div class="sMap section" id="sMap">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-5 col-lg-6">
+							<p><strong>Адрес: </strong>Большая Конюшенная ул, дом 11 или  набережная.реки Мойки, д. 20. Дворы Капеллы.   <br/><strong>Сайт: </strong>www.molbertgallery.ru</p>
+						</div>
+						<div class="col-xl-7 col-lg-6"> 
+							<div class="sMap__map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5304283888186!2d30.318872316185598!3d59.939933668956044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963111d41ef2df%3A0xa40e863cf828b4fc!2z0L3QsNCxLiDRgNC10LrQuCDQnNC-0LnQutC4LCAyMCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sby!4v1619961263334!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sMap-->
+			<footer class="footer">
+				<div class="footer__container container">
+					<div class="footer__row row gy-5">
+						<div class="footer__col col-sm-6 col-md-4 col-xl-auto">
+							<div class="footer__title">ПОКУПАТЕЛЯМ
+							</div>
+							<div class="footer__links">
+								<ul>
+									<li><a href="#">Как сделать заказ</a></li>
+									<li><a href="#">Оплата и доставка</a></li>
+									<li><a href="#">Возврат товара</a></li>
+									<li><a href="#">Публичная оферта</a></li>
+									<li><a href="#">Политика конфиденциальности</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-5 col-xl-auto">
+							<div class="footer__title">КОНТАКТЫ
+							</div><a class="footer__lonely-link footer__lonely-link--tell" href="tel:+78124380114">+7 (812) 438-01-14</a><a class="footer__lonely-link footer__lonely-link--mail" href="mailto:info@molbertgallery.ru">info@molbertgallery.ru</a>
+							<div class="footer__lonely-link footer__lonely-link--shedule">Пн-Вс  09.00-20.00
+							</div>
+							<div class="footer__address">191186, Россия, г. Санкт-Петербург,<br/>ул. Большая Конюшенная, 11
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-3 col-xl-auto">
+							<div class="footer__title">О НАС
+							</div>
+							<div class="footer__links">
+								<ul>
+									<li><a href="#">Кто мы</a></li>
+									<li><a href="#">Реквизиты</a></li>
+									<li><a href="#">Отзывы</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-4 col-xl-auto">
+							<div class="footer__title">ПАРТНЕРАМ
+							</div>
+							<div class="footer__links">
+								<ul>
+									<li><a href="#">Заявка на сотрудничество</a></li>
+									<li><a href="#">Услуги</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col col-sm-6 col-md-4 col-xl-auto">
+							<div class="footer__title">МЫ В СОЦ.СЕТЯХ
+							</div>
+							<div class="footer__soc-row row gy-3">
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-inst ">
+										<use xlink:href="img/svg/sprite.svg#inst"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-yt ">
+										<use xlink:href="img/svg/sprite.svg#yt"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__soc-link" href="#">
+									<svg class="icon icon-gPlus ">
+										<use xlink:href="img/svg/sprite.svg#gPlus"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="footer__sub-title">Мы приниаем
+							</div>
+							<div class="footer__accept-row row gy-3">
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-visa ">
+										<use xlink:href="img/svg/sprite.svg#visa"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-mastercard ">
+										<use xlink:href="img/svg/sprite.svg#mastercard"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-paypal ">
+										<use xlink:href="img/svg/sprite.svg#paypal"></use>
+									</svg></a>
+								</div>
+								<div class="col-auto"><a class="footer__accept-link" href="#">
+									<svg class="icon icon-uni-pay ">
+										<use xlink:href="img/svg/sprite.svg#uni-pay"></use>
+									</svg></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__copy-right">© Copyright 2020 artmolbert Limited. All rights reserved.
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-exponation modal-win" id="modal-exponation" style="display: none">
+			<div class="modal-exponation__txt-box"><strong>Основные выставки:</strong><br/><br/><strong>2004</strong><br/>
+				<ul>
+					<li>«Арт-Манеж в ЭКСПОЦЕНТРЕ», Галерея «ARS LONGA», «ЭКСПОЦЕНТР», Москва, Россия</li>
+					<li>1-й Салон Искусств «Лучшие художественные галереи», Галерея «ARS LONGA», «Инфопространство»,Москва, Россия</li>
+					<li>2-й Салон Искусств «Лучшие художественные галереи», Галерея «ARS LONGA», «Инфопространство»,Москва, Россия</li>
+					<li>«Арт-Манеж, 2004», Галерея «ARS LONGA», ЛФК «ЦСКА», Москва, Россия</li>
+				</ul><strong>2004-2005</strong><br/>
+				<ul>
+					<li>«Новые имена и новые работы», Галерея «АRS LONGA», ЦДХ, Москва, Россия</li>
+				</ul><strong>2005</strong><br/>
+				<ul>
+					<li>«ЦДХ», зал №9, Галерея «ARS LONGA», Москва, Россия</li>
+					<li>«Атмосфера”. Малая Садовая,4. Галерея «ARS LONGA», Москва, Россия</li>
+					<li>
+						Биеннале современного искусства. VII Международная выставка, ЦВЗ «Манеж»,
+						<br/>Галерея «ARS LONGA», С-Петербург, Россия
+					</li>
+					<li>«ЦДХ. Лето, 2005», Центральный Дом Художника, Галерея «ARS LONGA», Москва, Россия.</li>
+				</ul><strong>2006</strong><br/>
+				<ul>
+					<li>«АРТ- МАНЕЖ, 2006″. X Международная художественная ярмарка, ЦВЗ «Манеж», Москва,<br/>Галерея «ARS LONGA», Россия</li>
+					<li>6-й салон «Лучшие художественные галереи», «Инфопространство», Галерея «ARS LONGA», Москва, Россия</li>
+					<li>«Перекресток столетий» (совместный проект с галереями «АРТ-РА» и «ЭКСПО-88»), Центральный Дом Художника, Галерея «ARS LONGA», Москва, Россия</li>
+					<li>Проект «Городу и миру». 7-салон «Лучшие художественные галереи», «Инфопространство»,Галерея «ARS LONGA», Москва, Россия</li>
+					<li>«Фестиваль галерей», Галерея «ARS LONGA» ЦВЗ «Манеж», С-Пб, Россия.</li>
+				</ul><strong>2007</strong><br/>
+				<ul>
+					<li>«ХУДГРАФ», МГВЗ «Новый Манеж», Галерея «ARS LONGA», Москва, Россия</li>
+				</ul>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="modal-size modal-win" id="modal-size" style="display: none">
+			<div class="modal-size__img"><img loading="lazy" src="img/@2x/table-stab.png" alt=""/>
+			</div>
+		</div>
+		<!-- end modals-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

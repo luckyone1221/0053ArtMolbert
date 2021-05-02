@@ -468,7 +468,7 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
-	makeDDGroup(['.sProdCard-dd-group-js', '.sProdCard-dd-group-js', '.sProdCard-dd-group-js', '.sProdCard-dd-group-js']); //add to .f-hide-btn-js
+	makeDDGroup(['.sProdCard-dd-group-js']); //add to .f-hide-btn-js
 
 	$('.f-hide-btn-js').click(function () {
 		var ddContent = this.closest('.free-dd-content-js');
@@ -549,7 +549,7 @@ function eventHandler() {
 		});
 	}); //
 
-	$('.a-show-more-js').click(function () {
+	$(document).on('click', '.a-show-more-js', function () {
 		var grandParent = this.closest('.a-items-js');
 		if (!grandParent) return;
 		var hiddenItemsCont = grandParent.querySelector('.a-hidden-items-js');
@@ -562,6 +562,38 @@ function eventHandler() {
 	//todo
 	// 1. clean js file
 	// 2. remake page with h1(02-04)
+
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		console.log(popoverTriggerEl);
+		var popover = new bootstrap.Popover(popoverTriggerEl, {
+			container: '.sAddress__map-wrap',
+			// trigger: 'manual',
+			placement: 'auto' // offset: 0,
+
+		});
+	});
+	$('.sAddress [data-bs-toggle="popover"]').click(function () {
+		var content = $(this).find('.popover-content');
+		$('.popover-body .a-items-js  ').remove();
+		$('.popover-body').append(content.html());
+		console.log(content);
+	});
+	var sShowSlider = new Swiper('.sShow__slider--js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sShow .swiper-next',
+			prevEl: '.sShow .swiper-prev'
+		},
+		pagination: {
+			//el: $(this).find('.sShow-pagination'),
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
 }
 
 ;
