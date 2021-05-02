@@ -12,6 +12,7 @@
 		<!--range slider-->
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="libs/intl-tel-input/build/css/intlTelInput.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -1363,12 +1364,21 @@
 								</div>
 								<div class="form-wrap">
 									<form>
-										<div class="label custop-ph-label"><input class="form-wrap__input form-control has-ph-js" type="text" name="name"/><span class="l-title">Name</span>
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Name</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Name"/>
+											</label>
 										</div>
-										<div class="label custop-ph-label"><input class="form-wrap__input form-control has-ph-js" type="tel" name="name"/><span class="l-title">Phone </span>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Phone </span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Phone "/>
+											</label>
 										</div>
-										<div class="label custop-ph-label"><input class="form-wrap__input form-control has-ph-js" type="email" name="name" value="roman@mail.com"/><span class="l-title">E-mail </span>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">E-mail </span><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail "/>
+											</label>
 										</div>
+										<!-- +e.input-wrap-->
 										<div class="form-wrap__send-btn-cont">
 											<button class="form-wrap__send-btn" type="submit">отправить
 											</button>
@@ -1569,6 +1579,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

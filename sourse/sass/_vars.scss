@@ -714,10 +714,10 @@ $form-label-color: null !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y: rem(9) !default;
-$input-padding-x: 0 !default;
+$input-padding-y: rem(13) !default;
+$input-padding-x: rem(27) !default;
 $input-font-family: $input-btn-font-family !default;
-$input-font-size: rem(24px) !default;
+$input-font-size: rem(18px) !default;
 $input-font-weight: $font-weight-base !default;
 $input-line-height: 1 !default;
 

@@ -25,9 +25,101 @@ mixin sForm()
 							p
 								| Оставьте заявку, наш искусствовед-дизайнер, свяжеться и проконсультирует Вас.
 						+form-wrap()
-							+inp3('Name', 'text')
-							+inp3('Phone ', 'tel')
-							+inp3('E-mail ', 'email')(value="roman@mail.com")
+							+input('Name', 'text', 'Name')
+							+input('Phone ', 'tel', 'Phone ')
+							+input('E-mail ', 'email', 'E-mail ')(value="roman@mail.com")
 							+e.send-btn-cont
 								+e.send-btn(type='submit') отправить
+	// end sForm
+	
+mixin sForm12()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container 
+			form
+				.title-md ДАННЫЕ АВТОРА
+				+b.form-wrap--border
+					.row.roww--lg 
+						.col-lg-6
+							+input('Татьяна', 'text', 'Имя* ')
+						.col-lg-6
+							+input('exampeinstagram.com ', 'text', 'Facebook ')
+						.col-lg-6
+							+input('Фамилия', 'text', 'Фамилия*  ')
+						.col-lg-6
+							+input('exampeinstagram.com ', 'text', 'Instagram   ')
+						.col-lg-6
+							+input('Телефон', 'tel', 'Телефон* ')
+						.col-lg-6
+							+input('exampeYouTube.com', 'text', 'YouTube   ')
+					.a-items-js
+						.a-hidden-items-js
+							.row.roww--lg 
+								.col-lg-6 
+									+input('Россия', 'select', 'Страна    ')
+								.col-lg-6 
+									+input('Россия', 'select', 'Страна    ')
+								.col-lg-6 
+									+input('exampeYouTube.com', 'text', 'YouTube   ')
+								.col-lg-6 
+										+b.add-file
+										+e.btn  Добавить файл +
+						a.text-body.a-show-more-js.toggle-text(href="#")
+							span Дополнительные данные
+							span Скрыть
+				.title-md ИНФОРМАЦИЯ О ПРОИЗВЕДЕНИИ
+				+b.form-wrap--border
+					.row.roww--lg 
+						.col-lg-6
+							+input('Летний Сад', 'text', 'Название работы ')
+						.col-lg-6
+							+input('Рамка', 'text', 'Оформление  ')
+						.col-lg-6
+							.row
+								.col-4
+									+input('2020', 'text', 'Год создания   ')
+								.col-4
+									+input('159х120', 'text', 'Размер  ')
+								.col-4
+									+input('250 000 ₽', 'text', 'Цена  ')
+						.col-lg-6
+							+input('Рамка', 'text', 'Тираж и номер экземпляра (для тиражной графики)')
+						.col-lg-6
+							+input('Новое', 'text', 'Состояние работы (сохранность) ')
+						.col-lg-6
+							+input('', 'text', 'Материалы')
+					 
+					.a-items-js
+						.a-hidden-items-js
+						a.text-body.a-show-more-js.toggle-text(href="#")
+							span Дополнительные данные
+							span Скрыть
+				.a-items-js
+					+b.title-md.text-body.a-show-more-js.toggle-text ДОПОЛНИТЕЛЬНЫЕ данные
+						+e.toggle
+					.a-hidden-items-js.active
+						+b.form-wrap--border
+							.row.roww--lg 
+								.col-lg-6
+									+input('Летний Сад', 'text', 'Участие в выставках ')
+									+input('Летний Сад', 'text', 'Экспертиза')
+									+input('Летний Сад', 'text', 'Участие в аукционах ')
+									+input('Летний Сад', 'text', 'Участие в аукционах')
+								
+								.col-lg-6
+									+input('', 'textarea', 'Комментрии к работе')
+									+b.add-file
+										+e.btn  Добавить файл +
+										+e.text Cюда Вы можете загрузить дополнительные сканы, копии, относящиеся к работе
+										+e.file-name--success
+											span IMG_зимний сад.doc
+										+e.file-name--progress 
+											span IMG_зимний сад.doc
+											+b.progress
+												+e.bar(style="width:50% ")
+										+e.file-name--success
+											span IMG_зимний сад.doc
+							
+				.text-end 
+					button.btn.btn-primary(type="submit") отправить
 	// end sForm

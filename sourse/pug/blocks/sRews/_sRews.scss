@@ -1,0 +1,88 @@
+// start .sRews
+.sRews {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__row{
+		@include media-breakpoint-up(lg) {
+		columns: 2;
+		display: block;
+	}
+	}
+	&__col{
+		@include media-breakpoint-up(sm) {
+
+			display: inline-flex;
+			margin-bottom: rem(100);
+		}
+		margin-bottom: rem(50);
+		width: 100%;
+	}
+	&__col-head{
+		@include media-breakpoint-up(sm) {
+
+			width: rem(140);
+			margin-right: rem(30);
+			flex: 0 0 auto;
+		}
+		margin-bottom: 1rem;
+	}
+	&__col-body{
+		border: 1px solid #C4C4C4; 
+		border-radius: 8px;
+		padding: rem(30);
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			border-top: 1px solid #C4C4C4; 
+			border-left: 1px solid #C4C4C4; 
+			background-color: #fff;
+			@include media-breakpoint-up(sm) {
+
+				transform: rotate(-45deg);
+				left: -8px;
+				top: 25px;
+			}
+			transform: rotate(45deg);
+			top: -8px;
+			left: 25px;
+
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+	.star-block {
+		.icon{
+			font-size: rem(20);
+			cursor: pointer;
+		}
+	}
+} // end.sRews
+
+
+.star-block {
+	.icon{
+		font-size: rem(42);
+		cursor: pointer;
+		fill: transparent;
+		stroke:#000000;
+		opacity: 0.5;
+		@include mt;
+		&.active,
+		&:hover{
+			fill: #FFA800;
+			stroke: #FFA800;
+		}
+		&.active{
+			opacity: 1;
+		}
+	}
+}

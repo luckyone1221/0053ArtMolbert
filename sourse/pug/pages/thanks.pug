@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sFormRew/_sFormRew.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Заявка на сотрудничество     '
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+	+top-nav(true)
+	+topLine()
+	+b.thanks-setion.section.container.text-center
+		h1 Спасибо! <br>  Ваша заявка принята в&nbsp;обработку
+		img(src="img/svg/check-lg.svg", alt="")
+		p мы&nbsp;рассмотрим заявку в&nbsp;течении 2&nbsp;дней и&nbsp;свяжемся с&nbsp;вами по&nbsp;указанным данным

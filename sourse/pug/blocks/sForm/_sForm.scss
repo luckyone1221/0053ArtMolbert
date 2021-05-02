@@ -84,13 +84,13 @@
 		&__input{
 
 		}
-		.l-title{
-			font-size: rem(24px);
-			top: calc(100% - 33px);
+		// .l-title{
+		// 	font-size: rem(24px);
+		// 	top: calc(100% - 33px);
 
-			line-height: 1;
-			color: rgba($black, .6);
-		}
+		// 	line-height: 1;
+		// 	color: rgba($black, .6);
+		// }
 		&__send-btn-cont{
 			padding-top: rem(10);
 			@include media-breakpoint-up(sm){

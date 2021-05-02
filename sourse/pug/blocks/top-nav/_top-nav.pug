@@ -54,11 +54,16 @@ mixin inpBlock()
 		//-+inp3('Search', 'text')
 		+e.INPUT.input.form-control(type='text' placeholder='Search')&attributes(attributes)
 
-mixin inp3(ph, type, val='', labelClass='custop-ph-label', name="name")
+mixin inp3(ph, typ, val='', labelClass='custop-ph-label', name="name")
 	.label(class=labelClass)
-		+e.INPUT.input.form-control.has-ph-js(type=type name=name)&attributes(attributes)
-		span.l-title=ph
-		block
+		if typ=="textarea"
+			+e.TEXTAREA.input.form-control.has-ph-js(type=typ name= name)&attributes(attributes)
+			span.l-title=ph
+			block
+		else
+			+e.INPUT.input.form-control.has-ph-js(type=typ name= name)&attributes(attributes)
+			span.l-title=ph
+			block
 
 mixin iconLinksRow(addClasses)
 	+b.il-row.row(class=addClasses)

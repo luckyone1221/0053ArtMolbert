@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sFormRew/_sFormRew.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Отзывы     '
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+	+top-nav(true)
+	+topLine()
+	+b.page-head 
+		.container
+			+breadcrumb('Главная', title)
+			.row 
+				.col
+					h1= title
+				.col-auto
+					a.btn-default(href="#sFormRew") оставить отзыв  
+	+sRews
+	+sFormRew
+	+footer()

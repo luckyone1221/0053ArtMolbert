@@ -181,11 +181,13 @@ var JSCCommon = {
 	// /tabs
 	inputMask: function inputMask() {
 		// mask for input
-		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(function (element) {
-			return element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
+		var input = document.querySelectorAll('[type="tel"]');
+		input.forEach(function (element) {
+			window.intlTelInput(element, {
+				preferredCountries: ["ru", "by"] // any initialisation options go here
+
+			});
 		});
-		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
 	// /inputMask
 	ifie: function ifie() {
@@ -194,50 +196,6 @@ var JSCCommon = {
 		if (isIE11) {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
-	},
-	sendForm: function sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			var th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				}); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
 	},
 	heightwindow: function heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -281,7 +239,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
-	JSCCommon.sendForm();
+	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.checkEmptyVal();
@@ -549,13 +507,10 @@ function eventHandler() {
 		});
 	}); //
 
-	$(document).on('click', '.a-show-more-js', function () {
-		var grandParent = this.closest('.a-items-js');
-		if (!grandParent) return;
-		var hiddenItemsCont = grandParent.querySelector('.a-hidden-items-js');
-		if (!hiddenItemsCont) return;
+	$(document).on('click', '.a-show-more-js', function (e) {
+		e.preventDefault();
 		$(this).toggleClass('active');
-		$(hiddenItemsCont).slideToggle(function () {
+		$(this).siblings('.a-hidden-items-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
 	}); //end luckyone Js

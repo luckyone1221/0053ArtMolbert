@@ -1,0 +1,16 @@
+mixin sFormRew(data)
+	// start sFormRew
+	+b.SECTION.sFormRew.section#sFormRew&attributes(attributes)
+		.container
+			h5 Оставь отзыв
+			+form-wrap 
+				.row.pb-3
+					.col-sm-auto.fw-600.pt-2 Оценка
+					.col
+						+starblock()
+				.col-lg-7
+					+input('Имя', 'text','Имя ')
+				+input('Текст', 'textarea','Текст')
+				.text-end
+					button.btn-default(type="submit") оставить отзыв
+	// end sFormRew
