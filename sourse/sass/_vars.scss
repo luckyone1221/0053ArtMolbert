@@ -4,6 +4,8 @@ $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
 $rfs-breakpoint: 1200px !default;
+// 1 rem = $rfs-rem-value px
+$rfs-rem-value: 18 !default;
 
 
 $themeColor: $primary !default;

@@ -14,15 +14,33 @@ mixin basketblock()
 							.row 
 								.col-auto
 									+e.img-wrap 
-										+pic(``)
+										+pic(`basket-${i}.jpg`,'',0)
 								.col
+									+e.title(href="#")= t
+									+e.text Сергей Усик
+									+e.code Код товара 
+										span 32 55 84 35
 						td 
+							if size 
+								+e.size= size
 						td 
+							+b.add-block
+								+e.btn
+								input(type="text" value="1")
+								+e.btn--plus
 						td 
+							+e.price--old 140 000 ₽
+							+e.price 140 000 ₽
+							+e.delete 
+								+icon('close')
+				+tr('1',`12 линия Васильевского  Острова`,`60 x 159 cm`)
+				+tr('2',`ФУТБОЛКА  “ПРОГУЛКА ВНУТРИ СЕБЯ” `,`XL`)
+				+tr('3',`обложка на паспорт  “ПРОГУЛКА ВНУТРИ СЕБЯ” `)
+
 
 mixin sBasket(data)
 	// start sBasket
 	+b.sBasket.section#sBasket&attributes(attributes)
 		.container
-			
+			+basketblock()
 	// end sBasket
