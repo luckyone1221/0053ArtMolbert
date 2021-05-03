@@ -44,7 +44,52 @@ mixin sOrder(data)
 						button.btn-default(type="button").w-100 применить
 				.col-lg-6
 					.title-md СПОСОБ ОПЛАТЫ
+					+e.total-block 
+						.row 
+							.col-auto
+								+e.img-wrap 
+									+pic(`basket-1.jpg`,'',0)
+							+e.col.col
+								+e.title(href="#") 12 линия Васильевского  Острова
+								+e.text.small Сергей Усик
+								+e.code.small Код товара
+									span 32 55 84 35 
+								+e.code.small Кол-во
+									span 1
+								+e.code.small Размер
+									span 60 x 159 cm
+						.row.pt-1
+							.col.small Цена за 1 штуку
+
+							.col-auto
+								+e.price--current 140 000 ₽
+						hr
+						.row.pt-1
+							.col.fw-600 Cтоимость
+
+							.col-auto
+								+e.price--current 140 000 ₽
+			
+						.row.pt-1
+							.col.fw-600 Скидка
+
+							.col-auto
+								+e.price--current.text-orange -70 000 ₽
+		
+						.row.pt-1
+							.col.fw-600 Доставка
+
+							.col-auto
+								+e.price--current 950 ₽
+						hr
+						.row.pt-1
+							.col.fw-600 Всего
+
+							.col-auto
+								+e.price--current 70 000 ₽
+					.title-md СПОСОБ ОПЛАТЫ
 					+b.form-wrap--border
+
 						mixin r(t,p)
 							+in-c( "radio")
 								span.row 
@@ -64,4 +109,15 @@ mixin sOrder(data)
 						+r('Qiwi кошелек ','qiwi_icon.svg') 
 					+in-c( "checkbox")
 						small Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей  политика конфиденциальности.
+					.row 
+						.col-6
+						.col-6.smallest.text-center.pb-3
+							img(src="img/svg/lock.svg", alt="")
+							| Защищенный платеж
+
+					.row 
+						.col-6
+							a.btn.btn-default(href="#").w-100  вернуться в магазин
+						.col-6
+							a.btn.btn-primary(href="#").w-100 перейти к оплате
 	// end sOrder
