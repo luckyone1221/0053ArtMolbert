@@ -106,7 +106,7 @@ var _default = {
         swiper.hashNavigation.destroy();
       }
     },
-    'transitionEnd _freeModeNoMomentumRelease': function transitionEnd_freeModeNoMomentumRelease(swiper) {
+    transitionEnd: function transitionEnd(swiper) {
       if (swiper.hashNavigation.initialized) {
         swiper.hashNavigation.setHash();
       }

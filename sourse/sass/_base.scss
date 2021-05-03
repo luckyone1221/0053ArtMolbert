@@ -1,15 +1,15 @@
 .pixel-perfect {
-	top: 0;
-	display: block;
-	@include a-cent(x);
-	pointer-events: none;
-	z-index: 1000;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	background-position: center 0;
-	opacity: 0;
-	//opacity: 0.7;
+  top: 0;
+  display: block;
+  @include a-cent(x);
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-position: center 0;
+  opacity: 0;
+  //opacity: 0.7;
 }
 
 body,
@@ -1155,7 +1155,7 @@ iframe {
 				&::before{
 					content: '';
 					width: 1px;
-					height: 17px; 
+					height: 17px;
 					background: #C4C4C4;
 					left: 0;
 					@include a-cent1(y);
@@ -1203,7 +1203,7 @@ iframe {
       border-bottom: 20px solid #fff;
     vertical-align: top;
   }
-  
+
   &__total{
     background: #F4F5EF;
     display: flex;
@@ -1218,7 +1218,7 @@ iframe {
   &__total-price{
     @include rfs(24px);
   }
-  
+
   @include media-breakpoint-down(lg) {
     table{
       display: block;
@@ -1245,4 +1245,14 @@ iframe {
 
 .toggle-table{
   display: none;
+}
+
+.colections-page{
+  .page-head{
+    .breadcrumb{
+      @include media-breakpoint-up(xxl){
+        margin-bottom: 40px;
+      }
+    }
+  }
 }

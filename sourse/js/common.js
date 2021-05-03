@@ -241,7 +241,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	var x = window.location.host;
 	let screenName;
-	screenName = '04.png';
+	screenName = '05.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -589,6 +589,40 @@ function eventHandler() {
 
 	$(document).on('click' ,".td-head", function(){
 		$(this).parent().toggleClass("active").next().find(".toggle-table").slideToggle();
+	})
+
+	//
+	let sCatalogChbSlider = new Swiper('.sCatalog-chb-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 10,
+
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		//touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+	});
+
+	//
+	$('.chb-box-head-js').click(function (){
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.chb-box-content-js').fadeToggle(function (){
+			$(this).toggleClass('active');
+		});
+	})
+
+	$('body').click(function (){
+		if (!event.target.closest('.chb-box-js')){
+			let activeChbHead = document.querySelectorAll('.chb-box-head-js.active');
+
+			$(activeChbHead).each(function (){
+				$(this).removeClass('active');
+				$(this.parentElement).find('.chb-box-content-js').fadeOut(function (){
+					$(this).removeClass('active');
+				});
+			});
+		}
 	})
 
 };

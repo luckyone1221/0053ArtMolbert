@@ -78,9 +78,87 @@ mixin sCatalog(data)
 									imgNum: 1,
 								})
 					+pugin()
-
 	// end sCatalog
 
+mixin sCatalog2(data)
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+e.menu
+				ul
+					li: a(href='#') живопись
+					li: a(href='#') графика
+					li: a(href='#') принты
+					li: a(href='#') скульптура
+					li: a(href='#') диджитал арт
+					li: a(href='#') фотография
+					li: a(href='#') тиражная графика
+			+e.chb-slider-wrap
+				.swiper-container.sCatalog-chb-slider-js
+					.swiper-wrapper
+						+chbSliderItem('техника')
+						+chbSliderItem('стиль')
+						+chbSliderItem('темы')
+						+chbSliderItem('Ориентация')
+						+chbSliderItem('Размер')
+						+chbSliderItem('интерьер')
+			+e.c-select
+				+socSelect2('sort-select', [''], 'select2-no-search-js')(data-placeholder="Сортировать")
+					option(value="" label="" selected)
+					option(value='Все новые') Все новые
+					option(value="По популярности") По популярности
+					option(value="По скидке") По скидке
+					option(value="От самой низкой цены") От самой низкой цены
+					option(value="От самой высокой цены") От самой высокой цены
+			+e.c-filters
+				.row.align-items-center.gy-3
+					.col-md
+						+e.f-sub-row.row
+							+plateRowItem('Живопись')
+							+plateRowItem('Арт Деко')
+							+plateRowItem('Экспрессионизм')
+							+plateRowItem('Красный')
+					.col-md-auto
+						+e.f-discard(href='#') Сбросить все фильтры
+			+e.items
+				+e.items-row.row
+					- for (var i = 0; i < 4; i++)
+						+e.item-col.col-sm-6.col-md-4.col-xl-3
+							+sNewSlide({
+								txtItem: 'NEW',
+								sale: false,
+								imgNum: 1,
+							})
+						+e.item-col.col-sm-6.col-md-4.col-xl-3
+							+sNewSlide({
+								txtItem: 'NEW',
+								sale: false,
+								imgNum: 1,
+							})
+						+e.item-col.col-sm-6.col-md-4.col-xl-3
+							+sNewSlide({
+								txtItem: 'NEW',
+								sale: false,
+								imgNum: 1,
+							})
+						+e.item-col.col-sm-6.col-md-4.col-xl-3
+							+sNewSlide({
+								txtItem: 'NEW',
+								sale: false,
+								imgNum: 1,
+							})
+					+pugin()
+
+mixin chbSliderItem(name)
+	.swiper-slide
+		+e.c-box.chb-box-js
+			+e.c-head.chb-box-head-js=name
+			+e.c-content.chb-box-content-js
+				+customChB('Абстракционизм')
+				+customChB('Арт Деко')
+				+customChB('Бюст')
+				+customChB('Иллюстрация')
+				+customChB('Импрессионизм ')
+				+customChB('Объект')
 
 mixin sCatalog5(data)
 	// start sCatalog

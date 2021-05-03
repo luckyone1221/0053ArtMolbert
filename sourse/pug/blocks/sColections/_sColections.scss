@@ -1,9 +1,138 @@
 // start .sColections
 .sColections {
+  --sPT: #{rem(70px)};
+  --sPB: #{rem(70px)};
 
-  &__{}
-  &__{}
-  &__{}
-  &__{}
+  &__items{
 
+  }
+  &__item{
+    padding-bottom: rem(100);
+
+    &:nth-child(odd){
+      --big-col-p-l: #{15px};
+      --big-col-p-r: #{rem(50)};
+    }
+    &:nth-child(even){
+      --baner-order: 1;
+      --big-col-p-l: #{rem(50)};
+      --big-col-p-r: #{15px};
+    }
+  }
+  &__i-row{
+
+  }
+  &__big-col{
+    order: var(--baner-order, 0);
+
+    @include media-breakpoint-up(xxl){
+      padding-left: var(--big-col-p-l,#{15px});
+      padding-right: var(--big-col-p-r,#{15px});
+    }
+  }
+  &__baner{
+    min-height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  &__img{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 63.55%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
+  }
+  &__content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    padding: rem(30);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title{
+    &:before{
+      content: '';
+      display: block;
+      width: rem(108);
+      height: 1px;
+      margin-bottom: rem(20);
+      background-color: $orange2;
+    }
+    h4{
+      font-weight: 600;
+      font-size: rem(36);
+      margin-bottom: rem(20);
+      text-transform: uppercase;
+      line-height: 1;
+
+      letter-spacing: rem(4);
+
+      color: $white;
+    }
+  }
+  &__btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon{
+      font-size: rem(18);
+    }
+    min-width: rem(100);
+
+    @include media-breakpoint-up(xl){
+      min-height: rem(60);
+    }
+
+    @extend .btn;
+    @extend .btn-outline-white;
+
+    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0) !important;
+    &:hover{
+      background-color: $orange2!important;
+      border-color: $orange2!important;
+      box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25) !important;
+      color: $white;
+    }
+    &:active{
+      background-color: $white!important;
+      border-color: $white!important;
+      color: $black!important;
+    }
+  }
+  //
+  &__plates-col{
+
+  }
+  &__sub-row{
+
+  }
+  &__small-col{
+
+  }
+  &__{}
+  &__{}
 } // end.sColections

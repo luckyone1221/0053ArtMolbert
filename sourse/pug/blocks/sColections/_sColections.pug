@@ -3,21 +3,47 @@ mixin sColections(data)
 	+b.SECTION.sColections.section#sColections&attributes(attributes)
 		.container
 			+e.items
+				+sColectionItem({
+					imgNum: 1,
+				})
+				+sColectionItem({
+					imgNum: 2,
+				})
+				- for (var i = 0; i < 10; i++)
+					+sColectionItem({
+						imgNum: 1,
+					})
 	// end sColections
 
-mixin sColectionItem()
+mixin sColectionItem(data)
 	+e.item
-		+e.i-row.row
-			+e.big-col.col-md
-			+e.small-col.col-md-auto
-				+sNewSlide({
-					txtItem: 'NEW',
-					sale: false,
-					imgNum: 1,
-				})
-			+e.small-col.col-md-auto
-				+sNewSlide({
-					txtItem: 'NEW',
-					sale: false,
-					imgNum: 1,
-				})
+		+e.i-row.row.gy-4
+			+e.big-col.col-xl-6
+				+e.baner
+					+e.img
+						img(loading="lazy" src=`img/@2x/collections-${data.imgNum || 1}.jpg` alt="")
+					+e.content
+						+e.title
+							h4
+								if block
+									block
+								else
+									| искусство
+									br
+									| и мода
+						+e.btn(href='#')
+							+icon('arrow-r')
+			+e.plates-col.col-xl-6
+				+e.sub-row.row.gy-3
+					+e.small-col.col-md-6
+						+sNewSlide({
+							txtItem: 'NEW',
+							sale: false,
+							imgNum: 1,
+						})
+					+e.small-col.col-md-6
+						+sNewSlide({
+							txtItem: 'NEW',
+							sale: false,
+							imgNum: 2,
+						})

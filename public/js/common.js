@@ -6,7 +6,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -249,7 +249,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '04.png';
+	screenName = '05.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -572,6 +572,35 @@ function eventHandler() {
 
 	$(document).on('click', ".td-head", function () {
 		$(this).parent().toggleClass("active").next().find(".toggle-table").slideToggle();
+	}); //
+
+	var sCatalogChbSlider = new Swiper('.sCatalog-chb-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 10,
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		//touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true
+	}); //
+
+	$('.chb-box-head-js').click(function () {
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.chb-box-content-js').fadeToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	$('body').click(function () {
+		if (!event.target.closest('.chb-box-js')) {
+			var activeChbHead = document.querySelectorAll('.chb-box-head-js.active');
+			$(activeChbHead).each(function () {
+				$(this).removeClass('active');
+				$(this.parentElement).find('.chb-box-content-js').fadeOut(function () {
+					$(this).removeClass('active');
+				});
+			});
+		}
 	});
 }
 
