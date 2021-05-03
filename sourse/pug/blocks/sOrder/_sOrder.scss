@@ -12,7 +12,11 @@
 
 		&__total-block{
 			background: #f4f5ef;
-			padding: rem(50);
+			@include media-breakpoint-up(sm) {
+
+				padding: rem(50);
+			}
+			padding: rem(20);
 			margin-bottom: rem(50);
 		}
 &__img-wrap{
@@ -24,6 +28,7 @@
 		justify-content: center;
 		height: rem(130);
 		width: rem(100);
+		margin-bottom: 1rem;
 	}
 	&__title{
 		font-weight: 600;
