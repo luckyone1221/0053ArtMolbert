@@ -1,0 +1,67 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6
+					.title-md ИНФОРМАЦИЯ ДЛЯ ЗАКАЗА
+					+b.form-wrap--border
+						+input('Татьяна', 'text', 'Имя ') 
+						+input('Фамилия ', 'text', 'Фамилия  ') 
+						+input('+79 ', 'tel', 'Телефон  ') 
+						+input('exampel@mail.com ', 'email', 'Email   ') 
+					.title-md АДРЕС ДОСТАВКИ
+					+b.form-wrap--border
+						.row 
+							.col-8
+								+input('Соборная', 'text', 'Улица ') 
+							.col-4
+								+input('198 ', 'text', ' Дом') 
+						.row 
+							.col-8
+								+input('Усть-Каменогорск', 'text', 'Город  ') 
+							.col-4
+								+input('68104 ', 'text', ' Код почтовый') 
+						+input('+79 ', 'tel', 'Телефон  ') 
+						+input('Япония', 'select', 'Страна   ') 
+					.title-md АДРЕС ДОСТАВКИ
+					+b.form-wrap--border
+						mixin r(t,p)
+							+in-c( "radio")
+								span.row 
+									span.col= t 
+									span.col-auto.h5.m-0.fw-400= p
+							hr
+						+r('DHL','950 ₽')
+						+r('Kурьер dpd','750 ₽')
+						+r('TNT','1050 ₽')
+						+r('EMS','1100 ₽')
+						+r('Курьер по Санкт-Петербургу','0 ₽')
+						+r('Самовывоз из магазина','0 ₽') 
+					+b.form-wrap--border
+						p.text-center.fw-600 Использовать скидку
+						+input('Впишите код  ', 'text') 
+						button.btn-default(type="button").w-100 применить
+				.col-lg-6
+					.title-md СПОСОБ ОПЛАТЫ
+					+b.form-wrap--border
+						mixin r(t,p)
+							+in-c( "radio")
+								span.row 
+									span.col= t 
+									span.col-auto
+										img(src=`img/svg/${p}`, alt="")
+							hr
+						+r('Оплата картой','visa-master.svg')
+						+r('JCB','jcb_icon_payment.svg')
+						+r('PayPal','paypalIcon_color.svg')
+						+r('ЮMoney','iconyumoney.svg')
+						+r('UnionPay','icon_union_pay.svg')
+						+r('Альфа Клик ','alfaklik_icon.svg') 
+						+r('Мир ','icon_mir.svg') 
+						+r('GPay','GPaycolor.svg') 
+						+r('ApplePay ','icon_applepay.svg') 
+						+r('Qiwi кошелек ','qiwi_icon.svg') 
+					+in-c( "checkbox")
+						small Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей  политика конфиденциальности.
+	// end sOrder

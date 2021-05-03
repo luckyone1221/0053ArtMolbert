@@ -1246,3 +1246,43 @@ iframe {
 .toggle-table{
   display: none;
 }
+
+.form-check{
+  cursor: pointer;
+  margin-bottom: rem(20);
+  img{
+    position: relative;
+    top: em(-5);
+    filter: saturate(0)  opacity(50%);
+    @include mt;
+  }
+  @include mt;
+  input{
+    @include mt;
+  }
+  &:hover{ 
+      color: $orange2;
+      input{
+        border-color:$orange2;
+        // background-image: $form-check-radio-checked-bg-image;
+      } 
+  }
+  [type="checkbox"]{
+    background-size: 90%;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: em(4);
+  }
+  [type="radio"]:checked{
+    border-color: $orange2;
+  }
+  input:checked ~ span img{
+    filter: saturate(1)  opacity(100%);
+  }
+}
+
+
+.fw-400{
+  font-weight: normal !important;
+}
