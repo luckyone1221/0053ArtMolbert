@@ -189,7 +189,7 @@
 							<h1>мой аккаунт  </h1>
 						</div>
 						<div class="col-md-auto pt-1">
-							<div class="title-md mb-1">Избранное</div>
+							<div class="title-md mb-1">Мои заказы</div>
 						</div>
 					</div>
 				</div>
@@ -207,11 +207,11 @@
 										<svg class="icon icon-adress ">
 											<use xlink:href="img/svg/sprite.svg#adress"></use>
 										</svg>Контактные данные</a></li>
-								<li class="swiper-slide"> <a href="#"> 
+								<li class="swiper-slide"> <a class="active" href="#"> 
 										<svg class="icon icon-bag ">
 											<use xlink:href="img/svg/sprite.svg#bag"></use>
 										</svg>Мои заказы</a></li>
-								<li class="swiper-slide"> <a class="active" href="#"> 
+								<li class="swiper-slide"> <a href="#"> 
 										<svg class="icon icon-heart2 ">
 											<use xlink:href="img/svg/sprite.svg#heart2"></use>
 										</svg>Избранное</a></li>
@@ -223,214 +223,375 @@
 						</div>
 					</div>
 					<div class="col-lg-9 col-xxl-8">
-						<!-- start sCatalog-->
-						<div class="sCatalog"> 
-							<div class="sCatalog__items-row row">
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
+						<div class="order-block"> 
+							<table class="order-block__table"> 
+								<thead>
+									<tr>
+										<th>Дата</th>
+										<th>Номер заказа</th>
+										<th>Статус заказа</th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr>
+											<td class="td-head text-center">01.12.2020</td>
+											<td class="td-head text-center">124 490 0000</td>
+											<td class="td-head text-center"> 
+												<div class="order-block__status">В процессе обработки
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="toggle-td" colspan="3">
+												<div class="toggle-table">
+													<table> 
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-1.webp"/><img src="img/@2x/basket-1.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">12 линия Васильевского  Острова</a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-2.webp"/><img src="img/@2x/basket-2.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">ФУТБОЛКА  “ПРОГУЛКА ВНУТРИ СЕБЯ” </a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-3.webp"/><img src="img/@2x/basket-3.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">обложка на паспорт  “ПРОГУЛКА ВНУТРИ СЕБЯ” </a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+													</table>
+													<div class="toggle-td__total">Всего 
+														<div class="toggle-td__total-price">420 000 ₽
+														</div>
 													</div>
 												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
+											</td>
+										</tr>
+										<tr>
+											<td class="td-head text-center">01.12.2020</td>
+											<td class="td-head text-center">124 490 0000</td>
+											<td class="td-head text-center"> 
+												<div class="order-block__status">Отправлен
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="toggle-td" colspan="3">
+												<div class="toggle-table">
+													<table> 
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-1.webp"/><img src="img/@2x/basket-1.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">12 линия Васильевского  Острова</a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-2.webp"/><img src="img/@2x/basket-2.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">ФУТБОЛКА  “ПРОГУЛКА ВНУТРИ СЕБЯ” </a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-3.webp"/><img src="img/@2x/basket-3.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">обложка на паспорт  “ПРОГУЛКА ВНУТРИ СЕБЯ” </a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+													</table>
+													<div class="toggle-td__total">Всего 
+														<div class="toggle-td__total-price">420 000 ₽
+														</div>
 													</div>
 												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="td-head text-center">01.12.2020</td>
+											<td class="td-head text-center">124 490 0000</td>
+											<td class="td-head text-center"> 
+												<div class="order-block__status">Доставлен
 												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
+											</td>
+										</tr>
+										<tr>
+											<td class="toggle-td" colspan="3">
+												<div class="toggle-table">
+													<table> 
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-1.webp"/><img src="img/@2x/basket-1.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">12 линия Васильевского  Острова</a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-2.webp"/><img src="img/@2x/basket-2.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">ФУТБОЛКА  “ПРОГУЛКА ВНУТРИ СЕБЯ” </a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td> 
+																		<div class="row"> 
+																			<div class="col-auto">
+																				<div class="toggle-td__img-wrap"> 
+																					<!-- picture-->
+																					<picture> 
+																						<source type="image/webp" srcset="img/@2x/webp/basket-3.webp"/><img src="img/@2x/basket-3.jpg" alt="" loading="lazy"/>
+																					</picture>
+																					<!-- /picture-->
+																				</div>
+																			</div>
+																			<div class="toggle-td__col col"><a class="toggle-td__title" href="#">обложка на паспорт  “ПРОГУЛКА ВНУТРИ СЕБЯ” </a>
+																				<div class="toggle-td__text small">Сергей Усик 
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																	<td> 
+																		<div class="toggle-td__title small fw-600 pb-3 text-center">Цена
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--old">140 000 ₽
+																		</div>
+																		<div class="toggle-td__price toggle-td__price--current">140 000 ₽ 
+																		</div>
+																	</td>
+																	<td class="text-center"> 
+																		<div class="toggle-td__title small fw-600 pb-3">Отследить посылку
+																		</div>
+																		<div class="fw-800 m-2"><a class="text-orange tdn" href="#">DHL </a></div>
+																		<div class="small">Waybill: 992345602</div>
+																	</td>
+																</tr>
+													</table>
+													<div class="toggle-td__total">Всего 
+														<div class="toggle-td__total-price">420 000 ₽
+														</div>
 													</div>
 												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- end sCatalog-->
-						<!-- пустой-->
-						<div class="empty-block text-center pb-5">
-							<p>На данный момент Вы не сохранили ни одного товара</p>
-							<div class="mb-3"><img src="img/svg/empty.svg" alt=""></div>
-							<p>Перейдите к покупкам, чтобы сделать свой первый заказ</p><a class="btn-default" href="#">перейти в каталог</a>
-						</div>
-						<!-- пустой вар2-->
-						<div class="empty-block text-center pb-5">
-							<p>На данный момент Вы не сохранили ни одного товара</p>
-							<div class="mb-3"><img src="img/svg/empty.svg" alt=""></div><a class="btn-default" href="#">перейти в каталог</a>
+											</td>
+										</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>

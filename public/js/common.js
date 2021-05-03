@@ -569,6 +569,10 @@ function eventHandler() {
 			});
 		});
 	}
+
+	$(document).on('click', ".td-head", function () {
+		$(this).parent().toggleClass("active").next().find(".toggle-table").slideToggle();
+	});
 }
 
 ;

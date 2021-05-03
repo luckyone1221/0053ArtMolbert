@@ -30,7 +30,7 @@ block pagecontent
 				.col
 					h1= title
 				.col-md-auto.pt-1
-					.title-md.mb-1 Избранное
+					.title-md.mb-1 Мои заказы
 				//- 	a.btn-default(href="#sFormRew") оставить отзыв  
 	.section.container 
 		.row 
@@ -46,11 +46,11 @@ block pagecontent
 								+icon("adress")
 								| Контактные данные
 						li.swiper-slide 
-							a(href="#") 
+							a.active(href="#") 
 								+icon("bag")
 								| Мои заказы
 						li.swiper-slide 
-							a.active(href="#") 
+							a(href="#") 
 								+icon("heart2")
 								| Избранное
 						li.swiper-slide 
@@ -58,21 +58,48 @@ block pagecontent
 								+icon("logout")
 								| Выйти  
 			.col-lg-9.col-xxl-8
-				+sCatalog14()
-
-
-				// пустой
-				+b.empty-block.text-center.pb-5
-					p На данный момент Вы не сохранили ни одного товара
-					.mb-3
-						img(src="img/svg/empty.svg", alt="")
-					p Перейдите к покупкам, чтобы сделать свой первый заказ
-					a.btn-default(href="#") перейти в каталог
-				// пустой вар2
-				+b.empty-block.text-center.pb-5
-					p На данный момент Вы не сохранили ни одного товара
-					.mb-3
-						img(src="img/svg/empty.svg", alt="") 
-					a.btn-default(href="#") перейти в каталог
-	//- +sForm12
+				+b.order-block 
+					+e.TABLE.table 
+						thead
+							tr
+								th Дата
+								th Номер заказа
+								th Статус заказа
+						tbody
+							mixin tr(t)
+								tr
+									td.td-head.text-center 01.12.2020
+									td.td-head.text-center 124 490 0000
+									td.td-head.text-center 
+										+e.status= t
+								tr
+									+b.TD.toggle-td(colspan='3')
+										.toggle-table
+											table 
+												mixin tr2(i,t)
+													tr
+														td 
+															.row 
+																.col-auto
+																	+e.img-wrap 
+																		+pic(`basket-${i}.jpg`,'',0)
+																+e.col.col
+																	+e.title(href="#")= t
+																	+e.text.small Сергей Усик 
+														td 
+															+e.title.small.fw-600.pb-3.text-center Цена
+															+e.price--old 140 000 ₽
+															+e.price--current 140 000 ₽ 
+														td.text-center 
+															+e.title.small.fw-600.pb-3 Отследить посылку
+															.fw-800.m-2: a.text-orange(href="#").tdn DHL 
+															.small Waybill: 992345602
+												+tr2('1',`12 линия Васильевского  Острова`,`60 x 159 cm`)
+												+tr2('2',`ФУТБОЛКА  “ПРОГУЛКА ВНУТРИ СЕБЯ” `,`XL`)
+												+tr2('3',`обложка на паспорт  “ПРОГУЛКА ВНУТРИ СЕБЯ” `)
+											+e.total Всего 
+												+e.total-price 420 000 ₽
+							+tr('В процессе обработки')
+							+tr('Отправлен')
+							+tr('Доставлен')
 	+footer()
