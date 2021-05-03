@@ -13,12 +13,13 @@ mixin input(placeholder,  t='text', label, name= t)
 				- for (var x = 1; x < 5; x++)
 					option(value=` placeholder ${x}`)= `placeholder ${x}`
 		else if t=='file'
-			+e.INPUT.input.form-control(name=name type=t)
+			+e.INPUT.input.form-control(name=name type=t)&attributes(attributes)
 			
 		else if t=='number'
-			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')
+			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')&attributes(attributes)
+			
 		else
-			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)
+			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
 	+e.input-wrap.form-group
 		if label
 			label
@@ -27,7 +28,10 @@ mixin input(placeholder,  t='text', label, name= t)
 				block
 		else
 			+t(t,placeholder, name)&attributes(attributes)
-		block
+			block
+		if t=='password' 
+			+e.btn-toggle-show-password--js
+				+icon("eye")
 	// +e.input-wrap
 mixin select(label,pl,...items)
 	+e.input-wrap.form-group

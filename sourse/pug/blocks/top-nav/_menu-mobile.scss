@@ -1,4 +1,4 @@
-$h: em(2);
+$h: 2px;
 
 .toggle-menu-mobile {
 	display: block;
@@ -25,11 +25,11 @@ $h: em(2);
 	span:before {
 
 
-		top: $h * 2;
+		top: $h * 4;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: $h * 4;
 	}
 
 	span { 

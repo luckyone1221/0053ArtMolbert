@@ -1,9 +1,99 @@
 mixin sCabinet(data)
 	// start sCabinet
-	+b.SECTION.sCabinet.section#sCabinet&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCabinet
-				
-			.row
+	+b.sCabinet#sCabinet&attributes(attributes)
+		p.fw-600 Логин(электронная почта)
+		+e.row-line.row
+			.col-xl-8.col-md-9
+				+b.form-wrap--border
+					+input('tatiana.nikolaeva@mail.com', 'email', 'Email *')(value="tatiana.nikolaeva@mail.com")
+			.col.align-self-center.text-center
+				+b.btn-edit(type="button") Редактировать 
+		p.fw-600 Логин(электронная почта)
+		+e.row-line.row
+			.col-xl-8.col-md-9
+				+b.form-wrap--border
+					+input('tatiana.nikolaeva@mail.com', 'email', 'Email *') 
+					+input('tatiana.nikolaeva@mail.com', 'email', 'Новый Email *').valid
+					.row 
+						.col-sm-6 
+							button.btn-default.w-100.mb-3(type="submit") ОТмена
+						.col-sm-6 
+							button.btn.btn-primary.w-100.mb-3(type="submit") Сохранить
+			.col.align-self-center.text-center
+				+b.btn-edit.active(type="button") Редактировать 
+		p.fw-600 Пароль
+		+e.row-line.row
+			.col-xl-8.col-md-9
+				+b.form-wrap--border
+					+input('tatiana.nikolaeva@mail.com', 'password', 'Ваш пароль*')(value="tatiana.nikolaeva@mail.com")
+			.col.align-self-center.text-center
+				+b.btn-edit(type="button") Редактировать 
+		p.fw-600 Пароль
+		+e.row-line.row
+			.col-xl-8.col-md-9
+				+b.form-wrap--border
+					+input('tatiana.nikolaeva@mail.com', 'password', 'Ваш текущий пароль*')
+					+input('tatiana.nikolaeva@mail.com', 'password', 'Новый пароль*').border-danger
+						.small.text-danger Не менее 5 символов
+					+input('tatiana.nikolaeva@mail.com', 'password', 'Подтвердите новый пароль*')
+			.col.align-self-center.text-center
+				+b.btn-edit(type="button") Редактировать 
+		+e.row-line.row 
+			.col-xl-8.col-md-9
+				p.fw-600.border-bottom.border-secondary.pb-2 Подключить соц.сети
+				.row 
+					.col-6
+						+b.btn-social.btn-outline-secondary.w-100(href="#") 
+							img(src="img/svg/google.svg", alt="").me-2
+							| Google
+					.col-6
+						+b.btn-social.btn-outline-secondary.w-100(href="#") 	
+							img(src="img/svg/facebook.svg", alt="").me-2
+							| Facebook
+	// end sCabinet
+	
+	hr
+	// start sCabinet
+	+b.sCabinet#sCabinet&attributes(attributes)
+		p.fw-600 Личные данные
+		+e.row-line.row.row
+			.col-xl-8.col-md-9
+				+b.form-wrap--border
+					+input('Имя', 'text', 'Имя')(value="tatiana.nikolaeva@mail.com")
+					+input('Фамилия ', 'text', 'Фамилия ')(value="tatiana.nikolaeva@mail.com")
+					+input('Телефон', 'tel', 'Телефон* ')
+			.col.align-self-center.text-center
+				+b.btn-edit(type="button") Редактировать 
+		+e.row-line.row.row
+			.col-xl-8.col-md-9 
+					+b.add-info-block
+						.fw-600 Адрес
+						+e.text На данный момент у Вас нет сохраненного адреса
+						+e.toggle
+		p.fw-600 Адрес
+		+e.row-line.row.row
+			.col-xl-8.col-md-9
+				+b.form-wrap--border
+					+input('Страна', 'select', 'Страна ')
+					.row 
+						.col-8
+							+input('Улица ', 'text', 'Улица ')
+						.col
+							+input('Дом ', 'text', 'Дом ')
+					.row 
+						.col-8
+							+input('Город  ', 'text', 'Город  ')
+						.col
+							+input('Код почтовый ', 'text', 'Код почтовый ')
+				.text-end.fw-600.small Адрес доставки при оформлении заказов по-умолчанию.
+			.col.align-self-center.text-center
+				+b.btn-edit(type="button") Редактировать 
+
+		+e.row-line.row.row
+			.col-xl-8.col-md-9 
+					+b.add-info-block
+						.fw-600 Платежный адрес
+						+e.toggle
+
+
 	// end sCabinet

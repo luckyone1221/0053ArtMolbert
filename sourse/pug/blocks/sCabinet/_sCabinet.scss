@@ -4,6 +4,12 @@
 		// --sPB: ;
 		// --sTPB: ;
 
+	&__row-line.row{
+		.form-wrap{
+			margin-bottom: 5px;
+		}
+		padding-bottom: 50px;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -12,3 +18,61 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sCabinet
+
+.btn-edit{
+	@extend .btn;
+	color: $orange2;
+	font-size: rem(18);
+	margin-bottom: rem(30);
+	box-shadow: none;
+	&.active{
+		color: #000;
+	}
+}
+
+.add-info-block{	
+	position: relative;
+	cursor: pointer;
+	&__text{
+		display: flex;
+		align-items: center;
+	}
+	&__text::before{
+		content: '!';
+		width: rem(18);
+		height: rem(18);
+		border: 2px solid;
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: rem(12);
+		margin-right: rem(10);
+		flex: 0 0 auto;
+		font-weight: 600;
+	}
+	&__toggle{ 
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: rem(45);
+		height: rem(45);
+		border-radius: 50%;
+		padding: 0;
+		min-width: 1px;
+		// border: 1px solid $secondary;
+		@extend .btn;
+		@extend .btn-outline-secondary;
+		&::before,
+		&::after{
+			content: '';
+			@include a-cent;
+			height: 1px;
+			width: 12px;
+			background: currentColor;
+		}
+		&::after{
+			transform: rotate(90deg);
+		}
+	}
+}

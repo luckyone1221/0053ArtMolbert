@@ -128,6 +128,34 @@ mixin sCatalog5(data)
 	// end sCatalog
 
 
+
+mixin sCatalog14(data)
+	// start sCatalog
+	+b.sCatalog&attributes(attributes)  
+		+e.items-row.row
+			-for(var i = 0; i < 2; i++)
+				+e.item-col.col-sm-6.col-lg-4
+					+sNewSlide({
+						txtItem: 'NEW',
+						sale: false,
+						imgNum: 1,
+					})
+				+e.item-col.col-sm-6.col-lg-4
+					+sNewSlide({
+						txtItem: 'NEW',
+						sale: false,
+						imgNum: 1,
+					})
+				+e.item-col.col-sm-6.col-lg-4
+					+sNewSlide({
+						txtItem: 'NEW',
+						sale: false,
+						imgNum: 1,
+					}) 
+
+	// end sCatalog
+
+
 mixin cbGroup(Arr)
 	+e.chb-group
 		-for (let item of Arr)

@@ -501,12 +501,17 @@ iframe {
 
 
 //
-
+.btn-social{
+  @extend .btn;
+}
 .btn-default{
   @extend .btn-outline-primary;
   @extend .btn;
 }
-
+.btn-outline-secondary{
+  color: $body-color;
+}
+.btn-outline-secondary,
 .btn-outline-white,
 .btn-primary,
 .btn-outline-primary{
@@ -520,6 +525,7 @@ iframe {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
     color: $white;
   }
+  &.active,
   &:active{
     background-color: $black!important;
     border-color: $black!important;
@@ -1046,9 +1052,16 @@ iframe {
 }
 
 .aside-nav{
-  max-width: rem(300);
+  	@include media-breakpoint-up(lg){
+
+      max-width: rem(300);
+    }
   li{
     list-style: none;
+    @include media-breakpoint-up(lg){
+      width: 100%;
+    }
+    width: auto;
   }
   a{
     display: flex;
@@ -1070,5 +1083,12 @@ iframe {
         stroke-width: 2px;
       }
     }
+  }
+  	@include media-breakpoint-up(lg) {
+
+      display: block;
+      transform: none !important;
+    }
+  .swiper-wrapper{
   }
 }

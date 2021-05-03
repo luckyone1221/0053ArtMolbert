@@ -10,11 +10,53 @@
 	&__input-wrap {
 		@extend .form-group;
 		margin-bottom: rem(20);
+		position: relative;
+
+	}
+	&__btn-toggle-show-password {
+		position: absolute;
+		right: rem(20);
+		top: rem(40);
+		cursor: pointer;
+		color: $secondary;
+	&.active{
+		// color: $primary;
+		&::before{
+			content: '/';
+			position: absolute;
+			@include a-cent;
+			transform: rotate(45deg);
+			width: 1px;
+			height: 20px;
+			margin-top: 2px;
+			background-color: currentColor;
+			.icon{
+				// path{
+				// 	&:nth-child(2){
+				// 		// opacity: 0;
+				// 		stroke: transparent;
+				// 	}
+				// }
+			}
+		}
+	}		
+		.icon{
+			font-size: rem(20);
+			opacity: 1;
+			fill: transparent;
+			stroke: currentColor;
+		}
 	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
+		&.valid{
+			background-image: url(../img/svg/checkmark.svg);
+			background-position: calc(100% - 20px) center;
+			background-repeat: no-repeat;
+			background-size: rem(12);
+		}
 	}
 	&__btn {
 		cursor: pointer;

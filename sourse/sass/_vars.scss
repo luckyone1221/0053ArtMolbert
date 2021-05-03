@@ -91,7 +91,7 @@ $colors: ("blue": $blue,
   "purple": $purple,
   "pink": $pink,
   "red": $red,
-  "orange": $orange,
+  "orange": $orange2,
   "yellow": $yellow,
   "green": $green,
   "teal": $teal,
@@ -113,7 +113,9 @@ $dark: $gray-810 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
-$theme-colors: ("primary": $primary,
+$theme-colors: (
+  "orange": $orange2,
+  "primary": $primary,
   "secondary": $secondary,
   "success": $success,
   "info": $info,

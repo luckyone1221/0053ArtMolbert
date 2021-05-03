@@ -551,6 +551,24 @@ function eventHandler() {
 			clickable: true
 		}
 	});
+	var NavSlider = new Swiper('.nav-slider--js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 20
+	});
+	var inputWrap = document.querySelectorAll(".form-wrap__input-wrap");
+
+	if (inputWrap) {
+		inputWrap.forEach(function (el) {
+			el.addEventListener("click", function (event) {
+				var btn = event.target.closest(".form-wrap__btn-toggle-show-password--js");
+				var input = el.querySelector('.form-wrap__input');
+				if (!btn) return;
+				btn.classList.toggle('active');
+				input.type == "password" ? input.type = "text" : input.type = "password";
+			});
+		});
+	}
 }
 
 ;

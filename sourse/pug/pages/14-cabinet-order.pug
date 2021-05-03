@@ -4,6 +4,12 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sRews/_sRews.pug
 include ../blocks/sFormRew/_sFormRew.pug
 include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sProdCard/_sProdCard.pug
+//- include ../blocks/sSafe/_sSafe.pug
+//- include ../blocks/sAuthorPage/_sAuthorPage.pug
+//- include ../blocks/sAuthorBio/_sAuthorBio.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null 
@@ -24,10 +30,7 @@ block pagecontent
 				.col
 					h1= title
 				.col-md-auto.pt-1
-					.title-md.mb-1 данные аккаунта
-					.small 
-						span.fw-900 Вы вошли как, 
-						| tatiana.nikolaeva@mail.com
+					.title-md.mb-1 Избранное
 				//- 	a.btn-default(href="#sFormRew") оставить отзыв  
 	.section.container 
 		.row 
@@ -35,7 +38,7 @@ block pagecontent
 				+b.nav-slider--js
 					+b.UL.aside-nav.swiper-wrapper
 						li.swiper-slide 
-							a.active(href="#") 
+							a(href="#") 
 								+icon("user")
 								| Данные аккаунта
 						li.swiper-slide 
@@ -47,7 +50,7 @@ block pagecontent
 								+icon("bag")
 								| Мои заказы
 						li.swiper-slide 
-							a(href="#") 
+							a.active(href="#") 
 								+icon("heart2")
 								| Избранное
 						li.swiper-slide 
@@ -55,7 +58,21 @@ block pagecontent
 								+icon("logout")
 								| Выйти  
 			.col-lg-9.col-xxl-8
-				+sCabinet
+				+sCatalog14()
 
+
+				// пустой
+				+b.empty-block.text-center.pb-5
+					p На данный момент Вы не сохранили ни одного товара
+					.mb-3
+						img(src="img/svg/empty.svg", alt="")
+					p Перейдите к покупкам, чтобы сделать свой первый заказ
+					a.btn-default(href="#") перейти в каталог
+				// пустой вар2
+				+b.empty-block.text-center.pb-5
+					p На данный момент Вы не сохранили ни одного товара
+					.mb-3
+						img(src="img/svg/empty.svg", alt="") 
+					a.btn-default(href="#") перейти в каталог
 	//- +sForm12
 	+footer()
