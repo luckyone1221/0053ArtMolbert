@@ -217,8 +217,13 @@
 			align-items: center;
 			list-style: none;
 			@extend .row;
+			--bs-gutter-y: #{rem(18)};
 			margin-bottom: rem(41);
 
+			@include roww(rem(24));
+			@include media-breakpoint-up(sm){
+				@include roww(rem(30));
+			}
 			@include media-breakpoint-up(xxl){
 				@include roww(rem(40));
 			}
@@ -232,7 +237,10 @@
 				font-weight: 600;
 				line-height: 1;
 				text-transform: uppercase;
-				letter-spacing: 1px;
+
+				@include media-breakpoint-up(sm){
+					letter-spacing: rem(1px);
+				}
 
 				position: relative;
 				z-index: 1;
@@ -378,7 +386,10 @@
 			content: '';
 			width: rem(12);
 			height: rem(12);
-			margin-left: rem(47);
+			margin-left: rem(20);
+			@include media-breakpoint-up(xl){
+				margin-left: rem(47);
+			}
 
 			background-image: url(../img/svg/cross12.svg);
 			background-size: cover;
