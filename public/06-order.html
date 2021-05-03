@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Оформление заказа</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -176,888 +176,241 @@
 				</div>
 			</div>
 			<!-- end topLine-->
-			<!-- start sCatalog-->
-			<section class="sCatalog section" id="sCatalog">
+			<div class="page-head"> 
 				<div class="container">
-					<div class="sCatalog__content-row row">
-						<div class="sCatalog__filter-col col-md-4 col-lg-3">
-							<div class="sCatalog__f-items">
-								<div class="sCatalog__filter-item active">
-									<div class="sCatalog__head free-dd-head-js">Фильтры
+					<nav>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+							<li class="breadcrumb-item active"><a href="#"><span>Оформление заказа</span></a></li>
+						</ol>
+					</nav>
+					<div class="row"> 
+						<div class="col">
+							<h1>Оформление заказа</h1>
+						</div>
+						<div class="col-auto"></div>
+					</div>
+				</div>
+			</div>
+			<!-- start sOrder-->
+			<section class="sOrder section" id="sOrder">
+				<div class="container">
+					<div class="sOrder__row row">
+						<div class="col-lg-6">
+							<div class="title-md">ИНФОРМАЦИЯ ДЛЯ ЗАКАЗА</div>
+							<div class="form-wrap form-wrap--border">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Имя </span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Татьяна"/> 
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Фамилия  </span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Фамилия "/> 
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Телефон  </span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+79 "/> 
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Email   </span><input class="form-wrap__input form-control" name="email" type="email" placeholder="exampel@mail.com "/> 
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="title-md">АДРЕС ДОСТАВКИ</div>
+							<div class="form-wrap form-wrap--border">
+								<div class="row"> 
+									<div class="col-8">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Улица </span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Соборная"/> 
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
 									</div>
-									<div class="sCatalog__content free-dd-content-js active">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__plates-row row pb-3">
-												<div class="col-auto"><a class="sCatalog__plate" href="#">Живопись</a>
-												</div>
-												<div class="col-auto"><a class="sCatalog__plate" href="#">Арт Деко</a>
-												</div>
-												<div class="col-auto"><a class="sCatalog__plate" href="#">Экспрессионизм</a>
-												</div>
-												<div class="col-auto"><a class="sCatalog__plate" href="#">Красный</a>
-												</div>
-											</div><a class="sCatalog__discard-btn" href="#">Сбросить все</a>
+									<div class="col-4">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title"> Дом</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="198 "/> 
+											</label>
 										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
+										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="sCatalog__filter-item">
-									<div class="sCatalog__head free-dd-head-js">Категории
+								<div class="row"> 
+									<div class="col-8">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Город  </span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Усть-Каменогорск"/> 
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
 									</div>
-									<div class="sCatalog__content free-dd-content-js">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__chb-group">
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">живопись</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">графика</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">принты</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">скульптура</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">диджитал арт</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">фотография</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Тиражная графика</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-											</div>
+									<div class="col-4">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title"> Код почтовый</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="68104 "/> 
+											</label>
 										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
+										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="sCatalog__filter-item">
-									<div class="sCatalog__head free-dd-head-js">темы
-									</div>
-									<div class="sCatalog__content free-dd-content-js">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__chb-group">
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Абстракция</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Авангардизм</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Архитектура</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Города</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Деревенский мотив</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Экспрессионизм</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt"></div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
-									</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Телефон  </span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+79 "/> 
+									</label>
 								</div>
-								<div class="sCatalog__filter-item">
-									<div class="sCatalog__head free-dd-head-js">стиль
-									</div>
-									<div class="sCatalog__content free-dd-content-js">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__chb-group">
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Абстракционизм</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Арт Деко</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Бюст</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Иллюстрация</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Импрессионизм</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-												<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-													<div class="col">
-														<label class="custom-chb">
-															<input class="invisible" name="" type="checkbox"/>
-															<div class="square"></div>
-															<div class="cc-txt">Объект</div>
-														</label>
-													</div>
-													<div class="col-auto">
-														<div class="sCatalog__chb-txt">50
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
-									</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Страна   </span>
+										<select class="form-wrap__input form-select" name="select">
+											<option value="Япония">Япония</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select> 
+									</label>
 								</div>
-								<div class="sCatalog__filter-item">
-									<div class="sCatalog__head free-dd-head-js">техника
-									</div>
-									<div class="sCatalog__content free-dd-content-js">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-												<div class="col">
-													<label class="custom-chb">
-														<input class="invisible" name="" type="checkbox"/>
-														<div class="square"></div>
-														<div class="cc-txt">something</div>
-													</label>
-												</div>
-												<div class="col-auto">
-													<div class="sCatalog__chb-txt">50
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
-									</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="title-md">АДРЕС ДОСТАВКИ</div>
+							<div class="form-wrap form-wrap--border">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">DHL</span><span class="col-auto h5 m-0 fw-400">950 ₽</span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">Kурьер dpd</span><span class="col-auto h5 m-0 fw-400">750 ₽</span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">TNT</span><span class="col-auto h5 m-0 fw-400">1050 ₽</span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">EMS</span><span class="col-auto h5 m-0 fw-400">1100 ₽</span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">Курьер по Санкт-Петербургу</span><span class="col-auto h5 m-0 fw-400">0 ₽</span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">Самовывоз из магазина</span><span class="col-auto h5 m-0 fw-400">0 ₽</span></span>
+								</label>
+								<hr/>
+							</div>
+							<div class="form-wrap form-wrap--border">
+								<p class="text-center fw-600">Использовать скидку</p>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Впишите код  "/> 
 								</div>
-								<div class="sCatalog__filter-item active">
-									<div class="sCatalog__head free-dd-head-js">цена
-									</div>
-									<div class="sCatalog__content free-dd-content-js active">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__range-wrap">
-												<div class="range-wrap price_slider_amount">
-													<div class="range-wrap__row row">
-														<div class="range-wrap__col col-6">
-															<div class="form-group" data-unit="₽"><input class="input_from form-control" type="text"/>
-															</div>
-														</div>
-														<div class="range-wrap__col col-6">
-															<div class="form-group" data-unit="₽"><input class="input_to form-control" type="text"/>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="80" data-max="320000"/>
-												</div>
-											</div>
-											<button class="sCatalog__ok-btn" type="button">ok
-											</button>
-										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__filter-item">
-									<div class="sCatalog__head free-dd-head-js">ориентация
-									</div>
-									<div class="sCatalog__content free-dd-content-js">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-												<div class="col">
-													<label class="custom-chb">
-														<input class="invisible" name="" type="checkbox"/>
-														<div class="square"></div>
-														<div class="cc-txt">something</div>
-													</label>
-												</div>
-												<div class="col-auto">
-													<div class="sCatalog__chb-txt">50
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__filter-item">
-									<div class="sCatalog__head free-dd-head-js">размер
-									</div>
-									<div class="sCatalog__content free-dd-content-js">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__chb-row row flex-nowrap align-items-center">
-												<div class="col">
-													<label class="custom-chb">
-														<input class="invisible" name="" type="checkbox"/>
-														<div class="square"></div>
-														<div class="cc-txt">something</div>
-													</label>
-												</div>
-												<div class="col-auto">
-													<div class="sCatalog__chb-txt">50
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__filter-item active">
-									<div class="sCatalog__head free-dd-head-js">цвет
-									</div>
-									<div class="sCatalog__content free-dd-content-js active">
-										<div class="sCatalog__content-inner">
-											<div class="sCatalog__chb-group-alt">
-												<label class="custom-chb custom-chb--color">
-													<input class="invisible" name="" type="checkbox"/>
-													<div class="square" style="color: #6f42c1; background-image: url(img/@2x/multicolor.png)"></div>
-													<div class="cc-txt">Мультицвет</div>
-												</label>
-												<label class="custom-chb custom-chb--color">
-													<input class="invisible" name="" type="checkbox"/>
-													<div class="square" style="color: #FF0000;"></div>
-													<div class="cc-txt">Красный</div>
-												</label>
-												<label class="custom-chb custom-chb--color">
-													<input class="invisible" name="" type="checkbox"/>
-													<div class="square" style="color:#000000;"></div>
-													<div class="cc-txt">Белый</div>
-												</label>
-												<label class="custom-chb custom-chb--color">
-													<input class="invisible" name="" type="checkbox"/>
-													<div class="square" style="color: #FFD101;"></div>
-													<div class="cc-txt">Желтый</div>
-												</label>
-												<label class="custom-chb custom-chb--color">
-													<input class="invisible" name="" type="checkbox"/>
-													<div class="square" style="color:#00A64F;"></div>
-													<div class="cc-txt">Зеленый</div>
-												</label>
-												<label class="custom-chb custom-chb--color">
-													<input class="invisible" name="" type="checkbox"/>
-													<div class="square" style="color:#0062C1;"></div>
-													<div class="cc-txt">Синий</div>
-												</label>
-											</div>
-										</div>
-										<div class="sCatalog__hide-btn f-hide-btn-js">Скрыть
-										</div>
-									</div>
-								</div>
+								<!-- +e.input-wrap-->
+								<button class="btn-default w-100" type="button">применить</button>
 							</div>
 						</div>
-						<div class="sCatalog__items-col col-md-8 col-lg-9">
-							<div class="sCatalog__items-row row">
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
+						<div class="col-lg-6">
+							<div class="title-md">СПОСОБ ОПЛАТЫ</div>
+							<div class="sOrder__total-block"> 
+								<div class="row"> 
+									<div class="col-auto">
+										<div class="sOrder__img-wrap"> 
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/basket-1.webp"/><img src="img/@2x/basket-1.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
 										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
+									</div>
+									<div class="sOrder__col col"><a class="sOrder__title" href="#">12 линия Васильевского  Острова</a>
+										<div class="sOrder__text small">Сергей Усик
+										</div>
+										<div class="sOrder__code small">Код товара<span>32 55 84 35 </span>
+										</div>
+										<div class="sOrder__code small">Кол-во<span>1</span>
+										</div>
+										<div class="sOrder__code small">Размер<span>60 x 159 cm</span>
 										</div>
 									</div>
 								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
+								<div class="row pt-1">
+									<div class="col small">Цена за 1 штуку</div>
+									<div class="col-auto">
+										<div class="sOrder__price sOrder__price--current">140 000 ₽
 										</div>
 									</div>
 								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
+								<hr/>
+								<div class="row pt-1">
+									<div class="col fw-600">Cтоимость</div>
+									<div class="col-auto">
+										<div class="sOrder__price sOrder__price--current">140 000 ₽
 										</div>
 									</div>
 								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
+								<div class="row pt-1">
+									<div class="col fw-600">Скидка</div>
+									<div class="col-auto">
+										<div class="sOrder__price sOrder__price--current text-orange">-70 000 ₽
 										</div>
 									</div>
 								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
+								<div class="row pt-1">
+									<div class="col fw-600">Доставка</div>
+									<div class="col-auto">
+										<div class="sOrder__price sOrder__price--current">950 ₽
 										</div>
 									</div>
 								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCatalog__item-col col-sm-6 col-lg-4">
-									<div class="prod-item">
-										<div class="prod-item__box"><a class="prod-item__like-btn" href="#">
-											<svg class="icon icon-heart2 ">
-												<use xlink:href="img/svg/sprite.svg#heart2"></use>
-											</svg></a>
-											<div class="prod-item__top-row row align-items-center">
-												<div class="col-auto">
-													<div class="red-txt-box">NEW
-													</div>
-												</div>
-											</div><a class="prod-item__img" href="#"><img loading="lazy" src="img/@2x/sNew-1.png" alt=""/></a>
-										</div>
-										<div class="prod-item__txt-cont">
-											<div class="prod-item__author">Александр Воцмуш
-											</div><a class="prod-item__name" href="#">На Финском заливе</a>
-											<div class="prod-item__size">60 x 159 cm
-											</div>
-											<div class="prod-item__lower-row row align-items-end">
-												<div class="prod-item__price-col col-auto">
-													<div class="prod-item__price-curr"><span class="price">140 000</span><span class="currency">₽</span>
-													</div>
-												</div>
-												<div class="col-auto"><a class="prod-item__bag-btn" href="#">
-													<svg class="icon icon-shopping-bag ">
-														<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-													</svg></a>
-												</div>
-											</div>
+								<hr/>
+								<div class="row pt-1">
+									<div class="col fw-600">Всего</div>
+									<div class="col-auto">
+										<div class="sOrder__price sOrder__price--current">70 000 ₽
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="pagination-wrapper">
-								<ul>
-											<li><span class="prev page-numbers"><img src="img/svg/prev-start.svg" alt=""/></span>
-											</li>
-											<li><span class="prev page-numbers"><img src="img/svg/prev.svg" alt=""/></span>
-											</li>
-											<li><a class="page-numbers" href="#">1</a>
-											</li>
-											<li><span class="page-numbers">...</span>
-											</li>
-											<li><a class="page-numbers" href="#">6</a>
-											</li>
-											<li><span class="page-numbers current"> 7</span>
-											</li>
-											<li><a class="page-numbers" href="#">8</a>
-											</li>
-											<li><span class="page-numbers">...</span>
-											</li>
-											<li><a class="page-numbers" href="#">56</a>
-											</li>
-									<!-- - for (var x = 1; x < 5; x++)-->
-									<!-- 	+li(x)-->
-											<li><a class="next page-numbers" href="#"><img src="img/svg/next.svg" alt=""/></a>
-											</li>
-											<li><a class="next page-numbers" href="#"><img src="img/svg/next-end.svg" alt=""/></a>
-											</li>
-								</ul>
+							<div class="title-md">СПОСОБ ОПЛАТЫ</div>
+							<div class="form-wrap form-wrap--border">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">Оплата картой</span><span class="col-auto"><img src="img/svg/visa-master.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">JCB</span><span class="col-auto"><img src="img/svg/jcb_icon_payment.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">PayPal</span><span class="col-auto"><img src="img/svg/paypalIcon_color.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">ЮMoney</span><span class="col-auto"><img src="img/svg/iconyumoney.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">UnionPay</span><span class="col-auto"><img src="img/svg/icon_union_pay.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">Альфа Клик </span><span class="col-auto"><img src="img/svg/alfaklik_icon.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">Мир </span><span class="col-auto"><img src="img/svg/icon_mir.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">GPay</span><span class="col-auto"><img src="img/svg/GPaycolor.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">ApplePay </span><span class="col-auto"><img src="img/svg/icon_applepay.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="row"> <span class="col">Qiwi кошелек </span><span class="col-auto"><img src="img/svg/qiwi_icon.svg" alt=""/></span></span>
+								</label>
+								<hr/>
+							</div>
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><small>Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей  политика конфиденциальности.</small>
+							</label>
+							<div class="row"> 
+								<div class="col-6"></div>
+								<div class="col-6 smallest text-center pb-3"><img src="img/svg/lock.svg" alt=""/>Защищенный платеж</div>
+							</div>
+							<div class="row"> 
+								<div class="col-sm-6 mb-2"><a class="btn btn-default w-100" href="#"> вернуться в магазин</a></div>
+								<div class="col-sm-6 mb-2"><a class="btn btn-primary w-100" href="#">перейти к оплате</a></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sCatalog-->
+			<!-- end sOrder-->
 			<footer class="footer">
 				<div class="footer__container container">
 					<div class="footer__row row gy-5">
