@@ -1,0 +1,50 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sPaltes/_sPaltes.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sPopular/_sPopular.pug
+include ../blocks/sStyle/_sStyle.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sInstagram/_sInstagram.pug
+include ../blocks/sPresents/_sPresents.pug
+include ../blocks/sPercents/_sPercents.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sAuthorPage/_sAuthorPage.pug
+include ../blocks/sAuthorBio/_sAuthorBio.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'ИСКУССТВО'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+	+top-nav(true)
+	+topLine()
+	+b.page-head
+		.container
+			+breadcrumb('Главная', 'Каталог', title)
+			.row.align-items-center
+				.col
+					h1= title
+				//-.col-md-auto
+					+e.select
+						+socSelect2('sort-select', [''], 'select2-no-search-js')(data-placeholder="Сортировать")
+							option(value="" label="" selected)
+							option(value='Все новые') Все новые
+							option(value="По популярности") По популярности
+							option(value="По скидке") По скидке
+							option(value="От самой низкой цены") От самой низкой цены
+							option(value="От самой высокой цены") От самой высокой цены
+	+sCatalog3()
+	+footer()

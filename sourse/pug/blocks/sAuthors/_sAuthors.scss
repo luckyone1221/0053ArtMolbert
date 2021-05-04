@@ -1,0 +1,153 @@
+// start .sAuthors
+.sAuthors {
+	// --sPT: #{rem(25px)};
+	--sPB: #{rem(70px)};
+	&__menu{
+		ul{
+			justify-content: center;
+			align-items: center;
+			list-style: none;
+			@extend .row;
+			--bs-gutter-y: #{rem(18)};
+			margin-bottom: 0;
+
+			@include roww(rem(24));
+			@include media-breakpoint-up(sm){
+				@include roww(rem(30));
+			}
+			@include media-breakpoint-up(xxl){
+				@include roww(rem(40));
+			}
+
+			li{
+				@extend .col-auto;
+			}
+			a{
+				display: block;
+				text-decoration: none;
+				font-weight: 600;
+				line-height: 1;
+				text-transform: uppercase;
+
+				font-size: rem(16);
+				@include media-breakpoint-up(sm){
+					font-size: rem(18);
+					letter-spacing: rem(1px);
+				}
+
+				position: relative;
+				z-index: 1;
+				&:after{
+					@include mt();
+					opacity: 0;
+					content: '';
+					position: absolute;
+					z-index: 1;
+					top: calc(100% + 10px);
+					left: 0;
+					width: 100%;
+					height: 4px;
+					background-color: currentColor;
+				}
+
+				&:hover{
+					&:after{
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(70);
+		}
+	}
+
+	//
+	&__content{
+		border-top: 1px solid $gray-610;
+		padding-top: rem(50);
+	}
+	&__line{
+		padding-bottom: rem(40);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(60);
+		}
+		@include media-breakpoint-up(xxl){
+			padding-bottom: rem(90);
+		}
+	}
+	&__slide-wrap{
+
+		.swiper-container{
+			overflow: visible!important;
+			@include media-breakpoint-up(xl){
+				overflow: hidden!important;
+			}
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			width: rem(280);
+			@include media-breakpoint-up(sm){
+				width: rem(318);
+			}
+			@include media-breakpoint-up(xl){
+				width: calc((100%/ 4) - (20px * 3 /4));
+			}
+		}
+	}
+	&__portrait-wrap{
+		width: rem(270);
+		margin-bottom: rem(20);
+	}
+	&__portrait{
+		@extend .accept-ratio-frame;
+		padding-top: (308/270) * 100%;
+	}
+	&__bold{
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: 1;
+
+		letter-spacing: rem(2);
+		@include media-breakpoint-up(sm){
+			letter-spacing: rem(4);
+		}
+		text-transform: uppercase;
+		margin-bottom: rem(20);
+
+		&--name{
+
+		}
+		&--surn{
+
+		}
+	}
+	&__location{
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(20);
+
+		&:before{
+			content: '';
+			width: rem(32);
+			flex-shrink: 0;
+			height: rem(32);
+
+			margin-right: rem(5);
+
+			background-image: url(../img/svg/location32.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	&__arrow-btn{
+		@extend .arrow-btn;
+	}
+	&__{}
+	&__{}
+} // end.sAuthors

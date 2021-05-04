@@ -82,6 +82,15 @@ body {
 			opacity: 0.76;
 		}
 	}
+
+	&.fixed2 {
+		overflow: hidden;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 999;
+	}
 }
 
 .main-wrapper {
@@ -101,7 +110,7 @@ body {
 .section-title {
 	padding-bottom: var(--sTPB);
 	.outlined-txt {
-		display: block;
+		//display: block;
 	}
 	h2 {
 		text-transform: uppercase;
@@ -782,6 +791,9 @@ iframe {
 .page-head {
 	padding-top: rem(30);
 
+	.row{
+		@extend .gy-2;
+	}
 	h1 {
 		text-transform: uppercase;
 		// font-size: rem(64px);

@@ -29,43 +29,39 @@
 						<li class="menu-item"><a href="#">Коллекции</a></li>
 						<li class="menu-item"><a href="#">Подарки</a></li>
 					</ul>
-					<div class="mnu-search"><input class="mnu-search__input form-control" type="text" placeholder="Search"/>
-					</div>
-					<div class="il-row row d-sm-none">
-						<div class="col-auto"><a class="il-row__link il-row__link--heart" href="#">
-							<svg class="icon icon-heart2 ">
-								<use xlink:href="img/svg/sprite.svg#heart2"></use>
-							</svg></a>
+					<div class="mb-3">
+						<div class="mnu-search"><input class="mnu-search__input form-control" type="text" placeholder="Search"/>
 						</div>
-						<div class="col-auto">
-							<div class="il-row__link-user"><a class="il-row__link il-row__link--user" href="#">
-								<svg class="icon icon-user ">
-									<use xlink:href="img/svg/sprite.svg#user"></use>
-								</svg></a>
-								<div class="lc-dd">
-									<div class="lc-dd__inner">
-										<div class="lc-dd__header"><span>Приветствуем,</span><br/><span>tatiana.nikolaeva</span>
-										</div>
-										<div class="lc-dd__content">
-											<div class="lc-dd__menu">
-												<ul>
-													<li><a href="#">Данные аккаунта</a></li>
-													<li><a href="#">Контактные данные</a></li>
-													<li><a href="#">Мои заказы</a></li>
-													<li><a href="#">Избранное</a></li>
-												</ul>
-											</div><a class="lc-dd__log-out" href="#"><span class="lc-dd__icon"><img loading="lazy" src="img/svg/logout.svg" alt=""/></span><span class="lc-dd__lo-txt">Выйти</span></a>
-										</div>
-									</div>
+					</div>
+					<div class="row">
+						<div class="col-auto d-sm-none">
+							<div class="dd-link-cont">
+								<div class="dd-link-cont__head">€
+								</div>
+								<div class="dd-content">
+									<ul>
+										<li><a href="#">€</a></li>
+										<li><a href="#">₽</a></li>
+										<li><a href="#">$</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-auto"><a class="il-row__link il-row__link--bag" href="#">
-							<svg class="icon icon-bag ">
-								<use xlink:href="img/svg/sprite.svg#bag"></use>
-							</svg></a>
+						<div class="col-auto d-sm-none">
+							<div class="dd-link-cont">
+								<div class="dd-link-cont__head">EN
+								</div>
+								<div class="dd-content">
+									<ul>
+										<li><a href="#">RUS</a></li>
+										<li><a href="#">UKR</a></li>
+										<li><a href="#">POL</a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
+					<!--+iconLinksRow('d-sm-none')-->
 				</div>
 			</div>
 			<!-- start header-->
@@ -92,9 +88,9 @@
 									<div class="mnu-search"><input class="mnu-search__input form-control" type="text" placeholder="Search"/>
 									</div>
 								</div>
-								<div class="col-auto">
-									<div class="top-nav__dd-link-cont">
-										<div class="top-nav__dd-link">€
+								<div class="col-auto d-none d-sm-block">
+									<div class="dd-link-cont">
+										<div class="dd-link-cont__head">€
 										</div>
 										<div class="dd-content">
 											<ul>
@@ -105,9 +101,9 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-auto">
-									<div class="top-nav__dd-link-cont">
-										<div class="top-nav__dd-link">EN
+								<div class="col-auto d-none d-sm-block">
+									<div class="dd-link-cont">
+										<div class="dd-link-cont__head">EN
 										</div>
 										<div class="dd-content">
 											<ul>
@@ -118,7 +114,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-auto d-none d-sm-block">
+								<div class="col-auto">
 									<div class="il-row row">
 										<div class="col-auto"><a class="il-row__link il-row__link--heart active" href="#">
 											<svg class="icon icon-heart2 ">
@@ -145,10 +141,95 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-auto"><a class="il-row__link il-row__link--bag" href="#">
-											<svg class="icon icon-bag ">
-												<use xlink:href="img/svg/sprite.svg#bag"></use>
-											</svg></a>
+										<div class="col-auto">
+											<div class="il-row__link-cart">
+												<div class="il-row__link il-row__link--bag cart-btn-js">
+													<svg class="icon icon-bag ">
+														<use xlink:href="img/svg/sprite.svg#bag"></use>
+													</svg>
+												</div>
+												<div class="cart-dd cart-dd--js">
+													<div class="cart-dd__inner">
+														<div class="cart-dd__close-btn cart-btn-js d-xl-none">
+															<svg class="icon icon-close ">
+																<use xlink:href="img/svg/sprite.svg#close"></use>
+															</svg>
+														</div>
+														<div class="cart-dd__header">корзина
+														</div>
+														<div class="cart-dd__items">
+															<div class="cart-dd__item">
+																<div class="cart-dd__row row">
+																	<div class="col-auto"><a class="cart-dd__img" href="#"><img loading="lazy" src="img/@2x/basket-1.jpg" alt=""/></a>
+																	</div>
+																	<div class="col"><a class="cart-dd__name" href="#">12 линия Васильевского Острова</a>
+																		<div class="cart-dd__author">Сергей Усик
+																		</div>
+																		<div class="cart-dd__data">
+																			<div class="cart-dd__data-item row gy-1">
+																				<div class="cart-dd__name-col col-auto">Код товара
+																				</div>
+																				<div class="col">32 55 84 35</div>
+																			</div>
+																			<div class="cart-dd__data-item row gy-1">
+																				<div class="cart-dd__name-col col-auto">Кол-во
+																				</div>
+																				<div class="col">1</div>
+																			</div>
+																			<div class="cart-dd__data-item row gy-1">
+																				<div class="cart-dd__name-col col-auto">Размер
+																				</div>
+																				<div class="col">60 x 159 cm</div>
+																			</div>
+																		</div>
+																		<div class="cart-dd__foot-row row align-items-center gy-2">
+																			<div class="cart-dd__per-txt col-sm">Цена за 1 штуку
+																			</div>
+																			<div class="cart-dd__per-val col-sm-auto">140 000 ₽
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="cart-dd__item">
+																<div class="cart-dd__row row">
+																	<div class="col-auto"><a class="cart-dd__img" href="#"><img loading="lazy" src="img/@2x/basket-2.jpg" alt=""/></a>
+																	</div>
+																	<div class="col"><a class="cart-dd__name" href="#">12 линия Васильевского Острова</a>
+																		<div class="cart-dd__author">Сергей Усик
+																		</div>
+																		<div class="cart-dd__data">
+																			<div class="cart-dd__data-item row gy-1">
+																				<div class="cart-dd__name-col col-auto">Код товара
+																				</div>
+																				<div class="col">32 55 84 35</div>
+																			</div>
+																			<div class="cart-dd__data-item row gy-1">
+																				<div class="cart-dd__name-col col-auto">Кол-во
+																				</div>
+																				<div class="col">1</div>
+																			</div>
+																			<div class="cart-dd__data-item row gy-1">
+																				<div class="cart-dd__name-col col-auto">Размер
+																				</div>
+																				<div class="col">60 x 159 cm</div>
+																			</div>
+																		</div>
+																		<div class="cart-dd__foot-row row align-items-center gy-2">
+																			<div class="cart-dd__per-txt col-sm">Цена за 1 штуку
+																			</div>
+																			<div class="cart-dd__per-val col-sm-auto">140 000 ₽
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cart-dd__bot-btns"><a class="cart-dd__cart-btn" href="#">Перейти в корзину</a><a class="cart-dd__order-btn" href="#">Оформить Заказ</a>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>

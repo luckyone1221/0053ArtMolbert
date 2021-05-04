@@ -519,6 +519,71 @@ function eventHandler() {
 		});
 	})
 
+	//04-2
+	let sCatalogChbSlider = new Swiper('.sCatalog-chb-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 10,
+
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		//touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+	});
+
+	//??
+	$('.chb-box-head-js').click(function (){
+		$(this).toggleClass('active');
+		$(this.parentElement).toggleClass('active');
+		$(this.parentElement).find('.chb-box-content-js').fadeToggle(function (){
+			$(this).toggleClass('active');
+		});
+	})
+
+	$('body').click(function (){
+		if (!event.target.closest('.chb-box-js')){
+			let activeChbHead = document.querySelectorAll('.chb-box-head-js.active');
+			$(activeChbHead).each(function (){
+				let head = this;
+				$(this).removeClass('active');
+				$(this.parentElement).find('.chb-box-content-js').fadeOut(function (){
+					$(this).removeClass('active');
+					$(head.parentElement).removeClass('active');
+				});
+			});
+		}
+	})
+	//04-4 authors
+	$('.sAuthors-line-js').each(function (){
+		console.log(this.querySelector('.sAuthors-slider-js'));
+		let sAuthorsSlider = new Swiper($(this).find('.sAuthors-slider-js'), {
+			slidesPerView: 'auto',
+			watchOverflow: true,
+			spaceBetween: 20,
+
+			freeMode: true,
+			loopFillGroupWithBlank: true,
+			slideToClickedSlide: true,
+			freeModeMomentum: true,
+		});
+	})
+	let sAuthorsSlider = new Swiper('.sAuthors-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 20,
+
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+	});
+
+	$('.cart-btn-js').click(function (){
+		$('.cart-dd--js').toggleClass('active');
+		$('body').toggleClass('fixed2');
+	});
+
 	//end luckyone Js
 
 	//todo
@@ -589,40 +654,6 @@ function eventHandler() {
 
 	$(document).on('click' ,".td-head", function(){
 		$(this).parent().toggleClass("active").next().find(".toggle-table").slideToggle();
-	})
-
-	//
-	let sCatalogChbSlider = new Swiper('.sCatalog-chb-slider-js', {
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 10,
-
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		//touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-	});
-
-	//
-	$('.chb-box-head-js').click(function (){
-		$(this).toggleClass('active');
-		$(this.parentElement).find('.chb-box-content-js').fadeToggle(function (){
-			$(this).toggleClass('active');
-		});
-	})
-
-	$('body').click(function (){
-		if (!event.target.closest('.chb-box-js')){
-			let activeChbHead = document.querySelectorAll('.chb-box-head-js.active');
-
-			$(activeChbHead).each(function (){
-				$(this).removeClass('active');
-				$(this.parentElement).find('.chb-box-content-js').fadeOut(function (){
-					$(this).removeClass('active');
-				});
-			});
-		}
 	})
 
 };

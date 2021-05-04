@@ -515,6 +515,64 @@ function eventHandler() {
 		$(this).siblings('.a-hidden-items-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
+	}); //04-2
+
+	var sCatalogChbSlider = new Swiper('.sCatalog-chb-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 10,
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		//touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true
+	}); //??
+
+	$('.chb-box-head-js').click(function () {
+		$(this).toggleClass('active');
+		$(this.parentElement).toggleClass('active');
+		$(this.parentElement).find('.chb-box-content-js').fadeToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	$('body').click(function () {
+		if (!event.target.closest('.chb-box-js')) {
+			var activeChbHead = document.querySelectorAll('.chb-box-head-js.active');
+			$(activeChbHead).each(function () {
+				var head = this;
+				$(this).removeClass('active');
+				$(this.parentElement).find('.chb-box-content-js').fadeOut(function () {
+					$(this).removeClass('active');
+					$(head.parentElement).removeClass('active');
+				});
+			});
+		}
+	}); //04-4 authors
+
+	$('.sAuthors-line-js').each(function () {
+		console.log(this.querySelector('.sAuthors-slider-js'));
+		var sAuthorsSlider = new Swiper($(this).find('.sAuthors-slider-js'), {
+			slidesPerView: 'auto',
+			watchOverflow: true,
+			spaceBetween: 20,
+			freeMode: true,
+			loopFillGroupWithBlank: true,
+			slideToClickedSlide: true,
+			freeModeMomentum: true
+		});
+	});
+	var sAuthorsSlider = new Swiper('.sAuthors-slider-js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 20,
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		slideToClickedSlide: true,
+		freeModeMomentum: true
+	});
+	$('.cart-btn-js').click(function () {
+		$('.cart-dd--js').toggleClass('active');
+		$('body').toggleClass('fixed2');
 	}); //end luckyone Js
 	//todo
 	// 1. clean js file
@@ -572,35 +630,6 @@ function eventHandler() {
 
 	$(document).on('click', ".td-head", function () {
 		$(this).parent().toggleClass("active").next().find(".toggle-table").slideToggle();
-	}); //
-
-	var sCatalogChbSlider = new Swiper('.sCatalog-chb-slider-js', {
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 10,
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		//touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	}); //
-
-	$('.chb-box-head-js').click(function () {
-		$(this).toggleClass('active');
-		$(this.parentElement).find('.chb-box-content-js').fadeToggle(function () {
-			$(this).toggleClass('active');
-		});
-	});
-	$('body').click(function () {
-		if (!event.target.closest('.chb-box-js')) {
-			var activeChbHead = document.querySelectorAll('.chb-box-head-js.active');
-			$(activeChbHead).each(function () {
-				$(this).removeClass('active');
-				$(this.parentElement).find('.chb-box-content-js').fadeOut(function () {
-					$(this).removeClass('active');
-				});
-			});
-		}
 	});
 }
 

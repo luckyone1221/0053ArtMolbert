@@ -9,7 +9,10 @@
 
   //
   &__row{
-    @include roww(rem(30px));
+    @include roww(rem(20px));
+    @include media-breakpoint-up(sm){
+      @include roww(rem(30px));
+    }
   }
   .toggle-menu-mobile{
     &.on {
@@ -68,7 +71,10 @@
     }
   }
   &__logo{
-    width: rem(120);
+    width: rem(100);
+    @media (min-width: 400px) {
+      width: rem(120);
+    }
     display: block;
 
     img{
@@ -85,87 +91,7 @@
     }
   }
   //
-  &__dd-link-cont{
-    position: relative;
 
-    --link-bc: transparent;
-    --dd-cont-scale: 0;
-    &:hover{
-      --link-bc: #{$gray-610};
-      --dd-cont-scale: 1;
-    }
-  }
-  &__dd-link{
-    @include mt();
-    display: flex;
-    align-items: center;
-
-    font-size: 16px;
-    line-height: 1;
-
-    border-left: 1px solid var(--link-bc, #{$gray-610});
-    border-right: 1px solid var(--link-bc, #{$gray-610});
-    border-top: 1px solid var(--link-bc, #{$gray-610});
-
-
-    background-color: $white;
-    min-width: rem(57px);
-    padding: 16px 8px;
-
-
-    &:after{
-      content: '';
-      margin-left: 8px;
-      display: inline-block;
-
-      width: 8px;
-      height: 8px;
-
-      background-image: url(../img/svg/sm-chevron-down.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-
-    }
-  }
-  .dd-content{
-    @include mt();
-    transform-origin: top;
-    transform: scaleY(var(--dd-cont-scale, 0));
-
-    position: absolute;
-    z-index: 100;
-    left: 0;
-    top: 100%;
-    background-color: $white;
-    border-left: 1px solid $gray-610;
-    border-right: 1px solid $gray-610;
-    border-bottom: 1px solid $gray-610;
-    min-width: rem(57px);
-
-    ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li{
-
-        a{
-          display: block;
-          padding: rem(16px) rem(4px);
-          width: 100%;
-          text-decoration: none;
-          text-align: center;
-          background-color: $white;
-          &:hover{
-            background-color: $gray-220;
-          }
-
-
-        }
-      }
-    }
-  }
   //
   &__{}
 
@@ -288,6 +214,7 @@ textarea{
     width: rem(32px);
     height: rem(32px);
     position: relative;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
@@ -327,7 +254,15 @@ textarea{
     //bag
     &--bag{
       position: relative;
+      &.active{
+        &:before{
+          opacity: 1;
+        }
+      }
+
       &:before{
+        @include mt();
+        opacity: 0;
         content: '';
         position: absolute;
         top: 1px;
@@ -347,6 +282,15 @@ textarea{
     --lc-dd-scale: 0;
     &:hover{
       --lc-dd-scale: 1;
+    }
+  }
+  &__link-cart{
+    display: block;
+    position: relative;
+
+    --cart-dd-scale: 0;
+    &:hover{
+      --cart-dd-scale: 1;
     }
   }
   //
@@ -376,9 +320,18 @@ textarea{
 
   position: absolute;
   z-index: 100;
+
+  //left: 0;
   right: 0;
+  @include media-breakpoint-up(sm){
+    right: 0;
+    left: unset;
+  }
   top: 100%;
-  --side-padd: #{rem(30)};
+  --side-padd: #{rem(20)};
+  @include media-breakpoint-up(sm){
+    --side-padd: #{rem(30)};
+  }
   padding-top: rem(6);
 
   &__inner{
@@ -386,7 +339,11 @@ textarea{
   }
   &__header{
     background-color: $gray-220;
-    padding: rem(14) var(--side-padd, #{rem(30)});
+
+    padding: rem(10) var(--side-padd, #{rem(30)});
+    @include media-breakpoint-up(sm){
+      padding: rem(14) var(--side-padd, #{rem(30)});
+    }
   }
   &__content{
     padding: rem(14) var(--side-padd, #{rem(30)});
@@ -399,7 +356,10 @@ textarea{
       margin: 0 0 0;
 
       li{
-        padding-bottom: rem(18px);
+        padding-bottom: rem(10px);
+        @include media-breakpoint-up(sm){
+          padding-bottom: rem(18px);
+        }
         &:last-child{
           padding-bottom: 0;
         }
@@ -451,4 +411,288 @@ textarea{
   }
   &__{}
   &__{}
+}
+
+.cart-dd{
+  @include mt();
+  @include media-breakpoint-down(xl){
+    left: -120vw;
+    &.active{
+      left: 0;
+    }
+
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: $white;
+  }
+  @include media-breakpoint-up(xl){
+    padding-top: rem(6);
+    transform-origin: top left;
+    transform: scaleY(var(--cart-dd-scale, 0));
+    width: rem(523);
+
+    position: absolute;
+    z-index: 100;
+
+    right: 0;
+    top: 100%;
+  }
+  //
+  &__close-btn{
+    position: absolute;
+    z-index: 2;
+    top: rem(5);
+    right: rem(5);
+    @include media-breakpoint-up(sm){
+      right: rem(40);
+      top: rem(20);
+    }
+    cursor: pointer;
+
+    width: rem(40);
+    height: rem(40);
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon{
+      color: $black;
+      font-size: rem(30);
+    }
+  }
+
+  &__inner{
+    @include media-breakpoint-down(xl){
+      overflow-y: auto;
+      height: calc(var(--vh, 1vh) * 100);
+    }
+    background: $white;
+
+    padding: rem(50) 15px;
+    @include media-breakpoint-up(sm){
+      padding: rem(50);
+    }
+    @include media-breakpoint-up(xl){
+      box-shadow: 0px 0px rem(30) rgba(0, 0, 0, 0.25);
+      padding: rem(30);
+    }
+    @include media-breakpoint-up(xxl){
+      padding: rem(50);
+    }
+  }
+  &__header{
+    text-align: center;
+    padding-bottom: rem(20);
+    border-bottom: 1px solid $gray-610;
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(xxl){
+      margin-bottom: rem(50);
+    }
+
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: 1;
+
+    letter-spacing: rem(4);
+    text-transform: uppercase;
+  }
+  &__items{
+
+  }
+  &__item{
+    border-bottom: 1px solid $gray-610;
+    padding-bottom: rem(13);
+
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(xxl){
+      margin-bottom: rem(50);
+    }
+  }
+  &__row{
+    @include roww(rem(20));
+  }
+  &__img{
+    background: $white;
+    border: 1px solid $gray-610;
+    width: rem(100);
+    height: rem(130);
+    padding: rem(14) rem(7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+  &__name{
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1;
+
+    text-transform: capitalize;//??
+    margin-bottom: rem(10);
+    @include media-breakpoint-up(xxl){
+      padding-right: rem(40);
+    }
+  }
+  &__author{
+    font-size: 14px;
+    line-height: 1;
+    color: $gray-810;
+    margin-bottom: rem(14);
+  }
+  //
+  &__data{
+    padding-bottom: rem(33);
+  }
+  &__data-item{
+    @include roww(10px);
+
+    padding-bottom: rem(8);
+    &:last-child{
+      padding-bottom: 0;
+    }
+
+    font-size: 14px;
+    line-height: 1;
+    color: $brown2;
+  }
+  &__name-col{
+    min-width: rem(90);
+    max-width: 50%;
+  }
+  &__val-col{
+
+  }
+  //
+  &__foot-row{
+
+  }
+  &__per-txt{
+    font-size: 14px;
+    line-height: (18/14);
+    color: $gray-810;
+  }
+  &__per-val{
+    font-size: rem(24);
+    line-height: 1;
+
+    letter-spacing: rem(1);
+    text-transform: uppercase;
+  }
+  //
+  &__bot-btns{
+    text-align: center;
+  }
+  &__cart-btn,
+  &__order-btn{
+    @extend .btn;
+    border-width: 2px;
+    display: block;
+    width: rem(330);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__cart-btn{
+    @extend .btn-default;
+    margin-bottom: rem(30);
+  }
+  &__order-btn{
+    @extend .btn-primary;
+  }
+  &__{}
+}
+
+.dd-link-cont{
+  position: relative;
+
+  --link-bc: transparent;
+  --dd-cont-scale: 0;
+  &:hover{
+    --link-bc: #{$gray-610};
+    --dd-cont-scale: 1;
+  }
+
+  &__head{
+    @include mt();
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    line-height: 1;
+
+    border-left: 1px solid var(--link-bc, #{$gray-610});
+    border-right: 1px solid var(--link-bc, #{$gray-610});
+    border-top: 1px solid var(--link-bc, #{$gray-610});
+
+
+    background-color: $white;
+    min-width: rem(57px);
+    padding: 16px 8px;
+
+
+    &:after{
+      content: '';
+      margin-left: 8px;
+      display: inline-block;
+
+      width: 8px;
+      height: 8px;
+
+      background-image: url(../img/svg/sm-chevron-down.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+    }
+  }
+}
+.dd-content{
+  @include mt();
+  transform-origin: top;
+  transform: scaleY(var(--dd-cont-scale, 0));
+
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 100%;
+  background-color: $white;
+  border-left: 1px solid $gray-610;
+  border-right: 1px solid $gray-610;
+  border-bottom: 1px solid $gray-610;
+  //min-width: rem(57px);
+  min-width: 100%;
+
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+
+      a{
+        display: block;
+        padding: rem(16px) rem(4px);
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        background-color: $white;
+        &:hover{
+          background-color: $gray-220;
+        }
+
+
+      }
+    }
+  }
 }

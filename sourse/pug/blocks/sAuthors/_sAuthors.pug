@@ -1,0 +1,52 @@
+mixin sAuthors(data)
+	// start sAuthors
+	+b.SECTION.sAuthors.section#sAuthors&attributes(attributes)
+		.container
+			+e.menu
+				ul
+					li: a(href="#") Вcе авторы
+					li: a(href="#") фотографы
+					li: a(href="#") художники
+					li: a(href="#") СКульпторы
+			+e.content
+				- for (var i = 0; i < 4; i++)
+					+sAuthorsLine()
+				+pugin()
+	// end sAuthors
+
+mixin sAuthorsLine()
+	+e.line.sAuthors-line-js
+		+e.slide-wrap
+			.swiper-container.sAuthors-slider-js
+				.swiper-wrapper
+					+sAuthorsRepresent(1)
+					//
+					.swiper-slide
+						+sNewSlide({
+							txtItem: 'NEW',
+							sale: false,
+							imgNum: 1,
+						})
+					.swiper-slide
+						+sNewSlide({
+							txtItem: 'NEW',
+							sale: false,
+							imgNum: 1,
+						})
+					.swiper-slide
+						+sNewSlide({
+							txtItem: 'NEW',
+							sale: false,
+							imgNum: 1,
+						})
+
+mixin sAuthorsRepresent(imgNum='1')
+	.swiper-slide
+		+e.portrait-wrap
+			+e.portrait(href='#')
+				img(loading="lazy" src=`img/@2x/sAuthors-represent-${imgNum}.jpg` alt="")
+		+e.bold--name Александр
+		+e.bold--surn Воцмуш
+		+e.location Россия
+		+e.arrow-btn(href='#')
+			+icon('arrow-r')

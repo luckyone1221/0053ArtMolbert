@@ -6,8 +6,18 @@ mixin mob-mnu()
 			+e.logo
 				img(loading="lazy" src="img/svg/logo.svg" alt="")
 			+mnu()
-			+inpBlock()
-			+iconLinksRow('d-sm-none')
+			.mb-3
+				+inpBlock()
+			.row
+				.col-auto.d-sm-none
+					+b.dd-link-cont
+						+e.head €
+						+ddContent(['€', '₽', '$'])
+				.col-auto.d-sm-none
+					+b.dd-link-cont
+						+e.head EN
+						+ddContent(['RUS', 'UKR', 'POL'])
+			//+iconLinksRow('d-sm-none')
 
 mixin top-nav(showActive)
 	// start top-nav
@@ -23,15 +33,15 @@ mixin top-nav(showActive)
 					+e.sub-row.row.justify-content-end.align-items-center
 						.col-auto.d-none.d-md-block.me-xxl-3
 							+inpBlock()
-						.col-auto
-							+e.dd-link-cont
-								+e.dd-link €
-								+ddContent(['€', '₽', '$'])
-						.col-auto
-							+e.dd-link-cont
-								+e.dd-link EN
-								+ddContent(['RUS', 'UKR', 'POL'])
 						.col-auto.d-none.d-sm-block
+							+b.dd-link-cont
+								+e.head €
+								+ddContent(['€', '₽', '$'])
+						.col-auto.d-none.d-sm-block
+							+b.dd-link-cont
+								+e.head EN
+								+ddContent(['RUS', 'UKR', 'POL'])
+						.col-auto
 							if showActive
 								+iconLinksRow2()
 							else
@@ -75,13 +85,12 @@ mixin iconLinksRow(addClasses)
 				+e.link--user(href='#')
 					+icon('user')
 				+lcDD()
-		//-.col-auto.d-none
-			+e.link-user
-				+e.user-img(href='#')
-					img(loading="lazy" src='img/@2x/soc-img.png' alt="")
-				+lcDD()
 		.col-auto
-			+e.link--bag(href='#')
+			+e.link-cart
+				+e.link--bag.active.cart-btn-js
+					+icon('bag')
+				+cartDD()
+			//-+e.link--bag(href='#')
 				+icon('bag')
 
 
@@ -90,19 +99,17 @@ mixin iconLinksRow2(addClasses)
 		.col-auto
 			+e.link--heart.active(href='#')
 				+icon('heart2')
-		//-.col-auto.d-none
-			+e.link-user
-				+e.link--user(href='#')
-					+icon('user')
-				+lcDD()
 		.col-auto
 			+e.link-user
 				+e.user-img(href='#')
 					img(loading="lazy" src='img/@2x/soc-img.png' alt="")
 				+lcDD()
 		.col-auto
-			+e.link--bag(href='#')
-				+icon('bag')
+			+e.link-cart
+				+e.link--bag.cart-btn-js
+					+icon('bag')
+				+cartDD()
+
 mixin lcDD()
 	+b.lc-dd
 		+e.inner
@@ -121,3 +128,38 @@ mixin lcDD()
 					+e.icon
 						img(loading="lazy" src="img/svg/logout.svg" alt="")
 					+e.lo-txt Выйти
+
+mixin cartDD()
+	+b.cart-dd--js
+		+e.inner
+			+e.close-btn.cart-btn-js.d-xl-none
+				+icon('close')
+			+e.header корзина
+			+e.items
+				+cartDDItem(1)
+				+cartDDItem(2)
+			+e.bot-btns
+				+e.cart-btn(href="#") Перейти в корзину
+				+e.order-btn(href="#") Оформить Заказ
+
+mixin cartDDItem(imgNum)
+	+e.item
+		+e.row.row
+			.col-auto
+				+e.img(href='#')
+					img(loading="lazy" src=`img/@2x/basket-${imgNum}.jpg` alt="")
+			.col
+				+e.name(href='#') 12 линия Васильевского Острова
+				+e.author Сергей Усик
+				+e.data
+					+cartDDDataItem('Код товара', '32 55 84 35')
+					+cartDDDataItem('Кол-во', '1')
+					+cartDDDataItem('Размер', '60 x 159 cm')
+				+e.foot-row.row.align-items-center.gy-2
+					+e.per-txt.col-sm Цена за 1 штуку
+					+e.per-val.col-sm-auto 140 000 ₽
+
+mixin cartDDDataItem(name, val)
+	+e.data-item.row.gy-1
+		+e.name-col.col-auto=name
+		.col=val
