@@ -584,6 +584,23 @@ function eventHandler() {
 		$('body').toggleClass('fixed2');
 	});
 
+	//help pop up
+	$('.help-pp-header-js').click(function (){
+		$(this).toggleClass('active');
+		$('.help-pp-content-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		})
+	});
+	//css vars
+	let helpPPhead = document.querySelector('.help-pp-header-js');
+	if (helpPPhead){
+		calcHelpHeadHeight();
+		window.addEventListener('resize', calcHelpHeadHeight);
+	}
+	function calcHelpHeadHeight(){
+		document.documentElement.style.setProperty('--help-head-height', `${helpPPhead.offsetHeight}px`);
+	}
+
 	//end luckyone Js
 
 	//todo

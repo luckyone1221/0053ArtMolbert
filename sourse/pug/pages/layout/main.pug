@@ -12,6 +12,7 @@ include ../../blocks/topLine/_topLine.pug
 include ../../blocks/top-nav/_top-nav.pug 
 include ../../blocks/headerBlock/_headerBlock.pug
 include ../../blocks/sForm/_sForm.pug
+include ../../blocks/helpPopUp/_helpPopUp.pug
 
 doctype html
 html(lang="ru")
@@ -34,6 +35,7 @@ html(lang="ru")
 	//- body.loaded_hiding(class= mainPage) 
 	body(class= mainPage data-bg= bg)
 		.main-wrapper
+			+helpPopUp()
 			block pagecontent
 				h3 content
 		+modal()

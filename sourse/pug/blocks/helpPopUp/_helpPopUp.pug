@@ -1,0 +1,22 @@
+mixin helpPopUp(data)
+	// start helpPopUp
+	+b.helpPopUp#helpPopUp&attributes(attributes)
+		+e.header.help-pp-header-js
+			+e.txt Нужна помощь?
+			+e.icon
+				+icon('chevron-top')
+				+icon('close')
+		+e.content.help-pp-content-js
+			+form-wrap()
+				+input('', 'text', 'Имя')
+				+input('', 'tell', 'Контактный телефон')
+				+input('', 'email', 'E-mail')
+				+input('', 'textarea', 'Сообщение')
+				.text-center
+					+e.btn(type="submit") отправить
+					+e.talk-with
+						span
+							| Общаемся с помощью
+							|
+						a(href="#") Cleversite.ru
+	// end helpPopUp

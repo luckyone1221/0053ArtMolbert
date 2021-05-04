@@ -1,0 +1,16 @@
+mixin sNotFound(data)
+	// start sNotFound
+	+b.sNotFound.section#sNotFound&attributes(attributes)
+		.container
+			.row.align-items-center.gy-5
+				.col-md-auto
+					+e.img
+						img(loading="lazy" src="img/svg/404.svg" alt="")
+				.col-md.col-lg-auto.ms-auto.text-center.text-md-start
+					+e.txt
+						| страница которую вы ищите
+						br
+						| больше не доступна
+					+e.btn(href='#') вернуться ДОМОЙ
+
+	// end sNotFound

@@ -1,8 +1,5 @@
 // start .sCabinet
 .sCabinet {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
 
 	&__row-line.row{
 		.form-wrap{
@@ -10,13 +7,6 @@
 		}
 		padding-bottom: 50px;
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
 } // end.sCabinet
 
 .btn-edit{

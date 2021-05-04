@@ -1,0 +1,60 @@
+// start .sProps
+.sProps {
+
+	&__baner{
+		height: rem(308);
+		margin-bottom: rem(50);
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		position: relative;
+	}
+	&__black{
+		position: absolute;
+		z-index: 2;
+		background-color: $black;
+
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		width: rem(120px);
+		height: rem(120px);
+
+		padding: rem(15);
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	//
+	&__content{
+
+	}
+	&__name{
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: 1.45;
+		color: $black;
+		margin-bottom: rem(20);
+	}
+	&__txt{
+		font-size: rem(24);
+		line-height: 1.45;
+		color: $black;
+		margin-bottom: rem(8);
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//
+	&__{}
+	&__{}
+	&__{}
+} // end.sProps

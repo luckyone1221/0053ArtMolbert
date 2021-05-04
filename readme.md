@@ -9,6 +9,7 @@
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/04-catalog3.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/04-authors.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/05-colections.html>
+1. <https://luckyone1221.github.io/0053ArtMolbert/public/06-order.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/07-basket.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/09-about.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/10-servises.html>
@@ -18,5 +19,7 @@
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/15-shipping.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/14-cabinet.html>
 1. <https://luckyone1221.github.io/0053ArtMolbert/public/14-cabinet-order.html>
-2. <https://luckyone1221.github.io/0053ArtMolbert/public/14-cabinet-like.html>
-1. <https://luckyone1221.github.io/0053ArtMolbert/public/06-order.html>
+1. <https://luckyone1221.github.io/0053ArtMolbert/public/14-cabinet-like.html>
+1. <https://luckyone1221.github.io/0053ArtMolbert/public/20-props.html>
+1. <https://luckyone1221.github.io/0053ArtMolbert/public/21-404.html>
+1. <https://luckyone1221.github.io/0053ArtMolbert/public/22-policy.html>

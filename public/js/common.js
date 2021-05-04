@@ -573,10 +573,29 @@ function eventHandler() {
 	$('.cart-btn-js').click(function () {
 		$('.cart-dd--js').toggleClass('active');
 		$('body').toggleClass('fixed2');
-	}); //end luckyone Js
+	}); //help pop up
+
+	$('.help-pp-header-js').click(function () {
+		$(this).toggleClass('active');
+		$('.help-pp-content-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //css vars
+
+	var helpPPhead = document.querySelector('.help-pp-header-js');
+
+	if (helpPPhead) {
+		calcHelpHeadHeight();
+		window.addEventListener('resize', calcHelpHeadHeight);
+	}
+
+	function calcHelpHeadHeight() {
+		document.documentElement.style.setProperty('--help-head-height', "".concat(helpPPhead.offsetHeight, "px"));
+	} //end luckyone Js
 	//todo
 	// 1. clean js file
 	// 2. remake page with h1(02-04)
+
 
 	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {

@@ -17,27 +17,36 @@ include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sSafe/_sSafe.pug
 include ../blocks/sAuthorPage/_sAuthorPage.pug
 include ../blocks/sAuthorBio/_sAuthorBio.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAuthors/_sAuthors.pug
+include ../blocks/sProps/_sProps.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 
 block title
-	- let  title= 'title'
+	- let  title= 'реквизиты'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 	+top-nav(true)
 	+topLine()
-	.section
+	+b.page-head
 		.container
-			.row.gy-3
-				.col-auto
-					.btn-default.link-modal-js(href="#modal-exponation") Основные выставки
-				.col-auto
-					.btn-default.link-modal-js(href="#modal-size") Таблица размеров
-				.col-auto
-					.btn-default.link-modal-js(href="#modal-reg") ЗАРЕГЕСТРИРОВАТЬСЯ
-	//-+sSafe()
+			+breadcrumb('Главная', title)
+			.row.align-items-center
+				.col
+					h1= title
+				//-.col-md-auto
+					+e.select
+						+socSelect2('sort-select', [''], 'select2-no-search-js')(data-placeholder="Сортировать")
+							option(value="" label="" selected)
+							option(value='Все новые') Все новые
+							option(value="По популярности") По популярности
+							option(value="По скидке") По скидке
+							option(value="От самой низкой цены") От самой низкой цены
+							option(value="От самой высокой цены") От самой высокой цены
+	+sProps()
 	+footer()

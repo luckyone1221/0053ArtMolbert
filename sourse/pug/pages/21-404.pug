@@ -17,27 +17,22 @@ include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sSafe/_sSafe.pug
 include ../blocks/sAuthorPage/_sAuthorPage.pug
 include ../blocks/sAuthorBio/_sAuthorBio.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAuthors/_sAuthors.pug
+include ../blocks/sProps/_sProps.pug
+include ../blocks/sNotFound/_sNotFound.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 
 block title
-	- let  title= 'title'
+	- let  title= '21-404'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 	+top-nav(true)
 	+topLine()
-	.section
-		.container
-			.row.gy-3
-				.col-auto
-					.btn-default.link-modal-js(href="#modal-exponation") Основные выставки
-				.col-auto
-					.btn-default.link-modal-js(href="#modal-size") Таблица размеров
-				.col-auto
-					.btn-default.link-modal-js(href="#modal-reg") ЗАРЕГЕСТРИРОВАТЬСЯ
-	//-+sSafe()
+	+sNotFound()
 	+footer()

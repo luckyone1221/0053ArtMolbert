@@ -46,6 +46,24 @@ mixin modal()
 	+b.modal-size.modal-win(id="modal-size" class="" style="display: none")
 		+e.img
 			img(loading="lazy" src="img/@2x/table-stab.png" alt="")
+	+b.modal-reg.modal-win(id="modal-reg" class="" style="display: none")
+		+e.content
+			+e.title.text-center ЗАРЕГЕСТРИРОВАТЬСЯ
+			+b.form-wrap
+				+input('Татьяна', 'text', 'Имя*', 'name')
+				+input('Иванова', 'text', 'Фамилия*', 'surname')
+				+input('Enter e-mail ', 'text', 'E-mail*', 'email')
+				+input('', 'password', 'Ваш пароль*')(value="tatiana.nikolaeva@mail.com")
+				+e.hint Минимум 5 символов
+				+e.btn(type='submit') ЗАрегестрироваться
+			+e.soc-reg.text-center Зарегестрироваться c помощью соц.сетей
+			+e.btns
+				+b.btn-social.btn-outline-secondary.w-100(href="#")
+					img(src="img/svg/google.svg" alt="").me-2
+					| Google
+				+b.btn-social.btn-outline-secondary.w-100(href="#")
+					img(src="img/svg/facebook.svg" alt="").me-2
+					| Facebook
 
 	
 	// end modals

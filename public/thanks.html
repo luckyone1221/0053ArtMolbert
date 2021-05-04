@@ -17,6 +17,56 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
+			<!-- start helpPopUp-->
+			<div class="helpPopUp" id="helpPopUp">
+				<div class="helpPopUp__header help-pp-header-js">
+					<div class="helpPopUp__txt">Нужна помощь?
+					</div>
+					<div class="helpPopUp__icon">
+						<svg class="icon icon-chevron-top ">
+							<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
+						</svg>
+						<svg class="icon icon-close ">
+							<use xlink:href="img/svg/sprite.svg#close"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="helpPopUp__content help-pp-content-js">
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tell" type="tell" placeholder=""/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder=""/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="text-center">
+								<button class="form-wrap__btn" type="submit">отправить
+								</button>
+								<div class="form-wrap__talk-with"><span>
+										Общаемся с помощью
+										</span><a href="#">Cleversite.ru</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- end helpPopUp-->
 			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
@@ -298,6 +348,47 @@
 		<!-- #modal-call-->
 		<div class="modal-size modal-win" id="modal-size" style="display: none">
 			<div class="modal-size__img"><img loading="lazy" src="img/@2x/table-stab.png" alt=""/>
+			</div>
+		</div>
+		<div class="modal-reg modal-win" id="modal-reg" style="display: none">
+			<div class="modal-reg__content">
+				<div class="modal-reg__title text-center">ЗАРЕГЕСТРИРОВАТЬСЯ
+				</div>
+				<div class="form-wrap">
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Имя*</span><input class="form-wrap__input form-control" name="name" type="text" placeholder="Татьяна"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Фамилия*</span><input class="form-wrap__input form-control" name="surname" type="text" placeholder="Иванова"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">E-mail*</span><input class="form-wrap__input form-control" name="email" type="text" placeholder="Enter e-mail "/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Ваш пароль*</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="" value="tatiana.nikolaeva@mail.com"/>
+						</label>
+						<div class="form-wrap__btn-toggle-show-password form-wrap__btn-toggle-show-password--js">
+							<svg class="icon icon-eye ">
+								<use xlink:href="img/svg/sprite.svg#eye"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__hint">Минимум 5 символов
+					</div>
+					<button class="form-wrap__btn" type="submit">ЗАрегестрироваться
+					</button>
+				</div>
+				<div class="modal-reg__soc-reg text-center">Зарегестрироваться c помощью соц.сетей
+				</div>
+				<div class="modal-reg__btns"><a class="btn-social btn-outline-secondary w-100" href="#"><img class="me-2" src="img/svg/google.svg" alt=""/>Google</a><a class="btn-social btn-outline-secondary w-100" href="#"><img class="me-2" src="img/svg/facebook.svg" alt=""/>Facebook</a>
+				</div>
 			</div>
 		</div>
 		<!-- end modals-->

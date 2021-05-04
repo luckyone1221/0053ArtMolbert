@@ -1,0 +1,118 @@
+// start .helpPopUp
+.helpPopUp {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+
+  right: 0;
+  width: 100%;
+  border-radius: rem(15) rem(15) 0 0;
+  @include media-breakpoint-up(sm){
+    right: rem(50);
+    width: rem(375);
+    border-radius: rem(30) rem(30) 0 0;
+  }
+  max-height: calc(var(--vh, 1vh) * 100);
+  height: auto;
+  overflow: hidden;
+  background: $gray-220;
+
+  &__header{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba($gray-810, .5);
+    color: $white;
+
+    padding: rem(10) rem(20);
+    @include media-breakpoint-up(sm){
+      padding: rem(20) rem(40);
+    }
+
+    --chevron-o: 0;
+    --close-o: 1;
+    &.active{
+      --chevron-o: 1;
+      --close-o: 0;
+    }
+  }
+  &__txt{
+
+  }
+  &__icon{
+    width: rem(20);
+    height: rem(20);
+
+    position: relative;
+    .icon{
+      @include mt();
+      font-size: rem(12px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      color: $white;
+    }
+
+    .icon-chevron-top{
+      font-size: rem(8);
+      opacity: var(--chevron-o, 1);
+    }
+    .icon-close{
+      opacity: var(--close-o, 0);
+    }
+  }
+  &__content{
+    display: none;
+    &.active{
+      display: block;
+    }
+    padding: rem(40) rem(40) rem(20);
+
+    max-height: calc(var(--vh, 1vh) * 100 - var(--help-head-height, 70px));
+    overflow-y: auto;
+  }
+
+  .form-wrap{
+    &__input-wrap{
+      margin-bottom: rem(20);
+
+      textarea{
+        height: rem(100)!important;
+        min-height: 0!important;
+      }
+    }
+    &__input{
+      background-color: transparent;
+      font-size: 14px;
+      line-height: 1;
+
+      color: rgba($black, .6);
+      border-radius: rem(4);
+    }
+    &__input-title{
+      display: block;
+    }
+    //
+    &__btn{
+      @extend .btn-default;
+      margin-bottom: rem(20);
+      min-width: rem(250);
+    }
+    &__talk-with{
+      font-size: 12px;
+      line-height: (15/12);
+      color: $black;
+      a{
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+    &__{}
+    &__{}
+  }
+  &__{}
+  &__{}
+} // end.helpPopUp
