@@ -1,13 +1,91 @@
 //- WP menu
+mixin child()
+	.sub-menu-child 
+		.row
+			.col
+				.row 
+					.col
+						+b.menu-title Темы
+						ul 
+							li: a(href="#") Абстракция
+							li: a(href="#") Авангардизм 
+							li: a(href="#") Архитектура 
+							li: a(href="#") Города 
+							li: a(href="#") Деревенский мотив 
+							li: a(href="#") Экспрессионизм
+					.col
+						+b.menu-title стиль
+						ul 
+							li: a(href="#") Абстракционизм
+							li: a(href="#") Арт Деко 
+							li: a(href="#") Бюст 
+							li: a(href="#") Иллюстрация 
+							li: a(href="#") Импрессионизм 
+							li: a(href="#") Объект
+							li: a(href="#") Примитивизм
+							li: a(href="#") Реализм 
+							li: a(href="#") Сепия 
+							li: a(href="#") Символизм 
+							li: a(href="#") Сюрреализм 
+							li: a(href="#") Черно белая
+							li: a(href="#") Экспрессионизм
+					.col
+						+b.menu-title техника
+						ul 
+							li: a(href="#") Акварель
+							li: a(href="#") Акрил 
+							li: a(href="#") Бронза 
+							li: a(href="#") Бумага 
+							li: a(href="#") Карандаш 
+							li: a(href="#") Масло
+							li: a(href="#") Металл
+							li: a(href="#") Пастель
+							li: a(href="#") Тушь
+							li: a(href="#") Холст
+							li: a(href="#") Цифровая
+			.col-auto
+				+b.menu-card 
+					+e.img-wrap(href="#").bg-wrap
+						+pic("menu.jpg",'bg',0).picture-bg
+					+e.small Принты
+					+e.title новые  <br> поступления
+					a.sAbout__arrow-btn(href="#") 
+						+icon("arrow-r")
 mixin mnu()
 	-
-		var nav= { 
-			"Искусство":"#",
+		var nav= {  
 			"Авторы":"#",
 			"Коллекции":"#",
 			"Подарки":"#" ,
 			}
 	ul.menu
+		li.menu-item
+			a(href='#') Искусство
+			+b.sub-menu 
+				.container
+					.row.g-0
+						.col-auto
+							+e.left-block
+								+b.menu-title Категории
+								ul
+									
+									li
+										a(href="#") живопись  
+									li
+										a(href="#") графика  
+									li
+										a(href="#") принты  
+									li
+										a(href="#") скульптура  
+									li
+										a(href="#") фотография  
+									li
+										a(href="#") тиражная  графика 
+									li
+										a(href="#") Диджитал арт
+						.col
+							- for (var x = 0; x < 7; x++)
+								+child()
 		each linkPatch, linkName in nav
 			li.menu-item: a(href=linkPatch)=linkName
 //- menu

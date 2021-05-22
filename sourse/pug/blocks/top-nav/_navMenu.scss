@@ -12,3 +12,149 @@
 		padding: rem(20) rem(10);
 	}
 }
+
+
+.sub-menu{
+	@include media-breakpoint-up(xl){
+
+		position: absolute;
+		top: 100%;
+		display: block;
+	}
+	display: none;
+	position: relative;
+	left: 0;
+	&::after{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -70px;
+		position: absolute;
+		height: 100px;
+		width: 100%;
+	}
+	// background-color: #fff;
+	width: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	@include mt;
+	opacity: 0;
+	visibility: hidden;
+	&::before{
+		content: '';
+		position: absolute;
+		width: 200vw;
+		height: 300vh;
+		background-color: #000;
+		opacity: 0.7;
+		opacity: 0;
+		pointer-events: none;
+
+		@include a-cent1(x);
+		top: 0;
+	}
+	li{
+		list-style: none;
+	}
+	&__left-block{
+		min-height: 100%;
+		padding: var(--sp-sub-menu);
+		padding-right: 0;
+		background-color: #F4F5EF;
+		width: rem(250);
+		margin-left: calc(-1 * var(--sp-sub-menu));
+		a{
+			// text-decoration: underline;
+			text-transform: uppercase;
+		}
+	}
+	li{
+		margin-bottom: 1em;
+	}
+	a{
+		display: inline-block;
+		&:hover{
+			color: $orange2 !important;
+		}
+	}
+
+	li.active {
+		&>a {
+			color: $orange2;
+		}
+	}
+}
+
+
+.menu-title{
+	text-transform: uppercase;
+
+	font-weight: 600;
+	@include rfs(24px);
+	margin-bottom: 1em;
+
+}
+
+.sub-menu-child{
+	// position: absolute;
+	padding: var(--sp-sub-menu);
+	background-color: #fff;
+	&:not(.active){
+
+		display: none;
+	}
+	&:first-child{
+		// display: block;
+	}
+}
+
+.menu-card{
+	width: rem(340);
+	&__img-wrap{
+		@include block(340, 258);
+		margin-bottom: rem(30);
+		img{
+
+		}
+	}
+	&__small{
+		border-bottom: 1px solid;
+		font-size: $small;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+
+	}
+	&__title{
+		text-transform: uppercase;
+		@include rfs(24px);
+		margin-bottom: rem(14);
+	}
+	.sAbout__arrow-btn{
+		width: 100px;
+		min-width: 1px;
+		margin-left: 0;
+		margin-bottom: 2rem;
+	}
+	
+}
+
+
+li:hover{
+	&> a{
+		&::after{
+			opacity: 1 !important;
+		}
+	}
+	.sub-menu {
+		visibility: visible;
+		opacity: 1;
+		transform: scaleY(1);
+		// display: block;
+	@include media-breakpoint-up(xl){
+
+		&::before {
+			opacity: .6;
+		}
+	}
+	} 
+}

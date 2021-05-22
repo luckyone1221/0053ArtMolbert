@@ -30,5 +30,8 @@
 	}
 	@include media-breakpoint-up(xxl){
 		--i-cont-padding: #{rem(160px)};
+		--sp-sub-menu: #{rem(50)};
 	}
+
+	--sp-sub-menu: #{rem(20)};
 }

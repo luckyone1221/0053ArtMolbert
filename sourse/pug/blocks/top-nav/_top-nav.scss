@@ -1,7 +1,11 @@
 .top-nav {
   border-bottom: 1px solid rgba($black, .1);
   box-shadow: 0 0 15px 0 rgba($black, .1);
-
+  position: relative;
+  z-index: 200;
+  .container{
+    position: relative;
+  }
   @include media-breakpoint-up(xl){
     border-bottom: none;
     box-shadow: none;
@@ -48,6 +52,9 @@
         color: $black;
 
         position: relative;
+        
+      }
+      &> a{
         &:after{
           @include mt();
           content: '';
@@ -65,7 +72,6 @@
             opacity: 1;
           }
         }
-
 
       }
     }

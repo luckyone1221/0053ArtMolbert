@@ -672,7 +672,21 @@ function eventHandler() {
 	$(document).on('click' ,".td-head", function(){
 		$(this).parent().toggleClass("active").next().find(".toggle-table").slideToggle();
 	})
-
+	let subLink = document.querySelectorAll(".sub-menu__left-block> ul > li");
+	subLink.forEach((el, index)=>{
+		let linkIndex = index;
+		el.addEventListener("mouseover", function(){
+			subLink.forEach(function(el){
+				if (el.classList.contains("active")) el.classList.remove('active')
+			})
+			el.classList.add("active");
+			let subMenuAll = document.querySelectorAll(`.sub-menu-child`);
+			subMenuAll.forEach((el, index) => {
+				if (el.classList.contains("active")) el.classList.remove('active')
+				if (index == linkIndex) el.classList.add("active");
+			})
+		})
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
